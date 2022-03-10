@@ -19504,6 +19504,3081 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxFoundation_setReportAllocation
 }
 
 
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxInitVehicleSDK__SWIG_0___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  physx::PxPhysics *arg1 = 0 ;
+  physx::PxSerializationRegistry *arg2 = (physx::PxSerializationRegistry *) 0 ;
+  bool result;
+  
+  arg1 = (physx::PxPhysics *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxPhysics & type is null", 0);
+    return 0;
+  } 
+  arg2 = (physx::PxSerializationRegistry *)jarg2; 
+  {
+    try {
+      result = (bool)physx::PxInitVehicleSDK(*arg1,arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxInitVehicleSDK__SWIG_1___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxPhysics *arg1 = 0 ;
+  bool result;
+  
+  arg1 = (physx::PxPhysics *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxPhysics & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (bool)physx::PxInitVehicleSDK(*arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCloseVehicleSDK__SWIG_0___(void * jarg1) {
+  physx::PxSerializationRegistry *arg1 = (physx::PxSerializationRegistry *) 0 ;
+  
+  arg1 = (physx::PxSerializationRegistry *)jarg1; 
+  {
+    try {
+      physx::PxCloseVehicleSDK(arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCloseVehicleSDK__SWIG_1___() {
+  {
+    try {
+      physx::PxCloseVehicleSDK();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSetBasisVectors___( physx::PxVec3*  jarg1,  physx::PxVec3*  jarg2) {
+  physx::PxVec3 *arg1 = 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  
+  arg1 = jarg1; 
+  arg2 = jarg2; 
+  {
+    try {
+      physx::PxVehicleSetBasisVectors((physx::PxVec3 const &)*arg1,(physx::PxVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSetUpdateMode___(int jarg1) {
+  physx::PxVehicleUpdateMode::Enum arg1 ;
+  
+  arg1 = (physx::PxVehicleUpdateMode::Enum)jarg1; 
+  {
+    try {
+      physx::PxVehicleSetUpdateMode(arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleComputeSprungMasses___(unsigned int jarg1, physx::PxVec3* jarg2,  physx::PxVec3*  jarg3, float jarg4, unsigned int jarg5, float* jarg6) {
+  physx::PxU32 arg1 ;
+  physx::PxVec3 *arg2 = (physx::PxVec3 *) 0 ;
+  physx::PxVec3 *arg3 = 0 ;
+  physx::PxReal arg4 ;
+  physx::PxU32 arg5 ;
+  physx::PxReal *arg6 = (physx::PxReal *) 0 ;
+  
+  arg1 = (physx::PxU32)jarg1; 
+  arg2 = jarg2;
+  arg3 = jarg3; 
+  arg4 = (physx::PxReal)jarg4; 
+  arg5 = (physx::PxU32)jarg5; 
+  arg6 = jarg6;
+  {
+    try {
+      physx::PxVehicleComputeSprungMasses(arg1,arg2,(physx::PxVec3 const &)*arg3,arg4,arg5,arg6);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+  
+  
+  
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleSuspensionData___() {
+  void * jresult ;
+  physx::PxVehicleSuspensionData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleSuspensionData *)new physx::PxVehicleSuspensionData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mSpringStrength_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mSpringStrength = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mSpringStrength_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mSpringStrength);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mSpringDamperRate_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mSpringDamperRate = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mSpringDamperRate_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mSpringDamperRate);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mMaxCompression_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxCompression = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mMaxCompression_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxCompression);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mMaxDroop_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxDroop = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mMaxDroop_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxDroop);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mSprungMass_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mSprungMass = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mSprungMass_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mSprungMass);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mCamberAtRest_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mCamberAtRest = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mCamberAtRest_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mCamberAtRest);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mCamberAtMaxCompression_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mCamberAtMaxCompression = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mCamberAtMaxCompression_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mCamberAtMaxCompression);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mCamberAtMaxDroop_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mCamberAtMaxDroop = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_mCamberAtMaxDroop_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mCamberAtMaxDroop);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_getRecipMaxCompression___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipMaxCompression();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_getRecipMaxDroop___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipMaxDroop();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleSuspensionData_setMassAndPreserveNaturalFrequency___(void * jarg1, float jarg2) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  {
+    try {
+      (arg1)->setMassAndPreserveNaturalFrequency(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleSuspensionData___(void * jarg1) {
+  physx::PxVehicleSuspensionData *arg1 = (physx::PxVehicleSuspensionData *) 0 ;
+  
+  arg1 = (physx::PxVehicleSuspensionData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleWheelData___() {
+  void * jresult ;
+  physx::PxVehicleWheelData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleWheelData *)new physx::PxVehicleWheelData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mRadius_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mRadius = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mRadius_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mRadius);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mWidth_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mWidth = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mWidth_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mWidth);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMass_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMass = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMass_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMass);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMOI_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMOI = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMOI_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMOI);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mDampingRate_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mDampingRate = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mDampingRate_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mDampingRate);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMaxBrakeTorque_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxBrakeTorque = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMaxBrakeTorque_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxBrakeTorque);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMaxHandBrakeTorque_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxHandBrakeTorque = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMaxHandBrakeTorque_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxHandBrakeTorque);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMaxSteer_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxSteer = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mMaxSteer_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxSteer);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mToeAngle_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mToeAngle = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_mToeAngle_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mToeAngle);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_getRecipRadius___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipRadius();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelData_getRecipMOI___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipMOI();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleWheelData___(void * jarg1) {
+  physx::PxVehicleWheelData *arg1 = (physx::PxVehicleWheelData *) 0 ;
+  
+  arg1 = (physx::PxVehicleWheelData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleTireData___() {
+  void * jresult ;
+  physx::PxVehicleTireData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleTireData *)new physx::PxVehicleTireData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mLatStiffX_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mLatStiffX = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mLatStiffX_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mLatStiffX);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mLatStiffY_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mLatStiffY = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mLatStiffY_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mLatStiffY);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mLongitudinalStiffnessPerUnitGravity_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mLongitudinalStiffnessPerUnitGravity = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mLongitudinalStiffnessPerUnitGravity_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mLongitudinalStiffnessPerUnitGravity);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mCamberStiffnessPerUnitGravity_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mCamberStiffnessPerUnitGravity = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mCamberStiffnessPerUnitGravity_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mCamberStiffnessPerUnitGravity);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mType_set___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  if (arg1) (arg1)->mType = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_mType_get___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  result = (physx::PxU32) ((arg1)->mType);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_getRecipLongitudinalStiffnessPerUnitGravity___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipLongitudinalStiffnessPerUnitGravity();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_getFrictionVsSlipGraphRecipx1Minusx0___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getFrictionVsSlipGraphRecipx1Minusx0();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireData_getFrictionVsSlipGraphRecipx2Minusx1___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getFrictionVsSlipGraphRecipx2Minusx1();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleTireData___(void * jarg1) {
+  physx::PxVehicleTireData *arg1 = (physx::PxVehicleTireData *) 0 ;
+  
+  arg1 = (physx::PxVehicleTireData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleAntiRollBarData___() {
+  void * jresult ;
+  physx::PxVehicleAntiRollBarData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleAntiRollBarData *)new physx::PxVehicleAntiRollBarData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAntiRollBarData_mWheel0_set___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  if (arg1) (arg1)->mWheel0 = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAntiRollBarData_mWheel0_get___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  result = (physx::PxU32) ((arg1)->mWheel0);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAntiRollBarData_mWheel1_set___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  if (arg1) (arg1)->mWheel1 = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAntiRollBarData_mWheel1_get___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  result = (physx::PxU32) ((arg1)->mWheel1);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAntiRollBarData_mStiffness_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->mStiffness = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAntiRollBarData_mStiffness_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  result = (physx::PxF32) ((arg1)->mStiffness);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleAntiRollBarData___(void * jarg1) {
+  physx::PxVehicleAntiRollBarData *arg1 = (physx::PxVehicleAntiRollBarData *) 0 ;
+  
+  arg1 = (physx::PxVehicleAntiRollBarData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleTireLoadFilterData___() {
+  void * jresult ;
+  physx::PxVehicleTireLoadFilterData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleTireLoadFilterData *)new physx::PxVehicleTireLoadFilterData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMinNormalisedLoad_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMinNormalisedLoad = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMinNormalisedLoad_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMinNormalisedLoad);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMinFilteredNormalisedLoad_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMinFilteredNormalisedLoad = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMinFilteredNormalisedLoad_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMinFilteredNormalisedLoad);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMaxNormalisedLoad_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxNormalisedLoad = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMaxNormalisedLoad_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxNormalisedLoad);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMaxFilteredNormalisedLoad_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxFilteredNormalisedLoad = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_mMaxFilteredNormalisedLoad_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxFilteredNormalisedLoad);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleTireLoadFilterData_getDenominator___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getDenominator();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleTireLoadFilterData___(void * jarg1) {
+  physx::PxVehicleTireLoadFilterData *arg1 = (physx::PxVehicleTireLoadFilterData *) 0 ;
+  
+  arg1 = (physx::PxVehicleTireLoadFilterData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mMOI_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMOI = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mMOI_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMOI);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mPeakTorque_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mPeakTorque = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mPeakTorque_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mPeakTorque);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mMaxOmega_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mMaxOmega = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mMaxOmega_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mMaxOmega);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mDampingRateFullThrottle_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mDampingRateFullThrottle = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mDampingRateFullThrottle_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mDampingRateFullThrottle);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mDampingRateZeroThrottleClutchEngaged_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mDampingRateZeroThrottleClutchEngaged = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mDampingRateZeroThrottleClutchEngaged_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mDampingRateZeroThrottleClutchEngaged);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mDampingRateZeroThrottleClutchDisengaged_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mDampingRateZeroThrottleClutchDisengaged = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_mDampingRateZeroThrottleClutchDisengaged_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mDampingRateZeroThrottleClutchDisengaged);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_getRecipMOI___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipMOI();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleEngineData_getRecipMaxOmega___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)(arg1)->getRecipMaxOmega();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleEngineData___(void * jarg1) {
+  physx::PxVehicleEngineData *arg1 = (physx::PxVehicleEngineData *) 0 ;
+  
+  arg1 = (physx::PxVehicleEngineData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleGearsData___() {
+  void * jresult ;
+  physx::PxVehicleGearsData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleGearsData *)new physx::PxVehicleGearsData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mRatios_set___(void * jarg1, void * jarg2) {
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxReal *arg2 ;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  arg2 = (physx::PxReal *)jarg2; 
+  {
+    size_t ii;
+    physx::PxReal *b = (physx::PxReal *) arg1->mRatios;
+    for (ii = 0; ii < (size_t)physx::PxVehicleGearsData::eGEARSRATIO_COUNT; ii++) b[ii] = *((physx::PxReal *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mRatios_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxReal *result = 0 ;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  result = (physx::PxReal *)(physx::PxReal *) ((arg1)->mRatios);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mFinalRatio_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mFinalRatio = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mFinalRatio_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mFinalRatio);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mNbRatios_set___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  if (arg1) (arg1)->mNbRatios = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mNbRatios_get___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  result = (physx::PxU32) ((arg1)->mNbRatios);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mSwitchTime_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mSwitchTime = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleGearsData_mSwitchTime_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mSwitchTime);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleGearsData___(void * jarg1) {
+  physx::PxVehicleGearsData *arg1 = (physx::PxVehicleGearsData *) 0 ;
+  
+  arg1 = (physx::PxVehicleGearsData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleClutchData_mStrength_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mStrength = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleClutchData_mStrength_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mStrength);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleClutchData_mAccuracyMode_set___(void * jarg1, int jarg2) {
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  physx::PxVehicleClutchAccuracyMode::Enum arg2 ;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  arg2 = (physx::PxVehicleClutchAccuracyMode::Enum)jarg2; 
+  if (arg1) (arg1)->mAccuracyMode = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleClutchData_mAccuracyMode_get___(void * jarg1) {
+  int jresult ;
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  physx::PxVehicleClutchAccuracyMode::Enum result;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  result = (physx::PxVehicleClutchAccuracyMode::Enum) ((arg1)->mAccuracyMode);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleClutchData_mEstimateIterations_set___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  if (arg1) (arg1)->mEstimateIterations = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleClutchData_mEstimateIterations_get___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  result = (physx::PxU32) ((arg1)->mEstimateIterations);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleClutchData___(void * jarg1) {
+  physx::PxVehicleClutchData *arg1 = (physx::PxVehicleClutchData *) 0 ;
+  
+  arg1 = (physx::PxVehicleClutchData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mAccuracy_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mAccuracy = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mAccuracy_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mAccuracy);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mFrontWidth_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mFrontWidth = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mFrontWidth_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mFrontWidth);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mRearWidth_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mRearWidth = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mRearWidth_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mRearWidth);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mAxleSeparation_set___(void * jarg1, float jarg2) {
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  if (arg1) (arg1)->mAxleSeparation = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAckermannGeometryData_mAxleSeparation_get___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  result = (physx::PxReal) ((arg1)->mAxleSeparation);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleAckermannGeometryData___(void * jarg1) {
+  physx::PxVehicleAckermannGeometryData *arg1 = (physx::PxVehicleAckermannGeometryData *) 0 ;
+  
+  arg1 = (physx::PxVehicleAckermannGeometryData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_allocate___(unsigned int jarg1) {
+  void * jresult ;
+  physx::PxU32 arg1 ;
+  physx::PxVehicleWheelsSimData *result = 0 ;
+  
+  arg1 = (physx::PxU32)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleWheelsSimData *)physx::PxVehicleWheelsSimData::allocate(arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setChassisMass___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  {
+    try {
+      (arg1)->setChassisMass(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_free___(void * jarg1) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  {
+    try {
+      (arg1)->free();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData___assign___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxVehicleWheelsSimData *arg2 = 0 ;
+  physx::PxVehicleWheelsSimData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxVehicleWheelsSimData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleWheelsSimData const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxVehicleWheelsSimData *) &(arg1)->operator =((physx::PxVehicleWheelsSimData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_copy___(void * jarg1, void * jarg2, unsigned int jarg3, unsigned int jarg4) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxVehicleWheelsSimData *arg2 = 0 ;
+  physx::PxU32 arg3 ;
+  physx::PxU32 arg4 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxVehicleWheelsSimData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleWheelsSimData const & type is null", 0);
+    return ;
+  } 
+  arg3 = (physx::PxU32)jarg3; 
+  arg4 = (physx::PxU32)jarg4; 
+  {
+    try {
+      (arg1)->copy((physx::PxVehicleWheelsSimData const &)*arg2,arg3,arg4);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getNbWheels___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  {
+    try {
+      result = (physx::PxU32)((physx::PxVehicleWheelsSimData const *)arg1)->getNbWheels();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getSuspensionData___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleSuspensionData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVehicleSuspensionData *) &((physx::PxVehicleWheelsSimData const *)arg1)->getSuspensionData(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getWheelData___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleWheelData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVehicleWheelData *) &((physx::PxVehicleWheelsSimData const *)arg1)->getWheelData(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getTireData___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleTireData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVehicleTireData *) &((physx::PxVehicleWheelsSimData const *)arg1)->getTireData(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT  physx::PxVec3*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getSuspTravelDirection___(void * jarg1, unsigned int jarg2) {
+  physx::PxVec3*  jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVec3 *) &((physx::PxVehicleWheelsSimData const *)arg1)->getSuspTravelDirection(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT  physx::PxVec3*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getSuspForceAppPointOffset___(void * jarg1, unsigned int jarg2) {
+  physx::PxVec3*  jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVec3 *) &((physx::PxVehicleWheelsSimData const *)arg1)->getSuspForceAppPointOffset(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT  physx::PxVec3*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getTireForceAppPointOffset___(void * jarg1, unsigned int jarg2) {
+  physx::PxVec3*  jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVec3 *) &((physx::PxVehicleWheelsSimData const *)arg1)->getTireForceAppPointOffset(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT  physx::PxVec3*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getWheelCentreOffset___(void * jarg1, unsigned int jarg2) {
+  physx::PxVec3*  jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVec3 *) &((physx::PxVehicleWheelsSimData const *)arg1)->getWheelCentreOffset(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getWheelShapeMapping___(void * jarg1, unsigned int jarg2) {
+  int jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxI32 result;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxI32)((physx::PxVehicleWheelsSimData const *)arg1)->getWheelShapeMapping(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT  physx::PxFilterData*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getSceneQueryFilterData___(void * jarg1, unsigned int jarg2) {
+  physx::PxFilterData*  jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxFilterData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxFilterData *) &((physx::PxVehicleWheelsSimData const *)arg1)->getSceneQueryFilterData(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getAntiRollBarData___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleAntiRollBarData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxVehicleAntiRollBarData *) &((physx::PxVehicleWheelsSimData const *)arg1)->getAntiRollBarData(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setSuspensionData___(void * jarg1, unsigned int jarg2, void * jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleSuspensionData *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = (physx::PxVehicleSuspensionData *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleSuspensionData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setSuspensionData(arg2,(physx::PxVehicleSuspensionData const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setWheelData___(void * jarg1, unsigned int jarg2, void * jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleWheelData *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = (physx::PxVehicleWheelData *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleWheelData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setWheelData(arg2,(physx::PxVehicleWheelData const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setTireData___(void * jarg1, unsigned int jarg2, void * jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVehicleTireData *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = (physx::PxVehicleTireData *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleTireData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setTireData(arg2,(physx::PxVehicleTireData const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setSuspTravelDirection___(void * jarg1, unsigned int jarg2,  physx::PxVec3*  jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = jarg3; 
+  {
+    try {
+      (arg1)->setSuspTravelDirection(arg2,(physx::PxVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setSuspForceAppPointOffset___(void * jarg1, unsigned int jarg2,  physx::PxVec3*  jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = jarg3; 
+  {
+    try {
+      (arg1)->setSuspForceAppPointOffset(arg2,(physx::PxVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setTireForceAppPointOffset___(void * jarg1, unsigned int jarg2,  physx::PxVec3*  jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = jarg3; 
+  {
+    try {
+      (arg1)->setTireForceAppPointOffset(arg2,(physx::PxVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setWheelCentreOffset___(void * jarg1, unsigned int jarg2,  physx::PxVec3*  jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = jarg3; 
+  {
+    try {
+      (arg1)->setWheelCentreOffset(arg2,(physx::PxVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setWheelShapeMapping___(void * jarg1, unsigned int jarg2, int jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxI32 arg3 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = (physx::PxI32)jarg3; 
+  {
+    try {
+      (arg1)->setWheelShapeMapping(arg2,arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setSceneQueryFilterData___(void * jarg1, unsigned int jarg2,  physx::PxFilterData*  jarg3) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxFilterData *arg3 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  arg3 = jarg3; 
+  {
+    try {
+      (arg1)->setSceneQueryFilterData(arg2,(physx::PxFilterData const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setTireLoadFilterData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxVehicleTireLoadFilterData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxVehicleTireLoadFilterData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleTireLoadFilterData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setTireLoadFilterData((physx::PxVehicleTireLoadFilterData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_addAntiRollBarData___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxVehicleAntiRollBarData *arg2 = 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxVehicleAntiRollBarData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleAntiRollBarData const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxU32)(arg1)->addAntiRollBarData((physx::PxVehicleAntiRollBarData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_disableWheel___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      (arg1)->disableWheel(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_enableWheel___(void * jarg1, unsigned int jarg2) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      (arg1)->enableWheel(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_getIsWheelDisabled___(void * jarg1, unsigned int jarg2) {
+  unsigned int jresult ;
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxU32 arg2 ;
+  bool result;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (bool)((physx::PxVehicleWheelsSimData const *)arg1)->getIsWheelDisabled(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setSubStepCount___(void * jarg1, float jarg2, unsigned int jarg3, unsigned int jarg4) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxReal arg2 ;
+  physx::PxU32 arg3 ;
+  physx::PxU32 arg4 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  arg3 = (physx::PxU32)jarg3; 
+  arg4 = (physx::PxU32)jarg4; 
+  {
+    try {
+      (arg1)->setSubStepCount(arg2,arg3,arg4);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleWheelsSimData_setMinLongSlipDenominator___(void * jarg1, float jarg2) {
+  physx::PxVehicleWheelsSimData *arg1 = (physx::PxVehicleWheelsSimData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleWheelsSimData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  {
+    try {
+      (arg1)->setMinLongSlipDenominator(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleAutoBoxData___() {
+  void * jresult ;
+  physx::PxVehicleAutoBoxData *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleAutoBoxData *)new physx::PxVehicleAutoBoxData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAutoBoxData_mUpRatios_set___(void * jarg1, void * jarg2) {
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  physx::PxReal *arg2 ;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  arg2 = (physx::PxReal *)jarg2; 
+  {
+    size_t ii;
+    physx::PxReal *b = (physx::PxReal *) arg1->mUpRatios;
+    for (ii = 0; ii < (size_t)physx::PxVehicleGearsData::eGEARSRATIO_COUNT; ii++) b[ii] = *((physx::PxReal *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAutoBoxData_mUpRatios_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  physx::PxReal *result = 0 ;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  result = (physx::PxReal *)(physx::PxReal *) ((arg1)->mUpRatios);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAutoBoxData_mDownRatios_set___(void * jarg1, void * jarg2) {
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  physx::PxReal *arg2 ;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  arg2 = (physx::PxReal *)jarg2; 
+  {
+    size_t ii;
+    physx::PxReal *b = (physx::PxReal *) arg1->mDownRatios;
+    for (ii = 0; ii < (size_t)physx::PxVehicleGearsData::eGEARSRATIO_COUNT; ii++) b[ii] = *((physx::PxReal *) arg2 + ii);
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAutoBoxData_mDownRatios_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  physx::PxReal *result = 0 ;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  result = (physx::PxReal *)(physx::PxReal *) ((arg1)->mDownRatios);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAutoBoxData_setLatency___(void * jarg1, float jarg2) {
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  {
+    try {
+      (arg1)->setLatency(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleAutoBoxData_getLatency___(void * jarg1) {
+  float jresult ;
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  physx::PxReal result;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  {
+    try {
+      result = (physx::PxReal)((physx::PxVehicleAutoBoxData const *)arg1)->getLatency();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleAutoBoxData___(void * jarg1) {
+  physx::PxVehicleAutoBoxData *arg1 = (physx::PxVehicleAutoBoxData *) 0 ;
+  
+  arg1 = (physx::PxVehicleAutoBoxData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_getEngineData___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleEngineData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleEngineData *) &((physx::PxVehicleDriveSimData const *)arg1)->getEngineData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_setEngineData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleEngineData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  arg2 = (physx::PxVehicleEngineData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleEngineData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setEngineData((physx::PxVehicleEngineData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_getGearsData___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleGearsData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleGearsData *) &((physx::PxVehicleDriveSimData const *)arg1)->getGearsData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_setGearsData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleGearsData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  arg2 = (physx::PxVehicleGearsData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleGearsData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setGearsData((physx::PxVehicleGearsData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_getClutchData___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleClutchData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleClutchData *) &((physx::PxVehicleDriveSimData const *)arg1)->getClutchData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_setClutchData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleClutchData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  arg2 = (physx::PxVehicleClutchData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleClutchData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setClutchData((physx::PxVehicleClutchData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_getAutoBoxData___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleAutoBoxData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleAutoBoxData *) &((physx::PxVehicleDriveSimData const *)arg1)->getAutoBoxData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData_setAutoBoxData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  physx::PxVehicleAutoBoxData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  arg2 = (physx::PxVehicleAutoBoxData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleAutoBoxData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setAutoBoxData((physx::PxVehicleAutoBoxData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleDriveSimData___(void * jarg1) {
+  physx::PxVehicleDriveSimData *arg1 = (physx::PxVehicleDriveSimData *) 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxVehicleDriveSimData4W___() {
+  void * jresult ;
+  physx::PxVehicleDriveSimData4W *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxVehicleDriveSimData4W *)new physx::PxVehicleDriveSimData4W();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData4W_getDiffData___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleDriveSimData4W *arg1 = (physx::PxVehicleDriveSimData4W *) 0 ;
+  physx::PxVehicleDifferential4WData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData4W *)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleDifferential4WData *) &((physx::PxVehicleDriveSimData4W const *)arg1)->getDiffData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData4W_getAckermannGeometryData___(void * jarg1) {
+  void * jresult ;
+  physx::PxVehicleDriveSimData4W *arg1 = (physx::PxVehicleDriveSimData4W *) 0 ;
+  physx::PxVehicleAckermannGeometryData *result = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData4W *)jarg1; 
+  {
+    try {
+      result = (physx::PxVehicleAckermannGeometryData *) &((physx::PxVehicleDriveSimData4W const *)arg1)->getAckermannGeometryData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData4W_setDiffData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleDriveSimData4W *arg1 = (physx::PxVehicleDriveSimData4W *) 0 ;
+  physx::PxVehicleDifferential4WData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData4W *)jarg1; 
+  arg2 = (physx::PxVehicleDifferential4WData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleDifferential4WData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setDiffData((physx::PxVehicleDifferential4WData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData4W_setAckermannGeometryData___(void * jarg1, void * jarg2) {
+  physx::PxVehicleDriveSimData4W *arg1 = (physx::PxVehicleDriveSimData4W *) 0 ;
+  physx::PxVehicleAckermannGeometryData *arg2 = 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData4W *)jarg1; 
+  arg2 = (physx::PxVehicleAckermannGeometryData *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxVehicleAckermannGeometryData const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->setAckermannGeometryData((physx::PxVehicleAckermannGeometryData const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxVehicleDriveSimData4W___(void * jarg1) {
+  physx::PxVehicleDriveSimData4W *arg1 = (physx::PxVehicleDriveSimData4W *) 0 ;
+  
+  arg1 = (physx::PxVehicleDriveSimData4W *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxPhysics_release___(void * jarg1) {
   physx::PxPhysics *arg1 = (physx::PxPhysics *) 0 ;
   
@@ -38320,6 +41395,10 @@ SWIGEXPORT physx::PxOutputStream * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxDefaultMemo
 
 SWIGEXPORT physx::wrap::PxSimulationFilterCallback * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxUnityCollisionFiltering_SWIGUpcast___(physx::PxUnityCollisionFiltering *jarg1) {
     return (physx::wrap::PxSimulationFilterCallback *)jarg1;
+}
+
+SWIGEXPORT physx::PxVehicleDriveSimData * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDriveSimData4W_SWIGUpcast___(physx::PxVehicleDriveSimData4W *jarg1) {
+    return (physx::PxVehicleDriveSimData *)jarg1;
 }
 
 SWIGEXPORT physx::PxBase * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxActor_SWIGUpcast___(physx::PxActor *jarg1) {

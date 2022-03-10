@@ -153,6 +153,10 @@ namespace physx {
     class PxMassProperties;
     class PxCpuDispatcher;
     class PxDefaultCpuDispatcher;
+    
+    // Vehicles
+    class PxSerializationRegistry;
+    class PxVehicleWheelsSimData;
 
     // @@@ Just placeholders for function pointer types. Not sure if they should be exposed.
     struct PxConstraintSolverPrep;
@@ -164,6 +168,7 @@ namespace physx {
     CSHARP_OBJECT_ARRAY(physx::PxShape, PxShape)
     CSHARP_OBJECT_ARRAY(physx::PxMaterial, PxMaterial)
     CSHARP_OBJECT_ARRAY(physx::PxRigidActor, PxRigidActor)
+    CSHARP_ARRAYS(physx::PxVec3, PxVec3)
 
     DECLARE_BASIC_TYPEMAPS
 
@@ -638,6 +643,68 @@ namespace physx {
         PxIdentity
     };
 
+    SIMPLIFY_ENUM(PxVehicleUpdateMode,
+        eVELOCITY_CHANGE,
+		eACCELERATION
+	);
+
+    SIMPLIFY_FLAGS_ENUM(PxVehicleWheelsSimFlags,
+        eLIMIT_SUSPENSION_EXPANSION_VELOCITY = (1 << 0),
+		eDISABLE_INTERNAL_CYLINDER_PLANE_INTERSECTION_TEST = (1 << 1),
+		eDISABLE_SUSPENSION_FORCE_PROJECTION = (1 << 2)
+    );
+
+    SIMPLIFY_ENUM(PxVehicleDifferential4WData,
+		eDIFF_TYPE_LS_4WD,			//limited slip differential for car with 4 driven wheels
+		eDIFF_TYPE_LS_FRONTWD,		//limited slip differential for car with front-wheel drive
+		eDIFF_TYPE_LS_REARWD,		//limited slip differential for car with rear-wheel drive
+		eDIFF_TYPE_OPEN_4WD,		//open differential for car with 4 driven wheels 
+		eDIFF_TYPE_OPEN_FRONTWD,	//open differential for car with front-wheel drive
+		eDIFF_TYPE_OPEN_REARWD,		//open differential for car with rear-wheel drive
+		eMAX_NB_DIFF_TYPES
+	);
+    
+    SIMPLIFY_ENUM(PxVehicleGearsDataEnum,
+		eREVERSE=0,
+		eNEUTRAL,
+		eFIRST,
+		eSECOND,
+		eTHIRD,
+		eFOURTH,
+		eFIFTH,
+		eSIXTH,
+		eSEVENTH,
+		eEIGHTH,
+		eNINTH,
+		eTENTH,
+		eELEVENTH,
+		eTWELFTH,
+		eTHIRTEENTH,
+		eFOURTEENTH,
+		eFIFTEENTH,
+		eSIXTEENTH,
+		eSEVENTEENTH,
+		eEIGHTEENTH,
+		eNINETEENTH,
+		eTWENTIETH,
+		eTWENTYFIRST,
+		eTWENTYSECOND,
+		eTWENTYTHIRD,
+		eTWENTYFOURTH,
+		eTWENTYFIFTH,
+		eTWENTYSIXTH,
+		eTWENTYSEVENTH,
+		eTWENTYEIGHTH,
+		eTWENTYNINTH,
+		eTHIRTIETH,
+		eGEARSRATIO_COUNT
+	);
+
+    SIMPLIFY_ENUM(PxVehicleClutchAccuracyMode,
+        eESTIMATE = 0,
+		eBEST_POSSIBLE
+    );
+
     FLAT_STRUCT(physx::PxVec3, PxVec3, public float x, y, z;)
     FLAT_STRUCT(physx::PxVec4, PxVec4, public float x, y, z, w;)
     FLAT_STRUCT(physx::PxQuat, PxQuat, public float x, y, z, w;)
@@ -705,6 +772,7 @@ namespace physx {
     WRAPPER_CLASS(PxTaskManager)
     WRAPPER_CLASS(PxLightCpuTask)
     WRAPPER_CLASS(PxCooking)
+    WRAPPER_CLASS(PxVehicleWheelsSimData)
 
     class PxVec3 {
     public:
@@ -2093,6 +2161,204 @@ namespace physx {
     // Vehicles
     bool PxInitVehicleSDK(PxPhysics& physics, PxSerializationRegistry* serializationRegistry = NULL);
     void PxCloseVehicleSDK(PxSerializationRegistry* serializationRegistry = NULL);
+    void PxVehicleSetBasisVectors(const PxVec3& up, const PxVec3& forward);
+    void PxVehicleSetUpdateMode(PxVehicleUpdateMode::Enum vehicleUpdateMode);
+    %apply PxVec3 INPUT[] { PxVec3* sprungMassCoordinates }
+    %apply PxReal OUTPUT[] { PxReal* sprungMasses }
+    void PxVehicleComputeSprungMasses(const PxU32 numSprungMasses, PxVec3* sprungMassCoordinates, const PxVec3& centreOfMass, const PxReal totalMass, const PxU32 gravityDirection, PxReal* sprungMasses);
+
+    class PxVehicleSuspensionData {
+        public:
+            PxVehicleSuspensionData();
+            PxReal mSpringStrength;
+            PxReal mSpringDamperRate;
+            PxReal mMaxCompression;
+            PxReal mMaxDroop;
+            PxReal mSprungMass;
+            PxReal mCamberAtRest;
+            PxReal mCamberAtMaxCompression; 
+            PxReal mCamberAtMaxDroop; 
+            PxReal getRecipMaxCompression();
+            PxReal getRecipMaxDroop();
+            void setMassAndPreserveNaturalFrequency(const PxReal newSprungMass);
+    };
+
+    class PxVehicleWheelData {
+        public:
+            PxVehicleWheelData();
+            PxReal mRadius;
+            PxReal mWidth;
+            PxReal mMass;
+            PxReal mMOI;
+            PxReal mDampingRate;
+            PxReal mMaxBrakeTorque;
+            PxReal mMaxHandBrakeTorque;
+            PxReal mMaxSteer;
+            PxReal mToeAngle;
+            PxReal getRecipRadius();
+	        PxReal getRecipMOI();
+    };
+
+    class PxVehicleTireData {
+        public:
+            PxVehicleTireData();
+            PxReal mLatStiffX;
+            PxReal mLatStiffY;
+            PxReal mLongitudinalStiffnessPerUnitGravity;
+            PxReal mCamberStiffnessPerUnitGravity;
+            // %apply physx::PxReal INPUT[] INPUT[] { PxReal mFrictionVsSlipGraph[][] }
+            // PxReal mFrictionVsSlipGraph[3][2];
+            PxU32 mType;
+            PxReal getRecipLongitudinalStiffnessPerUnitGravity();
+            PxReal getFrictionVsSlipGraphRecipx1Minusx0();
+            PxReal getFrictionVsSlipGraphRecipx2Minusx1();
+    };
+
+    class PxVehicleDifferential4WData {
+        public:
+            PxVehicleDifferential4WData();
+            PxReal mFrontRearSplit;
+            PxReal mFrontLeftRightSplit;
+            PxReal mRearLeftRightSplit;
+            PxReal mCentreBias;
+            PxReal mFrontBias;
+            PxReal mRearBias;
+            PxVehicleDifferential4WData::Enum mType;
+    };
+
+    class PxVehicleAntiRollBarData {
+        public:
+            PxVehicleAntiRollBarData();
+            PxU32 mWheel0;
+            PxU32 mWheel1;
+            PxF32 mStiffness;
+    };
+
+    class PxVehicleTireLoadFilterData {
+        public:
+            PxVehicleTireLoadFilterData();
+            PxReal mMinNormalisedLoad; 
+            PxReal mMinFilteredNormalisedLoad;
+            PxReal mMaxNormalisedLoad;
+            PxReal mMaxFilteredNormalisedLoad;
+            PxReal getDenominator();
+    };
+
+    class PxVehicleEngineData {
+        public:
+            // PxFixedSizeLookupTable<eMAX_NB_ENGINE_TORQUE_CURVE_ENTRIES> mTorqueCurve;
+            PxReal mMOI;
+            PxReal mPeakTorque;
+            PxReal mMaxOmega;
+            PxReal mDampingRateFullThrottle;
+            PxReal mDampingRateZeroThrottleClutchEngaged;
+            PxReal mDampingRateZeroThrottleClutchDisengaged;
+            PxReal getRecipMOI();
+            PxReal getRecipMaxOmega();
+    };
+
+    class PxVehicleGearsData {
+        public:
+            PxVehicleGearsData();
+            //%apply physx::PxReal INPUT[] { PxReal *mRatios }
+            //PxReal mRatios[PxVehicleGearsDataEnum::Enum::eGEARSRATIO_COUNT];
+            PxReal mRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
+            PxReal mFinalRatio;
+            PxU32 mNbRatios;
+            PxReal mSwitchTime;
+    };
+
+    class PxVehicleClutchData {
+        public:
+            PxReal mStrength;
+            PxVehicleClutchAccuracyMode::Enum mAccuracyMode;
+            PxU32 mEstimateIterations;
+    };
+
+    class PxVehicleAckermannGeometryData {
+        public:
+            PxReal mAccuracy;
+            PxReal mFrontWidth;
+            PxReal mRearWidth;
+            PxReal mAxleSeparation;
+    };
+
+    class PxVehicleWheelsSimData {
+        public:
+            static PxVehicleWheelsSimData* allocate(const PxU32 nbWheels);
+	        void setChassisMass(const PxF32 chassisMass);
+        	void free();
+    	    PxVehicleWheelsSimData& operator=(const PxVehicleWheelsSimData& src);
+	        void copy(const PxVehicleWheelsSimData& src, const PxU32 srcWheel, const PxU32 trgWheel);
+	        PxU32 getNbWheels() const {return mNbActiveWheels;}
+	        const PxVehicleSuspensionData& getSuspensionData(const PxU32 id) const;
+	        const PxVehicleWheelData& getWheelData(const PxU32 id) const;
+	        const PxVehicleTireData& getTireData(const PxU32 id) const;
+	        const PxVec3& getSuspTravelDirection(const PxU32 id) const;
+            const PxVec3& getSuspForceAppPointOffset(const PxU32 id) const;
+            const PxVec3& getTireForceAppPointOffset(const PxU32 id) const;
+            const PxVec3& getWheelCentreOffset(const PxU32 id) const;
+            PxI32 getWheelShapeMapping(const PxU32 wheelId) const;
+            const PxFilterData& getSceneQueryFilterData(const PxU32 suspId) const;
+            // PxU32 getNbAntiRollBars() const { return mNbActiveAntiRollBars; }
+            const PxVehicleAntiRollBarData& getAntiRollBarData(const PxU32 antiRollId) const;
+	        // const PxVehicleTireLoadFilterData& getTireLoadFilterData() const { return mNormalisedLoadFilter; }
+	        void setSuspensionData(const PxU32 id, const PxVehicleSuspensionData& susp);
+            void setWheelData(const PxU32 id, const PxVehicleWheelData& wheel);
+            void setTireData(const PxU32 id, const PxVehicleTireData& tire);
+            void setSuspTravelDirection(const PxU32 id, const PxVec3& dir);
+            void setSuspForceAppPointOffset(const PxU32 id, const PxVec3& offset);
+            void setTireForceAppPointOffset(const PxU32 id, const PxVec3& offset);
+            void setWheelCentreOffset(const PxU32 id, const PxVec3& offset);
+            void setWheelShapeMapping(const PxU32 wheelId, const PxI32 shapeId);
+            void setSceneQueryFilterData(const PxU32 suspId, const PxFilterData& sqFilterData);
+            void setTireLoadFilterData(const PxVehicleTireLoadFilterData& tireLoadFilter);
+            PxU32 addAntiRollBarData(const PxVehicleAntiRollBarData& antiRoll);
+            void disableWheel(const PxU32 wheel);
+            void enableWheel(const PxU32 wheel);
+            bool getIsWheelDisabled(const PxU32 wheel) const;
+            void setSubStepCount(const PxReal thresholdLongitudinalSpeed, const PxU32 lowForwardSpeedSubStepCount, const PxU32 highForwardSpeedSubStepCount);
+            void setMinLongSlipDenominator(const PxReal minLongSlipDenominator);
+            /*%extend { PxVehicleWheelsSimFlags::Enum flags; %{
+            physx::PxHeightFieldFlag::Enum physx_PxHeightFieldDesc_flags_get(const physx::PxHeightFieldDesc* desc) { return (physx::PxHeightFieldFlag::Enum)(uint32_t)desc->flags; }
+            void physx_PxHeightFieldDesc_flags_set(physx::PxHeightFieldDesc* desc, physx::PxHeightFieldFlag::Enum flags) { desc->flags.set(flags); }
+            %}}
+            void setFlags(PxVehicleWheelsSimFlags::Enum flags);
+            PxVehicleWheelsSimFlags::Enum getFlags() const;*/
+    protected:
+        virtual ~PxVehicleWheelsSimData();
+    };
+
+    class PxVehicleAutoBoxData {
+        public:
+            PxVehicleAutoBoxData();
+	        PxReal mUpRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
+	        PxReal mDownRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
+	        void setLatency(const PxReal latency);
+            PxReal getLatency() const;
+    };
+
+    class PxVehicleDriveSimData {
+      public:
+        const PxVehicleEngineData& getEngineData() const;
+	    void setEngineData(const PxVehicleEngineData& engine);
+	    const PxVehicleGearsData& getGearsData() const;
+        void setGearsData(const PxVehicleGearsData& gears);
+	    const PxVehicleClutchData& getClutchData() const;
+        void setClutchData(const PxVehicleClutchData& clutch);
+        const PxVehicleAutoBoxData& getAutoBoxData() const;
+	    void setAutoBoxData(const PxVehicleAutoBoxData& autobox);
+    };
+
+    class PxVehicleDriveSimData4W : public PxVehicleDriveSimData {
+        public:
+            PxVehicleDriveSimData4W();
+            const PxVehicleDifferential4WData& getDiffData() const;
+	        const PxVehicleAckermannGeometryData& getAckermannGeometryData() const;
+            void setDiffData(const PxVehicleDifferential4WData& diff);
+	        void setAckermannGeometryData(const PxVehicleAckermannGeometryData& ackermannData);
+    };
+
     class PxPhysics {
     public:
         void release();
@@ -3149,5 +3415,4 @@ namespace physx {
     protected:
         virtual ~PxCooking(){}
     };
-
 }

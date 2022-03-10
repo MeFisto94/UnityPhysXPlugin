@@ -11,6 +11,43 @@
 namespace NVIDIA.PhysX {
 
 public class Native {
+  public static bool PxInitVehicleSDK(PxPhysics physics, PxSerializationRegistry serializationRegistry) {
+    bool ret = NativePINVOKE.PxInitVehicleSDK__SWIG_0(PxPhysics.getCPtr(physics), PxSerializationRegistry.getCPtr(serializationRegistry));
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static bool PxInitVehicleSDK(PxPhysics physics) {
+    bool ret = NativePINVOKE.PxInitVehicleSDK__SWIG_1(PxPhysics.getCPtr(physics));
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static void PxCloseVehicleSDK(PxSerializationRegistry serializationRegistry) {
+    NativePINVOKE.PxCloseVehicleSDK__SWIG_0(PxSerializationRegistry.getCPtr(serializationRegistry));
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void PxCloseVehicleSDK() {
+    NativePINVOKE.PxCloseVehicleSDK__SWIG_1();
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void PxVehicleSetBasisVectors( PxVec3  up,  PxVec3  forward) {
+    NativePINVOKE.PxVehicleSetBasisVectors( up.swigCPtr ,  forward.swigCPtr );
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void PxVehicleSetUpdateMode(PxVehicleUpdateMode vehicleUpdateMode) {
+    NativePINVOKE.PxVehicleSetUpdateMode((int)vehicleUpdateMode);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void PxVehicleComputeSprungMasses(uint numSprungMasses, PxVec3[] sprungMassCoordinates,  PxVec3  centreOfMass, float totalMass, uint gravityDirection, float[] sprungMasses) {
+    NativePINVOKE.PxVehicleComputeSprungMasses(numSprungMasses, sprungMassCoordinates,  centreOfMass.swigCPtr , totalMass, gravityDirection, sprungMasses);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public static readonly int PX_PHYSICS_VERSION_MAJOR = NativePINVOKE.PX_PHYSICS_VERSION_MAJOR_get();
   public static readonly int PX_PHYSICS_VERSION_MINOR = NativePINVOKE.PX_PHYSICS_VERSION_MINOR_get();
   public static readonly int PX_PHYSICS_VERSION_BUGFIX = NativePINVOKE.PX_PHYSICS_VERSION_BUGFIX_get();
