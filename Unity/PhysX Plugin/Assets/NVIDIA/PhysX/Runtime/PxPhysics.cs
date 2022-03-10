@@ -69,6 +69,7 @@ namespace NVIDIA.PhysX.Unity
             var scale = new PX.PxTolerancesScale { length = sm_settings.lengthScale, speed = sm_settings.speedScale };
             sm_physics = sm_foundation.createPhysics(PX.PxVersion.PX_PHYSICS_VERSION, scale, sm_pvd);
             sm_physics.initExtensions(sm_pvd);
+            Native.PxInitVehicleSDK(sm_physics);
 
             int numThreads = sm_settings.cpuThreads < 0 ? SystemInfo.processorCount + sm_settings.cpuThreads + 1
                                                         : sm_settings.cpuThreads;
@@ -107,6 +108,8 @@ namespace NVIDIA.PhysX.Unity
 
             sm_cpuDispatcher?.release();
             sm_cpuDispatcher = null;
+
+            Native.PxCloseVehicleSDK();
 
             sm_physics?.closeExtensions();
             sm_physics?.release();

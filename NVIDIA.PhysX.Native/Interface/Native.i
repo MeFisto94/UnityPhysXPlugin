@@ -2085,6 +2085,14 @@ namespace physx {
         virtual ~PxFoundation();
     };
 
+    class PxSerializationRegistry {
+    protected:
+        virtual ~PxSerializationRegistry();
+    };
+
+    // Vehicles
+    bool PxInitVehicleSDK(PxPhysics& physics, PxSerializationRegistry* serializationRegistry = NULL);
+    void PxCloseVehicleSDK(PxSerializationRegistry* serializationRegistry = NULL);
     class PxPhysics {
     public:
         void release();
