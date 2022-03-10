@@ -39,7 +39,7 @@ include_directories("${CMAKE_CURRENT_LIST_DIR}"
 
 link_directories("$ENV{PHYSX_DIR}/physx/bin/win.x86_64.vc142.mt/$(Configuration)")
 
-set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -namespace NVIDIA.PhysX -nodefaultctor)
+set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -v -namespace NVIDIA.PhysX -nodefaultctor)
 set(CMAKE_SWIG_OUTDIR "${CMAKE_CURRENT_LIST_DIR}/../NVIDIA.PhysX/Wrapper")
 set(SWIG_OUTFILE_DIR "${CMAKE_CURRENT_LIST_DIR}/Wrapper")
 
