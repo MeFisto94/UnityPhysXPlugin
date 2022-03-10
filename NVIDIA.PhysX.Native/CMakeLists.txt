@@ -50,7 +50,8 @@ target_link_libraries(${PROJECT_NAME} PhysXFoundation_static_64
                                       PhysXCommon_static_64
                                       PhysXCooking_static_64
                                       PhysXExtensions_static_64
-                                      PhysXPvdSDK_static_64)
+                                      PhysXPvdSDK_static_64
+                                      PhysXVehicle_static_64)
 
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_CURRENT_LIST_DIR}/../NVIDIA.PhysX/Wrapper")
 

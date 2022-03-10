@@ -32,6 +32,7 @@
 #include <vector>
 
 #include <PxPhysicsAPI.h>
+#include <vehicle/PxVehicleWheels.h>
 
 #include <Helpers/Helpers.h>
 
