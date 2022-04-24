@@ -10,14 +10,134 @@
 
 namespace NVIDIA.PhysX {
 
-public enum PxVehicleDifferential4WData {
-  DIFF_TYPE_LS_4WD,
-  DIFF_TYPE_LS_FRONTWD,
-  DIFF_TYPE_LS_REARWD,
-  DIFF_TYPE_OPEN_4WD,
-  DIFF_TYPE_OPEN_FRONTWD,
-  DIFF_TYPE_OPEN_REARWD,
-  MAX_NB_DIFF_TYPES
+public partial class PxVehicleDifferential4WData {
+  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  protected bool swigCMemOwn;
+
+  internal PxVehicleDifferential4WData(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwn = cMemoryOwn;
+    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+  }
+
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(PxVehicleDifferential4WData obj) {
+    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+  }
+
+  ~PxVehicleDifferential4WData() {
+    destroy();
+  }
+
+  public virtual void destroy() {
+    lock(this) {
+      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
+          NativePINVOKE.delete_PxVehicleDifferential4WData(swigCPtr);
+        }
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+      }
+      global::System.GC.SuppressFinalize(this);
+    }
+  }
+
+  public PxVehicleDifferential4WData() : this(NativePINVOKE.new_PxVehicleDifferential4WData(), true) {
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public float mFrontRearSplit {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mFrontRearSplit_set(swigCPtr, value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      float ret = NativePINVOKE.PxVehicleDifferential4WData_mFrontRearSplit_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public float mFrontLeftRightSplit {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mFrontLeftRightSplit_set(swigCPtr, value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      float ret = NativePINVOKE.PxVehicleDifferential4WData_mFrontLeftRightSplit_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public float mRearLeftRightSplit {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mRearLeftRightSplit_set(swigCPtr, value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      float ret = NativePINVOKE.PxVehicleDifferential4WData_mRearLeftRightSplit_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public float mCentreBias {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mCentreBias_set(swigCPtr, value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      float ret = NativePINVOKE.PxVehicleDifferential4WData_mCentreBias_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public float mFrontBias {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mFrontBias_set(swigCPtr, value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      float ret = NativePINVOKE.PxVehicleDifferential4WData_mFrontBias_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public float mRearBias {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mRearBias_set(swigCPtr, value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      float ret = NativePINVOKE.PxVehicleDifferential4WData_mRearBias_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public PxVehicleDifferential4WData.Enum mType {
+    set {
+      NativePINVOKE.PxVehicleDifferential4WData_mType_set(swigCPtr, (int)value);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      PxVehicleDifferential4WData.Enum ret = (PxVehicleDifferential4WData.Enum)NativePINVOKE.PxVehicleDifferential4WData_mType_get(swigCPtr);
+      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public enum Enum {
+    DIFF_TYPE_LS_4WD,
+    DIFF_TYPE_LS_FRONTWD,
+    DIFF_TYPE_LS_REARWD,
+    DIFF_TYPE_OPEN_4WD,
+    DIFF_TYPE_OPEN_FRONTWD,
+    DIFF_TYPE_OPEN_REARWD,
+    MAX_NB_DIFF_TYPES
+  }
+
 }
 
 }

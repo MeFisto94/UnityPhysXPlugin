@@ -19,6 +19,9 @@ Bin
 # Visual Studio cache directory
 .vs/
 
+# Jetbrains project directory
+.idea/
+
 # Gradle cache directory
 .gradle/
 
@@ -55,3 +58,5 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+swigwin-4.0.2

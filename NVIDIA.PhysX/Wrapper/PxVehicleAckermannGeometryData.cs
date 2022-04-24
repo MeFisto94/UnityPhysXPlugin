@@ -40,6 +40,10 @@ public partial class PxVehicleAckermannGeometryData {
     }
   }
 
+  public PxVehicleAckermannGeometryData() : this(NativePINVOKE.new_PxVehicleAckermannGeometryData(), true) {
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public float mAccuracy {
     set {
       NativePINVOKE.PxVehicleAckermannGeometryData_mAccuracy_set(swigCPtr, value);

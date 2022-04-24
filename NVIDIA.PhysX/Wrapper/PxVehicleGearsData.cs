@@ -44,14 +44,13 @@ public partial class PxVehicleGearsData {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_float mRatios {
+  public float[] mRatios {
     set {
-      NativePINVOKE.PxVehicleGearsData_mRatios_set(swigCPtr, SWIGTYPE_p_float.getCPtr(value));
+      NativePINVOKE.PxVehicleGearsData_mRatios_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = NativePINVOKE.PxVehicleGearsData_mRatios_get(swigCPtr);
-      SWIGTYPE_p_float ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_float(cPtr, false);
+      var ret = NativePINVOKE.PxVehicleGearsData_mRatios_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
@@ -91,6 +90,42 @@ public partial class PxVehicleGearsData {
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
+  }
+
+  public enum Enum {
+    REVERSE = 0,
+    NEUTRAL,
+    FIRST,
+    SECOND,
+    THIRD,
+    FOURTH,
+    FIFTH,
+    SIXTH,
+    SEVENTH,
+    EIGHTH,
+    NINTH,
+    TENTH,
+    ELEVENTH,
+    TWELFTH,
+    THIRTEENTH,
+    FOURTEENTH,
+    FIFTEENTH,
+    SIXTEENTH,
+    SEVENTEENTH,
+    EIGHTEENTH,
+    NINETEENTH,
+    TWENTIETH,
+    TWENTYFIRST,
+    TWENTYSECOND,
+    TWENTYTHIRD,
+    TWENTYFOURTH,
+    TWENTYFIFTH,
+    TWENTYSIXTH,
+    TWENTYSEVENTH,
+    TWENTYEIGHTH,
+    TWENTYNINTH,
+    THIRTIETH,
+    GEARSRATIO_COUNT
   }
 
 }

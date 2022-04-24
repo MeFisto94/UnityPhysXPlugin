@@ -17,7 +17,7 @@ cmake_policy(SET CMP0078 NEW)
 find_package(SWIG REQUIRED)
 include(UseSWIG)
 
-file(GLOB_RECURSE PROJECT_SOURCES RELATIVE "${CMAKE_CURRENT_LIST_DIR}" *.h *.hpp *.c *.cpp *.i *.cxx)
+file(GLOB_RECURSE PROJECT_SOURCES RELATIVE "${CMAKE_CURRENT_LIST_DIR}" *.h *.hpp *.c *.cpp Native.i *.cxx)
 
 foreach(SOURCE IN LISTS PROJECT_SOURCES)
     get_filename_component(SOURCE_PATH "${SOURCE}" PATH)
@@ -25,7 +25,7 @@ foreach(SOURCE IN LISTS PROJECT_SOURCES)
     source_group("${SOURCE_PATH_MSVC}" FILES "${SOURCE}")
 endforeach()
 
-file(GLOB_RECURSE SWIG_SOURCES RELATIVE "${CMAKE_CURRENT_LIST_DIR}" *.i)
+file(GLOB_RECURSE SWIG_SOURCES RELATIVE "${CMAKE_CURRENT_LIST_DIR}" Native.i)
 
 foreach(SOURCE IN LISTS SWIG_SOURCES)
     get_filename_component(SOURCE_PATH "${SOURCE}" PATH)
@@ -39,7 +39,8 @@ include_directories("${CMAKE_CURRENT_LIST_DIR}"
 
 link_directories("$ENV{PHYSX_DIR}/physx/bin/win.x86_64.vc142.mt/$(Configuration)")
 
-set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -v -namespace NVIDIA.PhysX -nodefaultctor)
+# -E -debug-tmsearch. -E seems to only emit the preprocessor and then quit
+set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -c++ -v -namespace NVIDIA.PhysX -nodefaultctor)
 set(CMAKE_SWIG_OUTDIR "${CMAKE_CURRENT_LIST_DIR}/../NVIDIA.PhysX/Wrapper")
 set(SWIG_OUTFILE_DIR "${CMAKE_CURRENT_LIST_DIR}/Wrapper")
 

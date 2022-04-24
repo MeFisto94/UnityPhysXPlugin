@@ -89,5 +89,23 @@ private:
     void swig_init_callbacks();
 };
 
+class SwigDirector_PxQueryFilterCallback : public physx::PxQueryFilterCallback, public Swig::Director {
+
+public:
+    SwigDirector_PxQueryFilterCallback();
+    virtual physx::PxQueryHitType::Enum preFilter(physx::PxFilterData const &filterData, physx::PxShape const *shape, physx::PxRigidActor const *actor, physx::PxHitFlags queryFlags);
+    virtual physx::PxQueryHitType::Enum postFilter(physx::PxFilterData const &filterData, physx::PxQueryHit const &hit);
+    virtual ~SwigDirector_PxQueryFilterCallback();
+
+    typedef int (SWIGSTDCALL* SWIG_Callback0_t)( physx::PxFilterData* , void *, void *, void *);
+    typedef int (SWIGSTDCALL* SWIG_Callback1_t)( physx::PxFilterData* , void *);
+    void swig_connect_director(SWIG_Callback0_t callbackpreFilter, SWIG_Callback1_t callbackpostFilter);
+
+private:
+    SWIG_Callback0_t swig_callbackpreFilter;
+    SWIG_Callback1_t swig_callbackpostFilter;
+    void swig_init_callbacks();
+};
+
 
 #endif

@@ -102,7 +102,7 @@ public partial class PxScene {
   }
 
   public void addActors(PxActor[] actors, uint nbActors) {
-    NativePINVOKE.PxScene_addActors__SWIG_0(swigCPtr, global::System.Array.ConvertAll(actors, x => PxActor.getCPtr(x)), nbActors);
+    NativePINVOKE.PxScene_addActors__SWIG_0(swigCPtr, global::System.Array.ConvertAll(actors, x => PxActor.getCPtr(x).Handle /* Mono Bug Workaround */), nbActors);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -122,12 +122,12 @@ public partial class PxScene {
   }
 
   public void removeActors(PxActor[] actors, uint nbActors, bool wakeOnLostTouch) {
-    NativePINVOKE.PxScene_removeActors__SWIG_0(swigCPtr, global::System.Array.ConvertAll(actors, x => PxActor.getCPtr(x)), nbActors, wakeOnLostTouch);
+    NativePINVOKE.PxScene_removeActors__SWIG_0(swigCPtr, global::System.Array.ConvertAll(actors, x => PxActor.getCPtr(x).Handle /* Mono Bug Workaround */), nbActors, wakeOnLostTouch);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void removeActors(PxActor[] actors, uint nbActors) {
-    NativePINVOKE.PxScene_removeActors__SWIG_1(swigCPtr, global::System.Array.ConvertAll(actors, x => PxActor.getCPtr(x)), nbActors);
+    NativePINVOKE.PxScene_removeActors__SWIG_1(swigCPtr, global::System.Array.ConvertAll(actors, x => PxActor.getCPtr(x).Handle /* Mono Bug Workaround */), nbActors);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -317,7 +317,7 @@ public partial class PxScene {
   }
 
   public void resetFiltering(PxRigidActor actor, PxShape[] shapes, uint shapeCount) {
-    NativePINVOKE.PxScene_resetFiltering__SWIG_1(swigCPtr, PxRigidActor.getCPtr(actor), global::System.Array.ConvertAll(shapes, x => PxShape.getCPtr(x)), shapeCount);
+    NativePINVOKE.PxScene_resetFiltering__SWIG_1(swigCPtr, PxRigidActor.getCPtr(actor), global::System.Array.ConvertAll(shapes, x => PxShape.getCPtr(x).Handle /* Mono Bug Workaround */), shapeCount);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -750,6 +750,13 @@ public partial class PxScene {
   public PxPvdSceneClient getScenePvdClient() {
     global::System.IntPtr cPtr = NativePINVOKE.PxScene_getScenePvdClient(swigCPtr);
     PxPvdSceneClient ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxPvdSceneClient(cPtr, false);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public virtual PxBatchQuery createBatchQuery(PxBatchQueryDesc desc) {
+    global::System.IntPtr cPtr = NativePINVOKE.PxScene_createBatchQuery(swigCPtr, PxBatchQueryDesc.getCPtr(desc));
+    PxBatchQuery ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxBatchQuery(cPtr, false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

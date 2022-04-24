@@ -53,6 +53,7 @@ namespace NVIDIA.PhysX.Unity
 
             if (sm_settings.pvdConnect)
             {
+                Debug.Log("Trying to create to the PVD");
                 sm_pvd = sm_foundation.createPvd();
                 sm_pvdTransport = PX.PxPvdTransport.createDefaultSocketTransport(sm_settings.pvdHost, sm_settings.pvdPort, (int)(sm_settings.pvdTimeout * 1000));
                 if (!sm_pvd.connect(sm_pvdTransport, sm_settings.pvdFlags))
@@ -91,6 +92,8 @@ namespace NVIDIA.PhysX.Unity
             sm_noMaterial = sm_physics.createMaterial(0.5f, 0.5f, 0);
 
             sm_cooking = sm_foundation.createCooking(PxVersion.PX_PHYSICS_VERSION, new PxCookingParams(sm_physics.getTolerancesScale()));
+
+            //
 
             //Debug.Log("PxPhysics created");
         }

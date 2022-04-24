@@ -39,8 +39,8 @@ public partial class PxVehicleDriveSimData4W : PxVehicleDriveSimData {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_physx__PxVehicleDifferential4WData getDiffData() {
-    SWIGTYPE_p_physx__PxVehicleDifferential4WData ret = new SWIGTYPE_p_physx__PxVehicleDifferential4WData(NativePINVOKE.PxVehicleDriveSimData4W_getDiffData(swigCPtr), false);
+  public PxVehicleDifferential4WData getDiffData() {
+    PxVehicleDifferential4WData ret = new PxVehicleDifferential4WData(NativePINVOKE.PxVehicleDriveSimData4W_getDiffData(swigCPtr), true);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -51,8 +51,8 @@ public partial class PxVehicleDriveSimData4W : PxVehicleDriveSimData {
     return ret;
   }
 
-  public void setDiffData(SWIGTYPE_p_physx__PxVehicleDifferential4WData diff) {
-    NativePINVOKE.PxVehicleDriveSimData4W_setDiffData(swigCPtr, SWIGTYPE_p_physx__PxVehicleDifferential4WData.getCPtr(diff));
+  public void setDiffData(PxVehicleDifferential4WData diff) {
+    NativePINVOKE.PxVehicleDriveSimData4W_setDiffData(swigCPtr, PxVehicleDifferential4WData.getCPtr(diff));
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 

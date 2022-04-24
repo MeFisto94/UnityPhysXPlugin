@@ -218,8 +218,10 @@
 
 %typemap(ctype)   CTYPE* INPUT[] "CTYPE**"
 %typemap(cstype)  CTYPE* INPUT[] "CSTYPE[]"
-%typemap(imtype)  CTYPE* INPUT[] "global::System.Runtime.InteropServices.HandleRef[]"
-%typemap(csin)    CTYPE* INPUT[] "global::System.Array.ConvertAll($csinput, x => CSTYPE.getCPtr(x))"
+//%typemap(imtype)  CTYPE* INPUT[] "global::System.Runtime.InteropServices.HandleRef[]"
+%typemap(imtype)  CTYPE* INPUT[] "global::System.IntPtr[]"
+// TODO: The following is not a full bug workaround, we'd need to cache the CPtrs I think.
+%typemap(csin)    CTYPE* INPUT[] "global::System.Array.ConvertAll($csinput, x => CSTYPE.getCPtr(x).Handle /* Mono Bug Workaround */)"
 
 %typemap(in)      CTYPE* INPUT[] "$1 = $input;"
 %typemap(freearg) CTYPE* INPUT[] ""
@@ -246,6 +248,17 @@
 %define SIMPLIFY_ENUM(NAME, ITEMS...)
     %ignore NAME;
     %rename(NAME) NAME##_swigEnum;
+    enum struct NAME##_swigEnum {
+        ITEMS
+    };
+    struct NAME { using Enum = NAME##_swigEnum; };
+%enddef
+
+// define the same, but as uint
+%define SIMPLIFY_ENUM_UINT(NAME, ITEMS...)
+    %ignore NAME;
+    %rename(NAME) NAME##_swigEnum;
+    %typemap(csbase) NAME##_swigEnum "uint"
     enum struct NAME##_swigEnum {
         ITEMS
     };

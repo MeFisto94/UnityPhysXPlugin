@@ -40,6 +40,10 @@ public partial class PxVehicleEngineData {
     }
   }
 
+  public PxVehicleEngineData() : this(NativePINVOKE.new_PxVehicleEngineData(), true) {
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public float mMOI {
     set {
       NativePINVOKE.PxVehicleEngineData_mMOI_set(swigCPtr, value);

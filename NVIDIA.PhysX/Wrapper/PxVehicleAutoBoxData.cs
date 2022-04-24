@@ -44,27 +44,25 @@ public partial class PxVehicleAutoBoxData {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_float mUpRatios {
+  public float[] mUpRatios {
     set {
-      NativePINVOKE.PxVehicleAutoBoxData_mUpRatios_set(swigCPtr, SWIGTYPE_p_float.getCPtr(value));
+      NativePINVOKE.PxVehicleAutoBoxData_mUpRatios_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = NativePINVOKE.PxVehicleAutoBoxData_mUpRatios_get(swigCPtr);
-      SWIGTYPE_p_float ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_float(cPtr, false);
+      var ret = NativePINVOKE.PxVehicleAutoBoxData_mUpRatios_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_float mDownRatios {
+  public float[] mDownRatios {
     set {
-      NativePINVOKE.PxVehicleAutoBoxData_mDownRatios_set(swigCPtr, SWIGTYPE_p_float.getCPtr(value));
+      NativePINVOKE.PxVehicleAutoBoxData_mDownRatios_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = NativePINVOKE.PxVehicleAutoBoxData_mDownRatios_get(swigCPtr);
-      SWIGTYPE_p_float ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_float(cPtr, false);
+      var ret = NativePINVOKE.PxVehicleAutoBoxData_mDownRatios_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

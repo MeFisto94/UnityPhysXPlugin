@@ -349,7 +349,7 @@ public partial class PxRigidBody : PxRigidActor {
   }
 
   public static  PxMassProperties  computeMassPropertiesFromShapes(PxShape[] shapes, int shapeCount) {
-        global::System.IntPtr ptr = NativePINVOKE.PxRigidBody_computeMassPropertiesFromShapes(global::System.Array.ConvertAll(shapes, x => PxShape.getCPtr(x)), shapeCount);
+        global::System.IntPtr ptr = NativePINVOKE.PxRigidBody_computeMassPropertiesFromShapes(global::System.Array.ConvertAll(shapes, x => PxShape.getCPtr(x).Handle /* Mono Bug Workaround */), shapeCount);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
         //PxMassProperties ret = global::System.Runtime.InteropServices.Marshal.PtrToStructure<PxMassProperties>(ptr);
         PxMassProperties ret; unsafe { ret = *(PxMassProperties*)ptr; }

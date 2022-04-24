@@ -99,14 +99,14 @@ public partial class PxRigidActor : PxActor {
   }
 
   public PxShape createExclusiveShape(PxGeometry geometry, PxMaterial[] materials, ushort materialCount, PxShapeFlag shapeFlags) {
-    global::System.IntPtr cPtr = NativePINVOKE.PxRigidActor_createExclusiveShape__SWIG_0(swigCPtr, PxGeometry.getCPtr(geometry), global::System.Array.ConvertAll(materials, x => PxMaterial.getCPtr(x)), materialCount, (int)shapeFlags);
+    global::System.IntPtr cPtr = NativePINVOKE.PxRigidActor_createExclusiveShape__SWIG_0(swigCPtr, PxGeometry.getCPtr(geometry), global::System.Array.ConvertAll(materials, x => PxMaterial.getCPtr(x).Handle /* Mono Bug Workaround */), materialCount, (int)shapeFlags);
     PxShape ret = (cPtr == global::System.IntPtr.Zero) ? null : PxShape.getWrapper(cPtr, false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public PxShape createExclusiveShape(PxGeometry geometry, PxMaterial[] materials, ushort materialCount) {
-    global::System.IntPtr cPtr = NativePINVOKE.PxRigidActor_createExclusiveShape__SWIG_1(swigCPtr, PxGeometry.getCPtr(geometry), global::System.Array.ConvertAll(materials, x => PxMaterial.getCPtr(x)), materialCount);
+    global::System.IntPtr cPtr = NativePINVOKE.PxRigidActor_createExclusiveShape__SWIG_1(swigCPtr, PxGeometry.getCPtr(geometry), global::System.Array.ConvertAll(materials, x => PxMaterial.getCPtr(x).Handle /* Mono Bug Workaround */), materialCount);
     PxShape ret = (cPtr == global::System.IntPtr.Zero) ? null : PxShape.getWrapper(cPtr, false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;

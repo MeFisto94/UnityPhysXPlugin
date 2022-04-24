@@ -105,7 +105,7 @@ public partial class PxShape : PxBase {
     }
 
   public void setMaterials(PxMaterial[] materials, ushort materialCount) {
-    NativePINVOKE.PxShape_setMaterials(swigCPtr, global::System.Array.ConvertAll(materials, x => PxMaterial.getCPtr(x)), materialCount);
+    NativePINVOKE.PxShape_setMaterials(swigCPtr, global::System.Array.ConvertAll(materials, x => PxMaterial.getCPtr(x).Handle /* Mono Bug Workaround */), materialCount);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 

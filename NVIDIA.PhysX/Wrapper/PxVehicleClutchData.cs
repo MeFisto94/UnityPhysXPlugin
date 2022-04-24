@@ -40,6 +40,10 @@ public partial class PxVehicleClutchData {
     }
   }
 
+  public PxVehicleClutchData() : this(NativePINVOKE.new_PxVehicleClutchData(), true) {
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public float mStrength {
     set {
       NativePINVOKE.PxVehicleClutchData_mStrength_set(swigCPtr, value);
