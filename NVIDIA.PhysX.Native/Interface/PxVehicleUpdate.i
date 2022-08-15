@@ -12,6 +12,7 @@ CSHARP_OBJECT_ARRAY(physx::PxVehicleWheelConcurrentUpdateData, PxVehicleWheelCon
 %apply bool INPUT[] { const bool* vehiclesToRaycast }
 %typemap (cstype) PxRaycastQueryResult* "System.Runtime.InteropServices.HandleRef"
 %typemap (imtype) PxRaycastQueryResult* "System.Runtime.InteropServices.HandleRef"
+%typemap (csin) PxRaycastQueryResult* "$csinput" // Don't use the getCPtr() for HandleRefs
 %typemap (csout, excode=SWIGEXCODE) PxRaycastQueryResult* {
     var ret = $imcall;$excode
     return ret;
@@ -262,6 +263,7 @@ private:
 //%apply physx::PxVehicleWheelQueryResult OUTPUT[] { PxVehicleWheelQueryResult* vehicleWheelQueryResults }
 %typemap (cstype) PxVehicleWheelQueryResult* "System.Runtime.InteropServices.HandleRef"
 %typemap (imtype) PxVehicleWheelQueryResult* "System.Runtime.InteropServices.HandleRef"
+%typemap (csin) PxVehicleWheelQueryResult* "$csinput" // pass the HandleRef directly without CPtr
 %typemap (csout, excode=SWIGEXCODE) PxVehicleWheelQueryResult* {
     var ret = $imcall;$excode
     return ret;
@@ -274,4 +276,13 @@ void PxVehicleUpdates(
     const PxU32 nbVehicles, PxVehicleWheels** vehicles, PxVehicleWheelQueryResult* vehicleWheelQueryResults,
     PxVehicleConcurrentUpdateData* vehicleConcurrentUpdates = NULL);
 
+%include PxVehicleUtilTelemetry.i
 
+void PxVehicleUpdateSingleVehicleAndStoreTelemetryData
+		(const PxReal timestep, const PxVec3& gravity, 
+		 const PxVehicleDrivableSurfaceToTireFrictionPairs& vehicleDrivableSurfaceToTireFrictionPairs, 
+		 PxVehicleWheels* focusVehicle, PxVehicleWheelQueryResult* vehicleWheelQueryResults, 
+		 PxVehicleTelemetryData& telemetryData,
+		 PxVehicleConcurrentUpdateData* vehicleConcurrentUpdates = NULL);
+
+void PxVehicleShiftOrigin(const PxVec3& shift, const PxU32 nbVehicles, PxVehicleWheels** vehicles);

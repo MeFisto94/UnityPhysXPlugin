@@ -212,6 +212,22 @@
 
 %enddef
 
+
+// The original byref relied on ref'ing the first element of the array and manually adding a partial override
+// we just try to use ref on the array and if not, we can still ref arr[0] inside the wrapper.
+%define CSHARP_BYREF_ARRAY2(CTYPE, CSTYPE)
+
+%typemap(ctype)   CTYPE BYREF[] "CTYPE*"
+%typemap(cstype)  CTYPE BYREF[] "ref CSTYPE[]"
+%typemap(imtype)  CTYPE BYREF[] "ref CSTYPE[]"
+%typemap(csin)    CTYPE BYREF[] "ref $csinput"
+
+%typemap(in)      CTYPE BYREF[] "$1 = $input;"
+%typemap(freearg) CTYPE BYREF[] ""
+%typemap(argout)  CTYPE BYREF[] ""
+
+%enddef
+
 // Object array
 
 %define CSHARP_OBJECT_ARRAY(CTYPE, CSTYPE)

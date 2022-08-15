@@ -238,4 +238,14 @@ namespace physx
         virtual PxFilterFlags pairFound(PxU32 pairID, PxFilterObjectAttributes attributes0, PxFilterData filterData0, const PxActor* a0, const PxShape* s0, PxFilterObjectAttributes attributes1, PxFilterData filterData1, const PxActor* a1, const PxShape* s1, PxPairFlags& _pairFlags);
         static PxUnityCollisionFiltering instance;
     };
+
+    class VehicleCollisionFiltering : public wrap::PxSimulationFilterCallback {
+    public:
+        static VehicleCollisionFiltering instance;
+    };
+
+    PxFilterFlags VehicleFilterShader
+            (PxFilterObjectAttributes attributes0, PxFilterData filterData0,
+             PxFilterObjectAttributes attributes1, PxFilterData filterData1,
+             PxPairFlags& pairFlags, const void* constantBlock, PxU32 constantBlockSize);
 }

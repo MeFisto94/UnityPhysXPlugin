@@ -2093,6 +2093,14 @@ namespace physx {
         %}}
     };
 
+    class VehicleCollisionFiltering: public wrap::PxSimulationFilterCallback {
+    public:
+        static VehicleCollisionFiltering const instance;
+        %extend { static physx::PxSimulationFilterShader* const function; %{
+            physx::PxSimulationFilterShader* physx_VehicleCollisionFiltering_function_get() { thread_local physx::PxSimulationFilterShader s; s = physx::VehicleFilterShader; return &s; }
+        %}}
+    };
+
     //REFERENCE_SEMANTIC // =========================================================================
 
     class PxFoundation {
@@ -3064,7 +3072,7 @@ namespace physx {
     class PxPvd : public physx::PxProfilerCallback {
     public:
         //bool connect(PxPvdTransport& transport, PxPvdInstrumentationFlags flags);
-        %extend { bool connect(PxPvdTransport& transport, PxPvdInstrumentationFlag::Enum flags) { return self->connect(transport, physx::PxPvdInstrumentationFlag::ePROFILE/*flags*/); }}
+        %extend { bool connect(PxPvdTransport& transport, PxPvdInstrumentationFlag::Enum flags) { return self->connect(transport, flags); }}
         void disconnect();
         bool isConnected(bool useCachedStatus = true);
         PxPvdTransport* getTransport();
@@ -3414,9 +3422,9 @@ namespace physx {
         } %}
         public:
             PxVehicleAutoBoxData();
-            %apply PxReal OUTPUT[] { PxReal mUpRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT] }
+            %apply float OUTPUT[] { PxReal mUpRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT] }
 	        PxReal mUpRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
-            %apply PxReal INOUT[] { PxReal mDownRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT] }
+            %apply float INOUT[] { PxReal mDownRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT] }
 	        PxReal mDownRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
 	        void setLatency(const PxReal latency);
             PxReal getLatency() const;

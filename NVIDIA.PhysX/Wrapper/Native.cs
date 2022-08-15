@@ -78,6 +78,21 @@ public class Native {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public static void PxVehicleUpdateSingleVehicleAndStoreTelemetryData(float timestep,  PxVec3  gravity, PxVehicleDrivableSurfaceToTireFrictionPairs vehicleDrivableSurfaceToTireFrictionPairs, PxVehicleWheels focusVehicle, System.Runtime.InteropServices.HandleRef vehicleWheelQueryResults, PxVehicleTelemetryData telemetryData, PxVehicleConcurrentUpdateData[] vehicleConcurrentUpdates) {
+    NativePINVOKE.PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_0(timestep,  gravity.swigCPtr , PxVehicleDrivableSurfaceToTireFrictionPairs.getCPtr(vehicleDrivableSurfaceToTireFrictionPairs), PxVehicleWheels.getCPtr(focusVehicle), vehicleWheelQueryResults, PxVehicleTelemetryData.getCPtr(telemetryData), vehicleConcurrentUpdates);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void PxVehicleUpdateSingleVehicleAndStoreTelemetryData(float timestep,  PxVec3  gravity, PxVehicleDrivableSurfaceToTireFrictionPairs vehicleDrivableSurfaceToTireFrictionPairs, PxVehicleWheels focusVehicle, System.Runtime.InteropServices.HandleRef vehicleWheelQueryResults, PxVehicleTelemetryData telemetryData) {
+    NativePINVOKE.PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_1(timestep,  gravity.swigCPtr , PxVehicleDrivableSurfaceToTireFrictionPairs.getCPtr(vehicleDrivableSurfaceToTireFrictionPairs), PxVehicleWheels.getCPtr(focusVehicle), vehicleWheelQueryResults, PxVehicleTelemetryData.getCPtr(telemetryData));
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public static void PxVehicleShiftOrigin( PxVec3  shift, uint nbVehicles, PxVehicleWheels[] vehicles) {
+    NativePINVOKE.PxVehicleShiftOrigin( shift.swigCPtr , nbVehicles, global::System.Array.ConvertAll(vehicles, x => PxVehicleWheels.getCPtr(x).Handle /* Mono Bug Workaround */));
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public static readonly int PX_PHYSICS_VERSION_MAJOR = NativePINVOKE.PX_PHYSICS_VERSION_MAJOR_get();
   public static readonly int PX_PHYSICS_VERSION_MINOR = NativePINVOKE.PX_PHYSICS_VERSION_MINOR_get();
   public static readonly int PX_PHYSICS_VERSION_BUGFIX = NativePINVOKE.PX_PHYSICS_VERSION_BUGFIX_get();
