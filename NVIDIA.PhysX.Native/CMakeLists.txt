@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS_PROFILE "${CMAKE_CXX_FLAGS_PROFILE} /MT")
 set(CMAKE_CXX_FLAGS_CHECKED "${CMAKE_CXX_FLAGS_CHECKED} /MT")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 
-add_definitions(-DPX_PHYSX_STATIC_LIB)
+add_definitions(-DPX_PHYSX_STATIC_LIB -DPX_PHYSX_CHARACTER_STATIC_LIB)
 
 cmake_policy(SET CMP0086 NEW)
 cmake_policy(SET CMP0078 NEW)
@@ -47,6 +47,7 @@ set(SWIG_OUTFILE_DIR "${CMAKE_CURRENT_LIST_DIR}/Wrapper")
 swig_add_library(${PROJECT_NAME} TYPE SHARED LANGUAGE csharp SOURCES ${PROJECT_SOURCES})
 
 target_link_libraries(${PROJECT_NAME} PhysXFoundation_static_64
+                                      PhysXCharacterKinematic_static_64
                                       PhysX_static_64
                                       PhysXCommon_static_64
                                       PhysXCooking_static_64

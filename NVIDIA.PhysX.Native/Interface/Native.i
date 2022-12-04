@@ -456,7 +456,7 @@ namespace physx {
 
     SIMPLIFY_FLAGS_ENUM(PxMeshPreprocessingFlag,
         eWELD_VERTICES = 1 << 0, 
-        eDISABLE_CLEAN_MESH = 1 << 1, 
+        eDISABLE_CLEAN_MESH = 1 << 1,
         eDISABLE_ACTIVE_EDGES_PRECOMPUTE = 1 << 2,
         eFORCE_32BIT_INDICES = 1 << 3
     );
@@ -3249,7 +3249,7 @@ namespace physx {
 		        eDIFF_TYPE_LS_4WD,			//limited slip differential for car with 4 driven wheels
 		        eDIFF_TYPE_LS_FRONTWD,		//limited slip differential for car with front-wheel drive
 		        eDIFF_TYPE_LS_REARWD,		//limited slip differential for car with rear-wheel drive
-		        eDIFF_TYPE_OPEN_4WD,		//open differential for car with 4 driven wheels 
+		        eDIFF_TYPE_OPEN_4WD,		//open differential for car with 4 driven wheels
 		        eDIFF_TYPE_OPEN_FRONTWD,	//open differential for car with front-wheel drive
 		        eDIFF_TYPE_OPEN_REARWD,		//open differential for car with rear-wheel drive
 		        eMAX_NB_DIFF_TYPES
@@ -3276,7 +3276,7 @@ namespace physx {
     class PxVehicleTireLoadFilterData {
         public:
             PxVehicleTireLoadFilterData();
-            PxReal mMinNormalisedLoad; 
+            PxReal mMinNormalisedLoad;
             PxReal mMinFilteredNormalisedLoad;
             PxReal mMaxNormalisedLoad;
             PxReal mMaxFilteredNormalisedLoad;
@@ -3529,7 +3529,7 @@ namespace physx {
 		        mUseAutoGears = !mUseAutoGears;
 	        }
 
-            void setCurrentGear(PxU32 currentGear) 
+            void setCurrentGear(PxU32 currentGear)
 	        {
 		        mCurrentGear = currentGear;
 	        }
@@ -3570,7 +3570,7 @@ namespace physx {
 		        return mEnginespeed;
 	        }
 
-	        
+
             PxReal getGearSwitchTime() const
 	        {
 		        return mGearSwitchTime;
@@ -3676,6 +3676,14 @@ namespace physx {
     %include PxVehicleUtilControl.i
     %include PxBatchQuery.i
     %include PxVehicleUpdate.i
+
+    %include PxExtended.i
+    %include PxControllerObstacles.i
+    %include PxController.i
+    %include PxControllerManager.i
+    %include PxCapsuleController.i
 }
 
 %include SnippetVehicle.i
+
+physx::PxControllerManager* PxCreateControllerManager(physx::PxScene& scene, bool lockingEnabled = false);

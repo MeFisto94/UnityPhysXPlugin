@@ -677,6 +677,7 @@ SWIGINTERN physx::PxPvdInstrumentationFlag::Enum physx_PxPvd_getInstrumentationF
 SWIGINTERN physx::PxDefaultCpuDispatcher *physx_PxCpuDispatcher_createDefault__SWIG_0(physx::PxU32 numThreads,physx::PxU32 affinityMasks[]=NULL){ return physx::PxDefaultCpuDispatcherCreate(numThreads, affinityMasks); }
 SWIGINTERN physx::PxShape *physx_PxRigidActorExt_createExclusiveShape__SWIG_0(physx::PxRigidActor &actor,physx::PxGeometry const &geometry,physx::PxMaterial const &material,physx::PxShapeFlag::Enum shapeFlags=(physx::PxShapeFlag::Enum) (uint32_t) (physx::PxShapeFlag::eVISUALIZATION|physx::PxShapeFlag::eSCENE_QUERY_SHAPE|physx::PxShapeFlag::eSIMULATION_SHAPE)){ return physx::PxRigidActorExt::createExclusiveShape(actor, geometry, material, shapeFlags); }
 SWIGINTERN physx::PxShape *physx_PxRigidActorExt_createExclusiveShape__SWIG_2(physx::PxRigidActor &actor,physx::PxGeometry const &geometry,physx::PxMaterial *const *materials,physx::PxU16 materialCount,physx::PxShapeFlag::Enum shapeFlags=(physx::PxShapeFlag::Enum) (uint32_t) (physx::PxShapeFlag::eVISUALIZATION|physx::PxShapeFlag::eSCENE_QUERY_SHAPE|physx::PxShapeFlag::eSIMULATION_SHAPE)){ return physx::PxRigidActorExt::createExclusiveShape(actor, geometry, materials, materialCount, shapeFlags); }
+SWIGINTERN physx::PxControllerCollisionFlag::Enum physx_PxController_move__SWIG_0(physx::PxController *self,physx::PxVec3 const &disp,physx::PxF32 minDist,physx::PxF32 elapsedTime,physx::PxControllerFilters const &filters,physx::PxObstacleContext const *obstacles=NULL){ return (physx::PxControllerCollisionFlag::Enum)(uint32_t)self->move(disp, minDist, elapsedTime, filters, obstacles); }
 
 namespace snippetvehicle
 {
@@ -47619,6 +47620,2456 @@ SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleShiftOrigin___( physx::
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxExtendedVec3__SWIG_0___() {
+  void * jresult ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxExtendedVec3 *)new physx::PxExtendedVec3();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxExtendedVec3__SWIG_1___(double jarg1, double jarg2, double jarg3) {
+  void * jresult ;
+  physx::PxExtended arg1 ;
+  physx::PxExtended arg2 ;
+  physx::PxExtended arg3 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxExtended)jarg1; 
+  arg2 = (physx::PxExtended)jarg2; 
+  arg3 = (physx::PxExtended)jarg3; 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *)new physx::PxExtendedVec3(arg1,arg2,arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_isZero___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  bool result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      result = (bool)((physx::PxExtendedVec3 const *)arg1)->isZero();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_dot___(void * jarg1,  physx::PxVec3*  jarg2) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = jarg2; 
+  {
+    try {
+      result = (physx::PxExtended)((physx::PxExtendedVec3 const *)arg1)->dot((physx::PxVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_distanceSquared___(void * jarg1, void * jarg2) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxExtended)((physx::PxExtendedVec3 const *)arg1)->distanceSquared((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_magnitudeSquared___(void * jarg1) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      result = (physx::PxExtended)((physx::PxExtendedVec3 const *)arg1)->magnitudeSquared();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_magnitude___(void * jarg1) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      result = (physx::PxExtended)((physx::PxExtendedVec3 const *)arg1)->magnitude();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_normalize___(void * jarg1) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      result = (physx::PxExtended)(arg1)->normalize();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_isFinite___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  bool result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      result = (bool)((physx::PxExtendedVec3 const *)arg1)->isFinite();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_maximum___(void * jarg1, void * jarg2) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->maximum((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_minimum___(void * jarg1, void * jarg2) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->minimum((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_set___(void * jarg1, double jarg2, double jarg3, double jarg4) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended arg2 ;
+  physx::PxExtended arg3 ;
+  physx::PxExtended arg4 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtended)jarg2; 
+  arg3 = (physx::PxExtended)jarg3; 
+  arg4 = (physx::PxExtended)jarg4; 
+  {
+    try {
+      (arg1)->set(arg2,arg3,arg4);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_setPlusInfinity___(void * jarg1) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      (arg1)->setPlusInfinity();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_setMinusInfinity___(void * jarg1) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      (arg1)->setMinusInfinity();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_0___(void * jarg1, void * jarg2,  physx::PxVec3*  jarg3) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return ;
+  } 
+  arg3 = jarg3; 
+  {
+    try {
+      (arg1)->cross((physx::PxExtendedVec3 const &)*arg2,(physx::PxVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_1___(void * jarg1, void * jarg2, void * jarg3) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return ;
+  } 
+  arg3 = (physx::PxExtendedVec3 *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->cross((physx::PxExtendedVec3 const &)*arg2,(physx::PxExtendedVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_2___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = ((physx::PxExtendedVec3 const *)arg1)->cross((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = new physx::PxExtendedVec3((const physx::PxExtendedVec3 &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_3___(void * jarg1,  physx::PxVec3*  jarg2, void * jarg3) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 *arg3 = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = jarg2; 
+  arg3 = (physx::PxExtendedVec3 *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return ;
+  } 
+  {
+    try {
+      (arg1)->cross((physx::PxVec3 const &)*arg2,(physx::PxExtendedVec3 const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract__SWIG_0___(void * jarg1) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      result = ((physx::PxExtendedVec3 const *)arg1)->operator -();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = new physx::PxExtendedVec3((const physx::PxExtendedVec3 &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___add_assign__SWIG_0___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *) &(arg1)->operator +=((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract_assign__SWIG_0___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *) &(arg1)->operator -=((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___add_assign__SWIG_1___(void * jarg1,  physx::PxVec3*  jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = jarg2; 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *) &(arg1)->operator +=((physx::PxVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract_assign__SWIG_1___(void * jarg1,  physx::PxVec3*  jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = jarg2; 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *) &(arg1)->operator -=((physx::PxVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___multiply_assign___(void * jarg1, float jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxReal *arg2 = 0 ;
+  physx::PxReal temp2 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  temp2 = (physx::PxReal)jarg2; 
+  arg2 = &temp2; 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *) &(arg1)->operator *=((physx::PxReal const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___add___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  physx::PxExtendedVec3 result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = ((physx::PxExtendedVec3 const *)arg1)->operator +((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = new physx::PxExtendedVec3((const physx::PxExtendedVec3 &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT physx::PxVec3* SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract__SWIG_1___(void * jarg1, void * jarg2) {
+  physx::PxVec3* jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  SwigValueWrapper< physx::PxVec3 > result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return NULL;
+  } 
+  {
+    try {
+      result = ((physx::PxExtendedVec3 const *)arg1)->operator -((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  
+  thread_local physx::PxVec3 out_temp;
+  out_temp = *(physx::PxVec3*)&result; 
+  jresult = &out_temp; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_get___(void * jarg1, int jarg2) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  int arg2 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (int)jarg2; 
+  {
+    try {
+      result = (physx::PxExtended)((physx::PxExtendedVec3 const *)arg1)->operator [](arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_x_set___(void * jarg1, double jarg2) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended arg2 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtended)jarg2; 
+  if (arg1) (arg1)->x = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_x_get___(void * jarg1) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  result = (physx::PxExtended) ((arg1)->x);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_y_set___(void * jarg1, double jarg2) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended arg2 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtended)jarg2; 
+  if (arg1) (arg1)->y = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_y_get___(void * jarg1) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  result = (physx::PxExtended) ((arg1)->y);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_z_set___(void * jarg1, double jarg2) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended arg2 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  arg2 = (physx::PxExtended)jarg2; 
+  if (arg1) (arg1)->z = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_NVIDIAfPhysX_PxExtendedVec3_z_get___(void * jarg1) {
+  double jresult ;
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  physx::PxExtended result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  result = (physx::PxExtended) ((arg1)->z);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxExtendedVec3___(void * jarg1) {
+  physx::PxExtendedVec3 *arg1 = (physx::PxExtendedVec3 *) 0 ;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT physx::PxVec3* SWIGSTDCALL CSharp_NVIDIAfPhysX_toVec3___(void * jarg1) {
+  physx::PxVec3* jresult ;
+  physx::PxExtendedVec3 *arg1 = 0 ;
+  SwigValueWrapper< physx::PxVec3 > result;
+  
+  arg1 = (physx::PxExtendedVec3 *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return NULL;
+  } 
+  {
+    try {
+      result = physx::toVec3((physx::PxExtendedVec3 const &)*arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  
+  thread_local physx::PxVec3 out_temp;
+  out_temp = *(physx::PxVec3*)&result; 
+  jresult = &out_temp; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxObstacleContext___(void * jarg1) {
+  physx::PxObstacleContext *arg1 = (physx::PxObstacleContext *) 0 ;
+  
+  arg1 = (physx::PxObstacleContext *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_position_set___(void * jarg1, void * jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxExtendedVec3 *arg2 = (physx::PxExtendedVec3 *) 0 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2; 
+  if (arg1) (arg1)->position = *arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_position_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxExtendedVec3 *)& ((arg1)->position);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_upDirection_set___(void * jarg1,  physx::PxVec3*  jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxVec3 *arg2 = (physx::PxVec3 *) 0 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = jarg2; 
+  if (arg1) (arg1)->upDirection = *arg2;
+}
+
+
+SWIGEXPORT  physx::PxVec3*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_upDirection_get___(void * jarg1) {
+  physx::PxVec3*  jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxVec3 *result = 0 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxVec3 *)& ((arg1)->upDirection);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_slopeLimit_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->slopeLimit = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_slopeLimit_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->slopeLimit);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_invisibleWallHeight_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->invisibleWallHeight = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_invisibleWallHeight_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->invisibleWallHeight);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_maxJumpHeight_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->maxJumpHeight = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_maxJumpHeight_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->maxJumpHeight);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_contactOffset_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->contactOffset = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_contactOffset_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->contactOffset);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_stepOffset_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->stepOffset = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_stepOffset_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->stepOffset);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_density_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->density = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_density_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->density);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_scaleCoeff_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->scaleCoeff = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_scaleCoeff_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->scaleCoeff);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_volumeGrowth_set___(void * jarg1, float jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->volumeGrowth = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_volumeGrowth_get___(void * jarg1) {
+  float jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->volumeGrowth);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_material_set___(void * jarg1, void * jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxMaterial *arg2 = (physx::PxMaterial *) 0 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = (physx::PxMaterial *)jarg2; 
+  if (arg1) (arg1)->material = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_material_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  physx::PxMaterial *result = 0 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (physx::PxMaterial *) ((arg1)->material);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_registerDeletionListener_set___(void * jarg1, unsigned int jarg2) {
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->registerDeletionListener = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerDesc_registerDeletionListener_get___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxControllerDesc *arg1 = (physx::PxControllerDesc *) 0 ;
+  bool result;
+  
+  arg1 = (physx::PxControllerDesc *)jarg1; 
+  result = (bool) ((arg1)->registerDeletionListener);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxControllerFilterCallback___(void * jarg1) {
+  physx::PxControllerFilterCallback *arg1 = (physx::PxControllerFilterCallback *) 0 ;
+  
+  arg1 = (physx::PxControllerFilterCallback *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilterCallback_filter___(void * jarg1, void * jarg2, void * jarg3) {
+  unsigned int jresult ;
+  physx::PxControllerFilterCallback *arg1 = (physx::PxControllerFilterCallback *) 0 ;
+  physx::PxController *arg2 = 0 ;
+  physx::PxController *arg3 = 0 ;
+  bool result;
+  
+  arg1 = (physx::PxControllerFilterCallback *)jarg1; 
+  arg2 = (physx::PxController *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxController const & type is null", 0);
+    return 0;
+  } 
+  arg3 = (physx::PxController *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxController const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (bool)(arg1)->filter((physx::PxController const &)*arg2,(physx::PxController const &)*arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxControllerFilters__SWIG_0___( physx::PxFilterData*  jarg1, void * jarg2, void * jarg3) {
+  void * jresult ;
+  physx::PxFilterData *arg1 = (physx::PxFilterData *) 0 ;
+  physx::PxQueryFilterCallback *arg2 = (physx::PxQueryFilterCallback *) 0 ;
+  physx::PxControllerFilterCallback *arg3 = (physx::PxControllerFilterCallback *) 0 ;
+  physx::PxControllerFilters *result = 0 ;
+  
+  arg1 = jarg1; 
+  arg2 = (physx::PxQueryFilterCallback *)jarg2; 
+  arg3 = (physx::PxControllerFilterCallback *)jarg3; 
+  {
+    try {
+      result = (physx::PxControllerFilters *)new physx::PxControllerFilters((physx::PxFilterData const *)arg1,arg2,arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxControllerFilters__SWIG_1___( physx::PxFilterData*  jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxFilterData *arg1 = (physx::PxFilterData *) 0 ;
+  physx::PxQueryFilterCallback *arg2 = (physx::PxQueryFilterCallback *) 0 ;
+  physx::PxControllerFilters *result = 0 ;
+  
+  arg1 = jarg1; 
+  arg2 = (physx::PxQueryFilterCallback *)jarg2; 
+  {
+    try {
+      result = (physx::PxControllerFilters *)new physx::PxControllerFilters((physx::PxFilterData const *)arg1,arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxControllerFilters__SWIG_2___( physx::PxFilterData*  jarg1) {
+  void * jresult ;
+  physx::PxFilterData *arg1 = (physx::PxFilterData *) 0 ;
+  physx::PxControllerFilters *result = 0 ;
+  
+  arg1 = jarg1; 
+  {
+    try {
+      result = (physx::PxControllerFilters *)new physx::PxControllerFilters((physx::PxFilterData const *)arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxControllerFilters__SWIG_3___() {
+  void * jresult ;
+  physx::PxControllerFilters *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxControllerFilters *)new physx::PxControllerFilters();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilters_mFilterData_set___(void * jarg1,  physx::PxFilterData*  jarg2) {
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  physx::PxFilterData *arg2 = (physx::PxFilterData *) 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  arg2 = jarg2; 
+  if (arg1) (arg1)->mFilterData = (physx::PxFilterData const *)arg2;
+}
+
+
+SWIGEXPORT  physx::PxFilterData*  SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilters_mFilterData_get___(void * jarg1) {
+  physx::PxFilterData*  jresult ;
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  physx::PxFilterData *result = 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  result = (physx::PxFilterData *) ((arg1)->mFilterData);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilters_mFilterCallback_set___(void * jarg1, void * jarg2) {
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  physx::PxQueryFilterCallback *arg2 = (physx::PxQueryFilterCallback *) 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  arg2 = (physx::PxQueryFilterCallback *)jarg2; 
+  if (arg1) (arg1)->mFilterCallback = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilters_mFilterCallback_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  physx::PxQueryFilterCallback *result = 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  result = (physx::PxQueryFilterCallback *) ((arg1)->mFilterCallback);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilters_mCCTFilterCallback_set___(void * jarg1, void * jarg2) {
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  physx::PxControllerFilterCallback *arg2 = (physx::PxControllerFilterCallback *) 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  arg2 = (physx::PxControllerFilterCallback *)jarg2; 
+  if (arg1) (arg1)->mCCTFilterCallback = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerFilters_mCCTFilterCallback_get___(void * jarg1) {
+  void * jresult ;
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  physx::PxControllerFilterCallback *result = 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  result = (physx::PxControllerFilterCallback *) ((arg1)->mCCTFilterCallback);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxControllerFilters___(void * jarg1) {
+  physx::PxControllerFilters *arg1 = (physx::PxControllerFilters *) 0 ;
+  
+  arg1 = (physx::PxControllerFilters *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_move__SWIG_0___(void * jarg1,  physx::PxVec3*  jarg2, float jarg3, float jarg4, void * jarg5, void * jarg6) {
+  int jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  physx::PxF32 arg3 ;
+  physx::PxF32 arg4 ;
+  physx::PxControllerFilters *arg5 = 0 ;
+  physx::PxObstacleContext *arg6 = (physx::PxObstacleContext *) 0 ;
+  physx::PxControllerCollisionFlag::Enum result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = jarg2; 
+  arg3 = (physx::PxF32)jarg3; 
+  arg4 = (physx::PxF32)jarg4; 
+  arg5 = (physx::PxControllerFilters *)jarg5;
+  if (!arg5) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxControllerFilters const & type is null", 0);
+    return 0;
+  } 
+  arg6 = (physx::PxObstacleContext *)jarg6; 
+  {
+    try {
+      result = (physx::PxControllerCollisionFlag::Enum)physx_PxController_move__SWIG_0(arg1,(physx::PxVec3 const &)*arg2,arg3,arg4,(physx::PxControllerFilters const &)*arg5,(physx::PxObstacleContext const *)arg6);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_move__SWIG_1___(void * jarg1,  physx::PxVec3*  jarg2, float jarg3, float jarg4, void * jarg5) {
+  int jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  physx::PxF32 arg3 ;
+  physx::PxF32 arg4 ;
+  physx::PxControllerFilters *arg5 = 0 ;
+  physx::PxControllerCollisionFlag::Enum result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = jarg2; 
+  arg3 = (physx::PxF32)jarg3; 
+  arg4 = (physx::PxF32)jarg4; 
+  arg5 = (physx::PxControllerFilters *)jarg5;
+  if (!arg5) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxControllerFilters const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxControllerCollisionFlag::Enum)physx_PxController_move__SWIG_0(arg1,(physx::PxVec3 const &)*arg2,arg3,arg4,(physx::PxControllerFilters const &)*arg5);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_release___(void * jarg1) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      (arg1)->release();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setPosition___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (bool)(arg1)->setPosition((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getPosition___(void * jarg1) {
+  void * jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxExtendedVec3 *result = 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (physx::PxExtendedVec3 *) &((physx::PxController const *)arg1)->getPosition();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setFootPosition___(void * jarg1, void * jarg2) {
+  unsigned int jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxExtendedVec3 *arg2 = 0 ;
+  bool result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (physx::PxExtendedVec3 *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxExtendedVec3 const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (bool)(arg1)->setFootPosition((physx::PxExtendedVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getFootPosition___(void * jarg1) {
+  void * jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxExtendedVec3 result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = ((physx::PxController const *)arg1)->getFootPosition();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = new physx::PxExtendedVec3((const physx::PxExtendedVec3 &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getActor___(void * jarg1) {
+  void * jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxRigidDynamic *result = 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (physx::PxRigidDynamic *)((physx::PxController const *)arg1)->getActor();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setStepOffset___(void * jarg1, float jarg2) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  {
+    try {
+      (arg1)->setStepOffset(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getStepOffset___(void * jarg1) {
+  float jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (physx::PxF32)((physx::PxController const *)arg1)->getStepOffset();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getContactOffset___(void * jarg1) {
+  float jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (physx::PxF32)((physx::PxController const *)arg1)->getContactOffset();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setContactOffset___(void * jarg1, float jarg2) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  {
+    try {
+      (arg1)->setContactOffset(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT physx::PxVec3* SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getUpDirection___(void * jarg1) {
+  physx::PxVec3* jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  SwigValueWrapper< physx::PxVec3 > result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = ((physx::PxController const *)arg1)->getUpDirection();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return NULL; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return NULL; 
+      };
+    }
+  }
+  
+  thread_local physx::PxVec3 out_temp;
+  out_temp = *(physx::PxVec3*)&result; 
+  jresult = &out_temp; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setUpDirection___(void * jarg1,  physx::PxVec3*  jarg2) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = jarg2; 
+  {
+    try {
+      (arg1)->setUpDirection((physx::PxVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getSlopeLimit___(void * jarg1) {
+  float jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (physx::PxF32)((physx::PxController const *)arg1)->getSlopeLimit();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setSlopeLimit___(void * jarg1, float jarg2) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  {
+    try {
+      (arg1)->setSlopeLimit(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_invalidateCache___(void * jarg1) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      (arg1)->invalidateCache();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getScene___(void * jarg1) {
+  void * jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxScene *result = 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (physx::PxScene *)(arg1)->getScene();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_getUserData___(void * jarg1) {
+  void * jresult ;
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  void *result = 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  {
+    try {
+      result = (void *)((physx::PxController const *)arg1)->getUserData();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_setUserData___(void * jarg1, void * jarg2) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  void *arg2 = (void *) 0 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (void *)jarg2; 
+  {
+    try {
+      (arg1)->setUserData(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxController_resize___(void * jarg1, float jarg2) {
+  physx::PxController *arg1 = (physx::PxController *) 0 ;
+  physx::PxReal arg2 ;
+  
+  arg1 = (physx::PxController *)jarg1; 
+  arg2 = (physx::PxReal)jarg2; 
+  {
+    try {
+      (arg1)->resize(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_release___(void * jarg1) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  {
+    try {
+      (arg1)->release();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_getScene___(void * jarg1) {
+  void * jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxScene *result = 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  {
+    try {
+      result = (physx::PxScene *) &((physx::PxControllerManager const *)arg1)->getScene();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_getNbControllers___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  {
+    try {
+      result = (physx::PxU32)((physx::PxControllerManager const *)arg1)->getNbControllers();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_getController___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxController *result = 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxController *)(arg1)->getController(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_createController___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxControllerDesc *arg2 = 0 ;
+  physx::PxController *result = 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = (physx::PxControllerDesc *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxControllerDesc const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxController *)(arg1)->createController((physx::PxControllerDesc const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_purgeControllers___(void * jarg1) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  {
+    try {
+      (arg1)->purgeControllers();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_getNbObstacleContexts___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxU32 result;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  {
+    try {
+      result = (physx::PxU32)((physx::PxControllerManager const *)arg1)->getNbObstacleContexts();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_getObstacleContext___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxU32 arg2 ;
+  physx::PxObstacleContext *result = 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = (physx::PxU32)jarg2; 
+  {
+    try {
+      result = (physx::PxObstacleContext *)(arg1)->getObstacleContext(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_createObstacleContext___(void * jarg1) {
+  void * jresult ;
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxObstacleContext *result = 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  {
+    try {
+      result = (physx::PxObstacleContext *)(arg1)->createObstacleContext();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_computeInteractions__SWIG_0___(void * jarg1, float jarg2, void * jarg3) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxF32 arg2 ;
+  physx::PxControllerFilterCallback *arg3 = (physx::PxControllerFilterCallback *) 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  arg3 = (physx::PxControllerFilterCallback *)jarg3; 
+  {
+    try {
+      (arg1)->computeInteractions(arg2,arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_computeInteractions__SWIG_1___(void * jarg1, float jarg2) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  {
+    try {
+      (arg1)->computeInteractions(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_setTessellation___(void * jarg1, unsigned int jarg2, float jarg3) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  bool arg2 ;
+  float arg3 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  arg3 = (float)jarg3; 
+  {
+    try {
+      (arg1)->setTessellation(arg2,arg3);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_setOverlapRecoveryModule___(void * jarg1, unsigned int jarg2) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      (arg1)->setOverlapRecoveryModule(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_setPreciseSweeps___(void * jarg1, unsigned int jarg2) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      (arg1)->setPreciseSweeps(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_setPreventVerticalSlidingAgainstCeiling___(void * jarg1, unsigned int jarg2) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      (arg1)->setPreventVerticalSlidingAgainstCeiling(arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxControllerManager_shiftOrigin___(void * jarg1,  physx::PxVec3*  jarg2) {
+  physx::PxControllerManager *arg1 = (physx::PxControllerManager *) 0 ;
+  physx::PxVec3 *arg2 = 0 ;
+  
+  arg1 = (physx::PxControllerManager *)jarg1; 
+  arg2 = jarg2; 
+  {
+    try {
+      (arg1)->shiftOrigin((physx::PxVec3 const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxCapsuleControllerDesc__SWIG_0___() {
+  void * jresult ;
+  physx::PxCapsuleControllerDesc *result = 0 ;
+  
+  {
+    try {
+      result = (physx::PxCapsuleControllerDesc *)new physx::PxCapsuleControllerDesc();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_delete_PxCapsuleControllerDesc___(void * jarg1) {
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  {
+    try {
+      delete arg1;
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_PxCapsuleControllerDesc__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  physx::PxCapsuleControllerDesc *arg1 = 0 ;
+  physx::PxCapsuleControllerDesc *result = 0 ;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxCapsuleControllerDesc const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxCapsuleControllerDesc *)new physx::PxCapsuleControllerDesc((physx::PxCapsuleControllerDesc const &)*arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc___assign___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  physx::PxCapsuleControllerDesc *arg2 = 0 ;
+  physx::PxCapsuleControllerDesc *result = 0 ;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  arg2 = (physx::PxCapsuleControllerDesc *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxCapsuleControllerDesc const & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxCapsuleControllerDesc *) &(arg1)->operator =((physx::PxCapsuleControllerDesc const &)*arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_setToDefault___(void * jarg1) {
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  {
+    try {
+      (arg1)->setToDefault();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return ; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return ; 
+      };
+    }
+  }
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_isValid___(void * jarg1) {
+  unsigned int jresult ;
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  bool result;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  {
+    try {
+      result = (bool)((physx::PxCapsuleControllerDesc const *)arg1)->isValid();
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_radius_set___(void * jarg1, float jarg2) {
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->radius = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_radius_get___(void * jarg1) {
+  float jresult ;
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->radius);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_height_set___(void * jarg1, float jarg2) {
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  physx::PxF32 arg2 ;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  arg2 = (physx::PxF32)jarg2; 
+  if (arg1) (arg1)->height = arg2;
+}
+
+
+SWIGEXPORT float SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_height_get___(void * jarg1) {
+  float jresult ;
+  physx::PxCapsuleControllerDesc *arg1 = (physx::PxCapsuleControllerDesc *) 0 ;
+  physx::PxF32 result;
+  
+  arg1 = (physx::PxCapsuleControllerDesc *)jarg1; 
+  result = (physx::PxF32) ((arg1)->height);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_new_VehicleSceneQueryData___() {
   void * jresult ;
   snippetvehicle::VehicleSceneQueryData *result = 0 ;
@@ -47831,6 +50282,64 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_NVIDIAfPhysX_VehicleSceneQueryData_ge
     }
   }
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCreateControllerManager__SWIG_0___(void * jarg1, unsigned int jarg2) {
+  void * jresult ;
+  physx::PxScene *arg1 = 0 ;
+  bool arg2 ;
+  physx::PxControllerManager *result = 0 ;
+  
+  arg1 = (physx::PxScene *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxScene & type is null", 0);
+    return 0;
+  } 
+  arg2 = jarg2 ? true : false; 
+  {
+    try {
+      result = (physx::PxControllerManager *)PxCreateControllerManager(*arg1,arg2);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCreateControllerManager__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  physx::PxScene *arg1 = 0 ;
+  physx::PxControllerManager *result = 0 ;
+  
+  arg1 = (physx::PxScene *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "physx::PxScene & type is null", 0);
+    return 0;
+  } 
+  {
+    try {
+      result = (physx::PxControllerManager *)PxCreateControllerManager(*arg1);
+    } catch(std::exception e) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, e.what()); return 0; 
+      };
+    } catch(...) {
+      {
+        SWIG_CSharpException(SWIG_RuntimeError, "Unknown exception"); return 0; 
+      };
+    }
+  }
+  jresult = (void *)result; 
   return jresult;
 }
 
@@ -48133,6 +50642,10 @@ SWIGEXPORT physx::PxVehicleWheels * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDri
 
 SWIGEXPORT physx::PxVehicleDrive * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxVehicleDrive4W_SWIGUpcast___(physx::PxVehicleDrive4W *jarg1) {
     return (physx::PxVehicleDrive *)jarg1;
+}
+
+SWIGEXPORT physx::PxControllerDesc * SWIGSTDCALL CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_SWIGUpcast___(physx::PxCapsuleControllerDesc *jarg1) {
+    return (physx::PxControllerDesc *)jarg1;
 }
 
 #ifdef __cplusplus

@@ -93,6 +93,28 @@ public class Native {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public static  PxVec3  toVec3(PxExtendedVec3 v) {
+        global::System.IntPtr ptr = NativePINVOKE.toVec3(PxExtendedVec3.getCPtr(v));
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+        //PxVec3 ret = global::System.Runtime.InteropServices.Marshal.PtrToStructure<PxVec3>(ptr);
+        PxVec3 ret; unsafe { ret = *(PxVec3*)ptr; }
+        return ret;
+    }
+
+  public static PxControllerManager PxCreateControllerManager(PxScene scene, bool lockingEnabled) {
+    global::System.IntPtr cPtr = NativePINVOKE.PxCreateControllerManager__SWIG_0(PxScene.getCPtr(scene), lockingEnabled);
+    PxControllerManager ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxControllerManager(cPtr, false);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public static PxControllerManager PxCreateControllerManager(PxScene scene) {
+    global::System.IntPtr cPtr = NativePINVOKE.PxCreateControllerManager__SWIG_1(PxScene.getCPtr(scene));
+    PxControllerManager ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxControllerManager(cPtr, false);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
   public static readonly int PX_PHYSICS_VERSION_MAJOR = NativePINVOKE.PX_PHYSICS_VERSION_MAJOR_get();
   public static readonly int PX_PHYSICS_VERSION_MINOR = NativePINVOKE.PX_PHYSICS_VERSION_MINOR_get();
   public static readonly int PX_PHYSICS_VERSION_BUGFIX = NativePINVOKE.PX_PHYSICS_VERSION_BUGFIX_get();
