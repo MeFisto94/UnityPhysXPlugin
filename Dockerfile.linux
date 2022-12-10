@@ -1,0 +1,22 @@
+# FROM ubuntu:jammy -> not supported clang version (?), also problems with the absence of python2
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+# openGL dependencies for the samples, so we can do make install (the full distribution)
+RUN apt update && apt install -y clang cmake freeglut3-dev libglu1-mesa-dev swig python2 git libgl1-mesa-glx libxdamage1 libxxf86vm-dev && rm -rf /var/lib/apt/lists/*
+WORKDIR /build
+
+RUN ln -s /usr/bin/python2.7 /usr/bin/python && git clone https://github.com/NVIDIAGameWorks/PhysX \
+&& cd PhysX/physx && echo 3 | ./generate_projects.sh && cd compiler/linux-debug && make && make install
+COPY . /build/UnityPhysXPlugin/
+
+# Disable the C# build (not supported on Linux)
+RUN sed -i s/add_subdirectory\(NVIDIA.PhysX\)/#add_subdirectory\(NVIDIA.PhysX\)/g UnityPhysXPlugin/CMakeLists.txt
+# fixed "upstream"
+#RUN sed -i s/pack_count/PACK_COUNT/g UnityPhysXPlugin/NVIDIA.PhysX.Native/Helpers/Helpers.h
+# This sed does not work, so I just removed that $Configuration from upstream as well...
+# Problem with that statment is case sensitivity $(Configuration) -> Debug, potentially.
+#RUN sed -i s/linux.clang\/\$\(Configuration\)/linux.clang\/debug/g
+
+RUN cd UnityPhysXPlugin/Build && PHYSX_DIR=/build/PhysX/physx/install/linux/ cmake ../ && make CXX_FLAGS="-D_DEBUG=true -fPIC"
+RUN ls -lsh /build/UnityPhysXPlugin/Build/NVIDIA.PhysX.Native/
