@@ -34,10 +34,12 @@ endforeach()
 
 include_directories("${CMAKE_CURRENT_LIST_DIR}"
                     "${CMAKE_CURRENT_LIST_DIR}/Header"
-                    "$ENV{PHYSX_DIR}/physx/include"
-                    "$ENV{PHYSX_DIR}/pxshared/include")
+                    "$ENV{PHYSX_DIR}/PhysX/include"
+                    "$ENV{PHYSX_DIR}/PxShared/include")
 
 link_directories("$ENV{PHYSX_DIR}/physx/bin/win.x86_64.vc142.mt/$(Configuration)")
+#link_directories("$ENV{PHYSX_DIR}/PhysX/bin/linux.clang/$(Configuration)")
+link_directories("$ENV{PHYSX_DIR}/PhysX/bin/linux.clang/debug")
 
 # -E -debug-tmsearch. -E seems to only emit the preprocessor and then quit
 set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -c++ -v -namespace NVIDIA.PhysX -nodefaultctor)
