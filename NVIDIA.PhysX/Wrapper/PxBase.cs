@@ -93,13 +93,6 @@ public partial class PxBase {
     return ret;
   }
 
-  public PxArticulationLink getArticulationLink() {
-    global::System.IntPtr cPtr = NativePINVOKE.PxBase_getArticulationLink(swigCPtr);
-    PxArticulationLink ret = (cPtr == global::System.IntPtr.Zero) ? null : PxArticulationLink.getWrapper(cPtr, false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public PxConvexMesh getConvexMesh() {
     global::System.IntPtr cPtr = NativePINVOKE.PxBase_getConvexMesh(swigCPtr);
     PxConvexMesh ret = (cPtr == global::System.IntPtr.Zero) ? null : PxConvexMesh.getWrapper(cPtr, false);

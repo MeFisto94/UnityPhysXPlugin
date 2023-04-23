@@ -310,9 +310,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVec4_getXYZ___")]
   public static extern global::System.IntPtr PxVec4_getXYZ( global::System.IntPtr  jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVec4_setZero___")]
-  public static extern void PxVec4_setZero( global::System.IntPtr  jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVec4___")]
   public static extern void delete_PxVec4( global::System.IntPtr  jarg1);
 
@@ -465,12 +462,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxTransform_transformInv__SWIG_1___")]
   public static extern global::System.IntPtr PxTransform_transformInv__SWIG_1( global::System.IntPtr  jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxTransform_transform__SWIG_2___")]
-  public static extern global::System.IntPtr PxTransform_transform__SWIG_2( global::System.IntPtr  jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxTransform_inverseTransform___")]
-  public static extern global::System.IntPtr PxTransform_inverseTransform( global::System.IntPtr  jarg1,  global::System.IntPtr  jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxTransform_getNormalized___")]
   public static extern global::System.IntPtr PxTransform_getNormalized( global::System.IntPtr  jarg1);
@@ -1129,12 +1120,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSceneDesc_ccdMaxSeparation_get___")]
   public static extern float PxSceneDesc_ccdMaxSeparation_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSceneDesc_solverOffsetSlop_set___")]
-  public static extern void PxSceneDesc_solverOffsetSlop_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSceneDesc_solverOffsetSlop_get___")]
-  public static extern float PxSceneDesc_solverOffsetSlop_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSceneDesc_flags_set___")]
   public static extern void PxSceneDesc_flags_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
@@ -1771,9 +1756,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxConstraintInvMassScale___")]
   public static extern void delete_PxConstraintInvMassScale(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxConstraintShaderTable_MAX_SOLVERPRPEP_DATASIZE_get___")]
-  public static extern int PxConstraintShaderTable_MAX_SOLVERPRPEP_DATASIZE_get();
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxConstraintShaderTable_flag_set___")]
   public static extern void PxConstraintShaderTable_flag_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
@@ -1788,33 +1770,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxArticulationRootLinkData___")]
   public static extern void delete_PxArticulationRootLinkData( global::System.IntPtr  jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_readJointVelocities___")]
-  public static extern void PxArticulationCache_readJointVelocities(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg2, int jarg3, int jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_writeJointVelocities___")]
-  public static extern void PxArticulationCache_writeJointVelocities(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg2, int jarg3, int jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_readJointPositions___")]
-  public static extern void PxArticulationCache_readJointPositions(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg2, int jarg3, int jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_writeJointPositions___")]
-  public static extern void PxArticulationCache_writeJointPositions(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg2, int jarg3, int jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_rootLinkData_set___")]
-  public static extern void PxArticulationCache_rootLinkData_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_rootLinkData_get___")]
-  public static extern global::System.IntPtr PxArticulationCache_rootLinkData_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_version_set___")]
-  public static extern void PxArticulationCache_version_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationCache_version_get___")]
-  public static extern uint PxArticulationCache_version_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxArticulationCache___")]
-  public static extern void delete_PxArticulationCache(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSpring_stiffness_set___")]
   public static extern void PxSpring_stiffness_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
@@ -1885,11 +1840,11 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxJointLimitParameters_damping_get___")]
   public static extern float PxJointLimitParameters_damping_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxJointLimitParameters_contactDistance_set___")]
-  public static extern void PxJointLimitParameters_contactDistance_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxJointLimitParameters_contactDistance_deprecated_set___")]
+  public static extern void PxJointLimitParameters_contactDistance_deprecated_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxJointLimitParameters_contactDistance_get___")]
-  public static extern float PxJointLimitParameters_contactDistance_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxJointLimitParameters_contactDistance_deprecated_get___")]
+  public static extern float PxJointLimitParameters_contactDistance_deprecated_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxJointLimitParameters__SWIG_0___")]
   public static extern global::System.IntPtr new_PxJointLimitParameters__SWIG_0();
@@ -2050,9 +2005,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxJointLimitPyramid___")]
   public static extern void delete_PxJointLimitPyramid(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxArticulationDriveCache___")]
-  public static extern void delete_PxArticulationDriveCache(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxDominanceGroupPair___")]
   public static extern global::System.IntPtr new_PxDominanceGroupPair(byte jarg1, byte jarg2);
 
@@ -2206,65 +2158,53 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxSimulationStatistics___")]
   public static extern void delete_PxSimulationStatistics(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegion_bounds_set___")]
-  public static extern void PxBroadPhaseRegion_bounds_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegion_mBounds_set___")]
+  public static extern void PxBroadPhaseRegion_mBounds_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegion_bounds_get___")]
-  public static extern global::System.IntPtr PxBroadPhaseRegion_bounds_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegion_mBounds_get___")]
+  public static extern global::System.IntPtr PxBroadPhaseRegion_mBounds_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxBroadPhaseRegion___")]
   public static extern void delete_PxBroadPhaseRegion(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_region_set___")]
-  public static extern void PxBroadPhaseRegionInfo_region_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mRegion_set___")]
+  public static extern void PxBroadPhaseRegionInfo_mRegion_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_region_get___")]
-  public static extern global::System.IntPtr PxBroadPhaseRegionInfo_region_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mRegion_get___")]
+  public static extern global::System.IntPtr PxBroadPhaseRegionInfo_mRegion_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_nbStaticObjects_set___")]
-  public static extern void PxBroadPhaseRegionInfo_nbStaticObjects_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mNbStaticObjects_set___")]
+  public static extern void PxBroadPhaseRegionInfo_mNbStaticObjects_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_nbStaticObjects_get___")]
-  public static extern uint PxBroadPhaseRegionInfo_nbStaticObjects_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mNbStaticObjects_get___")]
+  public static extern uint PxBroadPhaseRegionInfo_mNbStaticObjects_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_nbDynamicObjects_set___")]
-  public static extern void PxBroadPhaseRegionInfo_nbDynamicObjects_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mNbDynamicObjects_set___")]
+  public static extern void PxBroadPhaseRegionInfo_mNbDynamicObjects_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_nbDynamicObjects_get___")]
-  public static extern uint PxBroadPhaseRegionInfo_nbDynamicObjects_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mNbDynamicObjects_get___")]
+  public static extern uint PxBroadPhaseRegionInfo_mNbDynamicObjects_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_active_set___")]
-  public static extern void PxBroadPhaseRegionInfo_active_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mActive_set___")]
+  public static extern void PxBroadPhaseRegionInfo_mActive_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_active_get___")]
-  public static extern bool PxBroadPhaseRegionInfo_active_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mActive_get___")]
+  public static extern bool PxBroadPhaseRegionInfo_mActive_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_overlap_set___")]
-  public static extern void PxBroadPhaseRegionInfo_overlap_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mOverlap_set___")]
+  public static extern void PxBroadPhaseRegionInfo_mOverlap_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_overlap_get___")]
-  public static extern bool PxBroadPhaseRegionInfo_overlap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseRegionInfo_mOverlap_get___")]
+  public static extern bool PxBroadPhaseRegionInfo_mOverlap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxBroadPhaseRegionInfo___")]
   public static extern void delete_PxBroadPhaseRegionInfo(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_maxNbRegions_set___")]
-  public static extern void PxBroadPhaseCaps_maxNbRegions_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_mMaxNbRegions_set___")]
+  public static extern void PxBroadPhaseCaps_mMaxNbRegions_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_maxNbRegions_get___")]
-  public static extern uint PxBroadPhaseCaps_maxNbRegions_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_maxNbObjects_set___")]
-  public static extern void PxBroadPhaseCaps_maxNbObjects_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_maxNbObjects_get___")]
-  public static extern uint PxBroadPhaseCaps_maxNbObjects_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_needsPredefinedBounds_set___")]
-  public static extern void PxBroadPhaseCaps_needsPredefinedBounds_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_needsPredefinedBounds_get___")]
-  public static extern bool PxBroadPhaseCaps_needsPredefinedBounds_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBroadPhaseCaps_mMaxNbRegions_get___")]
+  public static extern uint PxBroadPhaseCaps_mMaxNbRegions_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxBroadPhaseCaps___")]
   public static extern void delete_PxBroadPhaseCaps(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -3262,12 +3202,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxPhysics_createD6Joint___")]
   public static extern global::System.IntPtr PxPhysics_createD6Joint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3, global::System.Runtime.InteropServices.HandleRef jarg4,  global::System.IntPtr  jarg5);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxPhysics_createArticulation___")]
-  public static extern global::System.IntPtr PxPhysics_createArticulation(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxPhysics_createArticulationReducedCoordinate___")]
-  public static extern global::System.IntPtr PxPhysics_createArticulationReducedCoordinate(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxPhysics_createMaterial___")]
   public static extern global::System.IntPtr PxPhysics_createMaterial(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4);
 
@@ -3289,317 +3223,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxPhysics_closeExtensions___")]
   public static extern void PxPhysics_closeExtensions(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_execute___")]
-  public static extern void PxBatchQuery_execute(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_getFilterShaderData___")]
-  public static extern global::System.IntPtr PxBatchQuery_getFilterShaderData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_getFilterShaderDataSize___")]
-  public static extern uint PxBatchQuery_getFilterShaderDataSize(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_release___")]
-  public static extern void PxBatchQuery_release(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_overlap__SWIG_0___")]
-  public static extern void PxBatchQuery_overlap__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3, ushort jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, global::System.Runtime.InteropServices.HandleRef jarg7);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_overlap__SWIG_1___")]
-  public static extern void PxBatchQuery_overlap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3, ushort jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_overlap__SWIG_2___")]
-  public static extern void PxBatchQuery_overlap__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3, ushort jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_overlap__SWIG_3___")]
-  public static extern void PxBatchQuery_overlap__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3, ushort jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQuery_overlap__SWIG_4___")]
-  public static extern void PxBatchQuery_overlap__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxQueryFilterCallback_preFilter___")]
-  public static extern int PxQueryFilterCallback_preFilter(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, PxHitFlag jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxQueryFilterCallback_postFilter___")]
-  public static extern int PxQueryFilterCallback_postFilter(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxQueryFilterCallback___")]
-  public static extern void delete_PxQueryFilterCallback(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxQueryFilterCallback_director_connect___")]
-  public static extern void PxQueryFilterCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, PxQueryFilterCallback.SwigDelegatePxQueryFilterCallback_0 delegate0, PxQueryFilterCallback.SwigDelegatePxQueryFilterCallback_1 delegate1);
-
-  public delegate PxQueryHitType PxBatchQueryPreFilterShaderDelegate(PxFilterData queryFilterData, PxFilterData objectFilterData,
-	global::System.IntPtr constantBlock, uint constantBlockSize,
-	PxHitFlag hitFlags);
-  public delegate PxQueryHitType PxBatchQueryPostFilterShaderDelegate(PxFilterData queryFilterData, PxFilterData objectFilterData,
-	global::System.IntPtr constantBlock, uint constantBlockSize,
-	PxQueryHit hit);
-
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxBatchQueryStatus___")]
-  public static extern void delete_PxBatchQueryStatus(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_block_set___")]
-  public static extern void PxSweepQueryResult_block_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_block_get___")]
-  public static extern global::System.IntPtr PxSweepQueryResult_block_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_touches_set___")]
-  public static extern void PxSweepQueryResult_touches_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_touches_get___")]
-  public static extern global::System.IntPtr PxSweepQueryResult_touches_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_nbTouches_set___")]
-  public static extern void PxSweepQueryResult_nbTouches_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_nbTouches_get___")]
-  public static extern uint PxSweepQueryResult_nbTouches_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_userData_set___")]
-  public static extern void PxSweepQueryResult_userData_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_userData_get___")]
-  public static extern global::System.IntPtr PxSweepQueryResult_userData_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_queryStatus_set___")]
-  public static extern void PxSweepQueryResult_queryStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_queryStatus_get___")]
-  public static extern byte PxSweepQueryResult_queryStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_hasBlock_set___")]
-  public static extern void PxSweepQueryResult_hasBlock_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_hasBlock_get___")]
-  public static extern bool PxSweepQueryResult_hasBlock_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_pad_set___")]
-  public static extern void PxSweepQueryResult_pad_set(global::System.Runtime.InteropServices.HandleRef jarg1, ushort jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_pad_get___")]
-  public static extern ushort PxSweepQueryResult_pad_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_getNbAnyHits___")]
-  public static extern uint PxSweepQueryResult_getNbAnyHits(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxSweepQueryResult_getAnyHit___")]
-  public static extern global::System.IntPtr PxSweepQueryResult_getAnyHit(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxSweepQueryResult___")]
-  public static extern void delete_PxSweepQueryResult(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_block_set___")]
-  public static extern void PxOverlapQueryResult_block_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_block_get___")]
-  public static extern global::System.IntPtr PxOverlapQueryResult_block_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_touches_set___")]
-  public static extern void PxOverlapQueryResult_touches_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_touches_get___")]
-  public static extern global::System.IntPtr PxOverlapQueryResult_touches_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_nbTouches_set___")]
-  public static extern void PxOverlapQueryResult_nbTouches_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_nbTouches_get___")]
-  public static extern uint PxOverlapQueryResult_nbTouches_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_userData_set___")]
-  public static extern void PxOverlapQueryResult_userData_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_userData_get___")]
-  public static extern global::System.IntPtr PxOverlapQueryResult_userData_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_queryStatus_set___")]
-  public static extern void PxOverlapQueryResult_queryStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_queryStatus_get___")]
-  public static extern byte PxOverlapQueryResult_queryStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_hasBlock_set___")]
-  public static extern void PxOverlapQueryResult_hasBlock_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_hasBlock_get___")]
-  public static extern bool PxOverlapQueryResult_hasBlock_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_pad_set___")]
-  public static extern void PxOverlapQueryResult_pad_set(global::System.Runtime.InteropServices.HandleRef jarg1, ushort jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_pad_get___")]
-  public static extern ushort PxOverlapQueryResult_pad_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_getNbAnyHits___")]
-  public static extern uint PxOverlapQueryResult_getNbAnyHits(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxOverlapQueryResult_getAnyHit___")]
-  public static extern global::System.IntPtr PxOverlapQueryResult_getAnyHit(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxOverlapQueryResult___")]
-  public static extern void delete_PxOverlapQueryResult(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_block_set___")]
-  public static extern void PxRaycastQueryResult_block_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_block_get___")]
-  public static extern global::System.IntPtr PxRaycastQueryResult_block_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_touches_set___")]
-  public static extern void PxRaycastQueryResult_touches_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_touches_get___")]
-  public static extern global::System.IntPtr PxRaycastQueryResult_touches_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_nbTouches_set___")]
-  public static extern void PxRaycastQueryResult_nbTouches_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_nbTouches_get___")]
-  public static extern uint PxRaycastQueryResult_nbTouches_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_userData_set___")]
-  public static extern void PxRaycastQueryResult_userData_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_userData_get___")]
-  public static extern global::System.IntPtr PxRaycastQueryResult_userData_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_queryStatus_set___")]
-  public static extern void PxRaycastQueryResult_queryStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, byte jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_queryStatus_get___")]
-  public static extern byte PxRaycastQueryResult_queryStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_hasBlock_set___")]
-  public static extern void PxRaycastQueryResult_hasBlock_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_hasBlock_get___")]
-  public static extern bool PxRaycastQueryResult_hasBlock_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_pad_set___")]
-  public static extern void PxRaycastQueryResult_pad_set(global::System.Runtime.InteropServices.HandleRef jarg1, ushort jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_pad_get___")]
-  public static extern ushort PxRaycastQueryResult_pad_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_getNbAnyHits___")]
-  public static extern uint PxRaycastQueryResult_getNbAnyHits(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRaycastQueryResult_getAnyHit___")]
-  public static extern global::System.IntPtr PxRaycastQueryResult_getAnyHit(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxRaycastQueryResult___")]
-  public static extern void delete_PxRaycastQueryResult(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userRaycastResultBuffer_set___")]
-  public static extern void PxBatchQueryMemory_userRaycastResultBuffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userRaycastResultBuffer_get___")]
-  public static extern global::System.IntPtr PxBatchQueryMemory_userRaycastResultBuffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userRaycastTouchBuffer_set___")]
-  public static extern void PxBatchQueryMemory_userRaycastTouchBuffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userRaycastTouchBuffer_get___")]
-  public static extern global::System.IntPtr PxBatchQueryMemory_userRaycastTouchBuffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userSweepResultBuffer_set___")]
-  public static extern void PxBatchQueryMemory_userSweepResultBuffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userSweepResultBuffer_get___")]
-  public static extern global::System.IntPtr PxBatchQueryMemory_userSweepResultBuffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userSweepTouchBuffer_set___")]
-  public static extern void PxBatchQueryMemory_userSweepTouchBuffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userSweepTouchBuffer_get___")]
-  public static extern global::System.IntPtr PxBatchQueryMemory_userSweepTouchBuffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userOverlapResultBuffer_set___")]
-  public static extern void PxBatchQueryMemory_userOverlapResultBuffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userOverlapResultBuffer_get___")]
-  public static extern global::System.IntPtr PxBatchQueryMemory_userOverlapResultBuffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userOverlapTouchBuffer_set___")]
-  public static extern void PxBatchQueryMemory_userOverlapTouchBuffer_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_userOverlapTouchBuffer_get___")]
-  public static extern global::System.IntPtr PxBatchQueryMemory_userOverlapTouchBuffer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_raycastTouchBufferSize_set___")]
-  public static extern void PxBatchQueryMemory_raycastTouchBufferSize_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_raycastTouchBufferSize_get___")]
-  public static extern uint PxBatchQueryMemory_raycastTouchBufferSize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_sweepTouchBufferSize_set___")]
-  public static extern void PxBatchQueryMemory_sweepTouchBufferSize_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_sweepTouchBufferSize_get___")]
-  public static extern uint PxBatchQueryMemory_sweepTouchBufferSize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_overlapTouchBufferSize_set___")]
-  public static extern void PxBatchQueryMemory_overlapTouchBufferSize_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_overlapTouchBufferSize_get___")]
-  public static extern uint PxBatchQueryMemory_overlapTouchBufferSize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_getMaxRaycastsPerExecute___")]
-  public static extern uint PxBatchQueryMemory_getMaxRaycastsPerExecute(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_getMaxSweepsPerExecute___")]
-  public static extern uint PxBatchQueryMemory_getMaxSweepsPerExecute(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryMemory_getMaxOverlapsPerExecute___")]
-  public static extern uint PxBatchQueryMemory_getMaxOverlapsPerExecute(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxBatchQueryMemory___")]
-  public static extern global::System.IntPtr new_PxBatchQueryMemory(uint jarg1, uint jarg2, uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxBatchQueryMemory___")]
-  public static extern void delete_PxBatchQueryMemory(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_filterShaderData_set___")]
-  public static extern void PxBatchQueryDesc_filterShaderData_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_filterShaderData_get___")]
-  public static extern global::System.IntPtr PxBatchQueryDesc_filterShaderData_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_filterShaderDataSize_set___")]
-  public static extern void PxBatchQueryDesc_filterShaderDataSize_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_filterShaderDataSize_get___")]
-  public static extern uint PxBatchQueryDesc_filterShaderDataSize_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_preFilterShader_set___")]
-  public static extern void PxBatchQueryDesc_preFilterShader_set(global::System.Runtime.InteropServices.HandleRef jarg1, PxBatchQueryPreFilterShaderDelegate jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_preFilterShader_get___")]
-  public static extern PxBatchQueryPreFilterShaderDelegate PxBatchQueryDesc_preFilterShader_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_postFilterShader_set___")]
-  public static extern void PxBatchQueryDesc_postFilterShader_set(global::System.Runtime.InteropServices.HandleRef jarg1, PxBatchQueryPostFilterShaderDelegate jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_postFilterShader_get___")]
-  public static extern PxBatchQueryPostFilterShaderDelegate PxBatchQueryDesc_postFilterShader_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_queryMemory_set___")]
-  public static extern void PxBatchQueryDesc_queryMemory_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_queryMemory_get___")]
-  public static extern global::System.IntPtr PxBatchQueryDesc_queryMemory_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxBatchQueryDesc___")]
-  public static extern global::System.IntPtr new_PxBatchQueryDesc(uint jarg1, uint jarg2, uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBatchQueryDesc_isValid___")]
-  public static extern bool PxBatchQueryDesc_isValid(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxBatchQueryDesc___")]
-  public static extern void delete_PxBatchQueryDesc(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_release___")]
   public static extern void PxScene_release(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -3620,15 +3243,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getTimestamp___")]
   public static extern uint PxScene_getTimestamp(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_addArticulation___")]
-  public static extern void PxScene_addArticulation(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_removeArticulation__SWIG_0___")]
-  public static extern void PxScene_removeArticulation__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, bool jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_removeArticulation__SWIG_1___")]
-  public static extern void PxScene_removeArticulation__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_addActor__SWIG_0___")]
   public static extern void PxScene_addActor__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -3683,9 +3297,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getNbArticulations___")]
   public static extern uint PxScene_getNbArticulations(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getArticulation___")]
-  public static extern global::System.IntPtr PxScene_getArticulation(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getNbConstraints___")]
   public static extern uint PxScene_getNbConstraints(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -3809,9 +3420,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getFrictionOffsetThreshold___")]
   public static extern float PxScene_getFrictionOffsetThreshold(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_setFrictionType___")]
-  public static extern void PxScene_setFrictionType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getFrictionType___")]
   public static extern int PxScene_getFrictionType(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -3975,9 +3583,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_getScenePvdClient___")]
   public static extern global::System.IntPtr PxScene_getScenePvdClient(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxScene_createBatchQuery___")]
-  public static extern global::System.IntPtr PxScene_createBatchQuery(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBase_release___")]
   public static extern void PxBase_release(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -4004,9 +3609,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBase_getRigidDynamic___")]
   public static extern global::System.IntPtr PxBase_getRigidDynamic(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBase_getArticulationLink___")]
-  public static extern global::System.IntPtr PxBase_getArticulationLink(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxBase_getConvexMesh___")]
   public static extern global::System.IntPtr PxBase_getConvexMesh(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -4134,20 +3736,8 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_getLinearVelocity___")]
   public static extern global::System.IntPtr PxRigidBody_getLinearVelocity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_setLinearVelocity__SWIG_0___")]
-  public static extern void PxRigidBody_setLinearVelocity__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, bool jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_setLinearVelocity__SWIG_1___")]
-  public static extern void PxRigidBody_setLinearVelocity__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_getAngularVelocity___")]
   public static extern global::System.IntPtr PxRigidBody_getAngularVelocity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_setAngularVelocity__SWIG_0___")]
-  public static extern void PxRigidBody_setAngularVelocity__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, bool jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_setAngularVelocity__SWIG_1___")]
-  public static extern void PxRigidBody_setAngularVelocity__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidBody_setMaxAngularVelocity___")]
   public static extern void PxRigidBody_setMaxAngularVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
@@ -4373,6 +3963,18 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidDynamic_setContactReportThreshold___")]
   public static extern void PxRigidDynamic_setContactReportThreshold(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidDynamic_setLinearVelocity__SWIG_0___")]
+  public static extern void PxRigidDynamic_setLinearVelocity__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidDynamic_setLinearVelocity__SWIG_1___")]
+  public static extern void PxRigidDynamic_setLinearVelocity__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidDynamic_setAngularVelocity__SWIG_0___")]
+  public static extern void PxRigidDynamic_setAngularVelocity__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, bool jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxRigidDynamic_setAngularVelocity__SWIG_1___")]
+  public static extern void PxRigidDynamic_setAngularVelocity__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxShape_getReferenceCount___")]
   public static extern uint PxShape_getReferenceCount(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -4704,384 +4306,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxConstraint_setConstraintFunctions___")]
   public static extern void PxConstraint_setConstraintFunctions(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_getParentArticulationLink___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_getParentArticulationLink(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_setParentPose___")]
-  public static extern void PxArticulationJointBase_setParentPose(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_getParentPose___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_getParentPose(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_getChildArticulationLink___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_getChildArticulationLink(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_setChildPose___")]
-  public static extern void PxArticulationJointBase_setChildPose(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_getChildPose___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_getChildPose(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_getArticulationJoint___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_getArticulationJoint(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_getArticulationJointReducedCoordinate___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_getArticulationJointReducedCoordinate(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxArticulationJointBase___")]
-  public static extern void delete_PxArticulationJointBase(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTargetOrientation___")]
-  public static extern void PxArticulationJoint_setTargetOrientation(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTargetOrientation___")]
-  public static extern global::System.IntPtr PxArticulationJoint_getTargetOrientation(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTargetVelocity___")]
-  public static extern void PxArticulationJoint_setTargetVelocity(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTargetVelocity___")]
-  public static extern global::System.IntPtr PxArticulationJoint_getTargetVelocity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setDriveType___")]
-  public static extern void PxArticulationJoint_setDriveType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getDriveType___")]
-  public static extern int PxArticulationJoint_getDriveType(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setStiffness___")]
-  public static extern void PxArticulationJoint_setStiffness(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getStiffness___")]
-  public static extern float PxArticulationJoint_getStiffness(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setDamping___")]
-  public static extern void PxArticulationJoint_setDamping(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getDamping___")]
-  public static extern float PxArticulationJoint_getDamping(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setInternalCompliance___")]
-  public static extern void PxArticulationJoint_setInternalCompliance(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getInternalCompliance___")]
-  public static extern float PxArticulationJoint_getInternalCompliance(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setExternalCompliance___")]
-  public static extern void PxArticulationJoint_setExternalCompliance(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getExternalCompliance___")]
-  public static extern float PxArticulationJoint_getExternalCompliance(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setSwingLimit___")]
-  public static extern void PxArticulationJoint_setSwingLimit(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getSwingLimit___")]
-  public static extern void PxArticulationJoint_getSwingLimit(global::System.Runtime.InteropServices.HandleRef jarg1, out float jarg2, out float jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTangentialStiffness___")]
-  public static extern void PxArticulationJoint_setTangentialStiffness(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTangentialStiffness___")]
-  public static extern float PxArticulationJoint_getTangentialStiffness(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTangentialDamping___")]
-  public static extern void PxArticulationJoint_setTangentialDamping(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTangentialDamping___")]
-  public static extern float PxArticulationJoint_getTangentialDamping(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setSwingLimitContactDistance___")]
-  public static extern void PxArticulationJoint_setSwingLimitContactDistance(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getSwingLimitContactDistance___")]
-  public static extern float PxArticulationJoint_getSwingLimitContactDistance(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setSwingLimitEnabled___")]
-  public static extern void PxArticulationJoint_setSwingLimitEnabled(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getSwingLimitEnabled___")]
-  public static extern bool PxArticulationJoint_getSwingLimitEnabled(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTwistLimit___")]
-  public static extern void PxArticulationJoint_setTwistLimit(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTwistLimit___")]
-  public static extern void PxArticulationJoint_getTwistLimit(global::System.Runtime.InteropServices.HandleRef jarg1, out float jarg2, out float jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTwistLimitEnabled___")]
-  public static extern void PxArticulationJoint_setTwistLimitEnabled(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTwistLimitEnabled___")]
-  public static extern bool PxArticulationJoint_getTwistLimitEnabled(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_setTwistLimitContactDistance___")]
-  public static extern void PxArticulationJoint_setTwistLimitContactDistance(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_getTwistLimitContactDistance___")]
-  public static extern float PxArticulationJoint_getTwistLimitContactDistance(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setJointType___")]
-  public static extern void PxArticulationJointReducedCoordinate_setJointType(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getJointType___")]
-  public static extern int PxArticulationJointReducedCoordinate_getJointType(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setMotion___")]
-  public static extern void PxArticulationJointReducedCoordinate_setMotion(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getMotion___")]
-  public static extern int PxArticulationJointReducedCoordinate_getMotion(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setLimit___")]
-  public static extern void PxArticulationJointReducedCoordinate_setLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3, float jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getLimit___")]
-  public static extern void PxArticulationJointReducedCoordinate_getLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, out float jarg3, out float jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setDrive__SWIG_0___")]
-  public static extern void PxArticulationJointReducedCoordinate_setDrive__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3, float jarg4, float jarg5, int jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setDrive__SWIG_1___")]
-  public static extern void PxArticulationJointReducedCoordinate_setDrive__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3, float jarg4, float jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getDrive___")]
-  public static extern void PxArticulationJointReducedCoordinate_getDrive(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, out float jarg3, out float jarg4, out float jarg5, out PxArticulationDriveType jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setDriveTarget___")]
-  public static extern void PxArticulationJointReducedCoordinate_setDriveTarget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setDriveVelocity___")]
-  public static extern void PxArticulationJointReducedCoordinate_setDriveVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, float jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getDriveTarget___")]
-  public static extern float PxArticulationJointReducedCoordinate_getDriveTarget(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getDriveVelocity___")]
-  public static extern float PxArticulationJointReducedCoordinate_getDriveVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setFrictionCoefficient___")]
-  public static extern void PxArticulationJointReducedCoordinate_setFrictionCoefficient(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getFrictionCoefficient___")]
-  public static extern float PxArticulationJointReducedCoordinate_getFrictionCoefficient(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_setMaxJointVelocity___")]
-  public static extern void PxArticulationJointReducedCoordinate_setMaxJointVelocity(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_getMaxJointVelocity___")]
-  public static extern float PxArticulationJointReducedCoordinate_getMaxJointVelocity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getArticulation___")]
-  public static extern global::System.IntPtr PxArticulationLink_getArticulation(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getInboundJoint___")]
-  public static extern global::System.IntPtr PxArticulationLink_getInboundJoint(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getInboundJointReducedCoordinate___")]
-  public static extern global::System.IntPtr PxArticulationLink_getInboundJointReducedCoordinate(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getInboundJointDof___")]
-  public static extern uint PxArticulationLink_getInboundJointDof(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getNbChildren___")]
-  public static extern uint PxArticulationLink_getNbChildren(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getLinkIndex___")]
-  public static extern uint PxArticulationLink_getLinkIndex(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_getChild___")]
-  public static extern global::System.IntPtr PxArticulationLink_getChild(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getScene___")]
-  public static extern global::System.IntPtr PxArticulationBase_getScene(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_setSolverIterationCounts__SWIG_0___")]
-  public static extern void PxArticulationBase_setSolverIterationCounts__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_setSolverIterationCounts__SWIG_1___")]
-  public static extern void PxArticulationBase_setSolverIterationCounts__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getSolverIterationCounts___")]
-  public static extern void PxArticulationBase_getSolverIterationCounts(global::System.Runtime.InteropServices.HandleRef jarg1, out uint jarg2, out uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_isSleeping___")]
-  public static extern bool PxArticulationBase_isSleeping(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_setSleepThreshold___")]
-  public static extern void PxArticulationBase_setSleepThreshold(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getSleepThreshold___")]
-  public static extern float PxArticulationBase_getSleepThreshold(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_setStabilizationThreshold___")]
-  public static extern void PxArticulationBase_setStabilizationThreshold(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getStabilizationThreshold___")]
-  public static extern float PxArticulationBase_getStabilizationThreshold(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_setWakeCounter___")]
-  public static extern void PxArticulationBase_setWakeCounter(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getWakeCounter___")]
-  public static extern float PxArticulationBase_getWakeCounter(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_wakeUp___")]
-  public static extern void PxArticulationBase_wakeUp(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_putToSleep___")]
-  public static extern void PxArticulationBase_putToSleep(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_createLink___")]
-  public static extern global::System.IntPtr PxArticulationBase_createLink(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getLink___")]
-  public static extern global::System.IntPtr PxArticulationBase_getLink(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_setName___")]
-  public static extern void PxArticulationBase_setName(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getName___")]
-  public static extern string PxArticulationBase_getName(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getWorldBounds__SWIG_0___")]
-  public static extern global::System.IntPtr PxArticulationBase_getWorldBounds__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getWorldBounds__SWIG_1___")]
-  public static extern global::System.IntPtr PxArticulationBase_getWorldBounds__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_getAggregate___")]
-  public static extern global::System.IntPtr PxArticulationBase_getAggregate(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_createArticulationJoint___")]
-  public static extern global::System.IntPtr PxArticulationBase_createArticulationJoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3, global::System.Runtime.InteropServices.HandleRef jarg4,  global::System.IntPtr  jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_releaseArticulationJoint___")]
-  public static extern void PxArticulationBase_releaseArticulationJoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxArticulationBase___")]
-  public static extern void delete_PxArticulationBase(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_release___")]
-  public static extern void PxArticulation_release(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_setMaxProjectionIterations___")]
-  public static extern void PxArticulation_setMaxProjectionIterations(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_getMaxProjectionIterations___")]
-  public static extern uint PxArticulation_getMaxProjectionIterations(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_setSeparationTolerance___")]
-  public static extern void PxArticulation_setSeparationTolerance(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_getSeparationTolerance___")]
-  public static extern float PxArticulation_getSeparationTolerance(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_setInternalDriveIterations___")]
-  public static extern void PxArticulation_setInternalDriveIterations(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_getInternalDriveIterations___")]
-  public static extern uint PxArticulation_getInternalDriveIterations(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_setExternalDriveIterations___")]
-  public static extern void PxArticulation_setExternalDriveIterations(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_getExternalDriveIterations___")]
-  public static extern uint PxArticulation_getExternalDriveIterations(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_createDriveCache___")]
-  public static extern global::System.IntPtr PxArticulation_createDriveCache(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_updateDriveCache___")]
-  public static extern void PxArticulation_updateDriveCache(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, float jarg3, uint jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_releaseDriveCache___")]
-  public static extern void PxArticulation_releaseDriveCache(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_applyImpulse___")]
-  public static extern void PxArticulation_applyImpulse(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3,  global::System.IntPtr  jarg4,  global::System.IntPtr  jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_computeImpulseResponse___")]
-  public static extern void PxArticulation_computeImpulseResponse(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3,  global::System.IntPtr  jarg4, global::System.Runtime.InteropServices.HandleRef jarg5,  global::System.IntPtr  jarg6,  global::System.IntPtr  jarg7);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_setArticulationFlags___")]
-  public static extern void PxArticulationReducedCoordinate_setArticulationFlags(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_setArticulationFlag___")]
-  public static extern void PxArticulationReducedCoordinate_setArticulationFlag(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, bool jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_getArticulationFlags___")]
-  public static extern int PxArticulationReducedCoordinate_getArticulationFlags(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_getDofs___")]
-  public static extern uint PxArticulationReducedCoordinate_getDofs(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_createCache___")]
-  public static extern global::System.IntPtr PxArticulationReducedCoordinate_createCache(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_getCacheDataSize___")]
-  public static extern uint PxArticulationReducedCoordinate_getCacheDataSize(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_zeroCache___")]
-  public static extern void PxArticulationReducedCoordinate_zeroCache(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_applyCache__SWIG_0___")]
-  public static extern void PxArticulationReducedCoordinate_applyCache__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3, bool jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_applyCache__SWIG_1___")]
-  public static extern void PxArticulationReducedCoordinate_applyCache__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_copyInternalStateToCache___")]
-  public static extern void PxArticulationReducedCoordinate_copyInternalStateToCache(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_releaseCache___")]
-  public static extern void PxArticulationReducedCoordinate_releaseCache(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_commonInit___")]
-  public static extern void PxArticulationReducedCoordinate_commonInit(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeGeneralizedGravityForce___")]
-  public static extern void PxArticulationReducedCoordinate_computeGeneralizedGravityForce(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeCoriolisAndCentrifugalForce___")]
-  public static extern void PxArticulationReducedCoordinate_computeCoriolisAndCentrifugalForce(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeGeneralizedExternalForce___")]
-  public static extern void PxArticulationReducedCoordinate_computeGeneralizedExternalForce(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeJointAcceleration___")]
-  public static extern void PxArticulationReducedCoordinate_computeJointAcceleration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeJointForce___")]
-  public static extern void PxArticulationReducedCoordinate_computeJointForce(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeDenseJacobian___")]
-  public static extern void PxArticulationReducedCoordinate_computeDenseJacobian(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, out uint jarg3, out uint jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeCoefficientMatrix___")]
-  public static extern void PxArticulationReducedCoordinate_computeCoefficientMatrix(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_computeGeneralizedMassMatrix___")]
-  public static extern void PxArticulationReducedCoordinate_computeGeneralizedMassMatrix(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_addLoopJoint___")]
-  public static extern void PxArticulationReducedCoordinate_addLoopJoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_removeLoopJoint___")]
-  public static extern void PxArticulationReducedCoordinate_removeLoopJoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_getNbLoopJoints___")]
-  public static extern uint PxArticulationReducedCoordinate_getNbLoopJoints(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_getLoopJoint___")]
-  public static extern global::System.IntPtr PxArticulationReducedCoordinate_getLoopJoint(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_getCoefficientMatrixSize___")]
-  public static extern uint PxArticulationReducedCoordinate_getCoefficientMatrixSize(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_teleportRootLink___")]
-  public static extern void PxArticulationReducedCoordinate_teleportRootLink(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, bool jarg3);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxAggregate_addActor__SWIG_0___")]
   public static extern bool PxAggregate_addActor__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
@@ -5090,12 +4314,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxAggregate_removeActor___")]
   public static extern bool PxAggregate_removeActor(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxAggregate_addArticulation___")]
-  public static extern bool PxAggregate_addArticulation(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxAggregate_removeArticulation___")]
-  public static extern bool PxAggregate_removeArticulation(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxAggregate_getNbActors___")]
   public static extern uint PxAggregate_getNbActors(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -6534,513 +5752,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4W_mDriveSimData_get___")]
   public static extern global::System.IntPtr PxVehicleDrive4W_mDriveSimData_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleKeySmoothingData_mRiseRates_set___")]
-  public static extern void PxVehicleKeySmoothingData_mRiseRates_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleKeySmoothingData_mRiseRates_get___")]
-  public static extern global::System.IntPtr PxVehicleKeySmoothingData_mRiseRates_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleKeySmoothingData_mFallRates_set___")]
-  public static extern void PxVehicleKeySmoothingData_mFallRates_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleKeySmoothingData_mFallRates_get___")]
-  public static extern global::System.IntPtr PxVehicleKeySmoothingData_mFallRates_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleKeySmoothingData___")]
-  public static extern void delete_PxVehicleKeySmoothingData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehiclePadSmoothingData_mRiseRates_set___")]
-  public static extern void PxVehiclePadSmoothingData_mRiseRates_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehiclePadSmoothingData_mRiseRates_get___")]
-  public static extern global::System.IntPtr PxVehiclePadSmoothingData_mRiseRates_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehiclePadSmoothingData_mFallRates_set___")]
-  public static extern void PxVehiclePadSmoothingData_mFallRates_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehiclePadSmoothingData_mFallRates_get___")]
-  public static extern global::System.IntPtr PxVehiclePadSmoothingData_mFallRates_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehiclePadSmoothingData___")]
-  public static extern void delete_PxVehiclePadSmoothingData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxVehicleDrive4WRawInputData___")]
-  public static extern global::System.IntPtr new_PxVehicleDrive4WRawInputData();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleDrive4WRawInputData___")]
-  public static extern void delete_PxVehicleDrive4WRawInputData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setDigitalAccel___")]
-  public static extern void PxVehicleDrive4WRawInputData_setDigitalAccel(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setDigitalBrake___")]
-  public static extern void PxVehicleDrive4WRawInputData_setDigitalBrake(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setDigitalHandbrake___")]
-  public static extern void PxVehicleDrive4WRawInputData_setDigitalHandbrake(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setDigitalSteerLeft___")]
-  public static extern void PxVehicleDrive4WRawInputData_setDigitalSteerLeft(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setDigitalSteerRight___")]
-  public static extern void PxVehicleDrive4WRawInputData_setDigitalSteerRight(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getDigitalAccel___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getDigitalAccel(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getDigitalBrake___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getDigitalBrake(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getDigitalHandbrake___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getDigitalHandbrake(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getDigitalSteerLeft___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getDigitalSteerLeft(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getDigitalSteerRight___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getDigitalSteerRight(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setAnalogAccel___")]
-  public static extern void PxVehicleDrive4WRawInputData_setAnalogAccel(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setAnalogBrake___")]
-  public static extern void PxVehicleDrive4WRawInputData_setAnalogBrake(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setAnalogHandbrake___")]
-  public static extern void PxVehicleDrive4WRawInputData_setAnalogHandbrake(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setAnalogSteer___")]
-  public static extern void PxVehicleDrive4WRawInputData_setAnalogSteer(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getAnalogAccel___")]
-  public static extern float PxVehicleDrive4WRawInputData_getAnalogAccel(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getAnalogBrake___")]
-  public static extern float PxVehicleDrive4WRawInputData_getAnalogBrake(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getAnalogHandbrake___")]
-  public static extern float PxVehicleDrive4WRawInputData_getAnalogHandbrake(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getAnalogSteer___")]
-  public static extern float PxVehicleDrive4WRawInputData_getAnalogSteer(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setGearUp___")]
-  public static extern void PxVehicleDrive4WRawInputData_setGearUp(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_setGearDown___")]
-  public static extern void PxVehicleDrive4WRawInputData_setGearDown(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getGearUp___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getGearUp(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WRawInputData_getGearDown___")]
-  public static extern bool PxVehicleDrive4WRawInputData_getGearDown(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs___")]
-  public static extern void PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4, bool jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs___")]
-  public static extern void PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, float jarg4, bool jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_MAX_NB_SURFACE_TYPES_get___")]
-  public static extern int PxVehicleDrivableSurfaceToTireFrictionPairs_MAX_NB_SURFACE_TYPES_get();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_allocate___")]
-  public static extern global::System.IntPtr PxVehicleDrivableSurfaceToTireFrictionPairs_allocate(uint jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_setup___")]
-  public static extern void PxVehicleDrivableSurfaceToTireFrictionPairs_setup(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, uint jarg3, global::System.IntPtr[] jarg4, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]PxVehicleDrivableSurfaceType[] jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_release___")]
-  public static extern void PxVehicleDrivableSurfaceToTireFrictionPairs_release(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_setTypePairFriction___")]
-  public static extern void PxVehicleDrivableSurfaceToTireFrictionPairs_setTypePairFriction(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, uint jarg3, float jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_getTypePairFriction___")]
-  public static extern float PxVehicleDrivableSurfaceToTireFrictionPairs_getTypePairFriction(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, uint jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_getMaxNbSurfaceTypes___")]
-  public static extern uint PxVehicleDrivableSurfaceToTireFrictionPairs_getMaxNbSurfaceTypes(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleDrivableSurfaceToTireFrictionPairs_getMaxNbTireTypes___")]
-  public static extern uint PxVehicleDrivableSurfaceToTireFrictionPairs_getMaxNbTireTypes(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleSuspensionRaycasts__SWIG_0___")]
-  public static extern void PxVehicleSuspensionRaycasts__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.IntPtr[] jarg3, uint jarg4, System.Runtime.InteropServices.HandleRef jarg5, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray,ArraySubType=System.Runtime.InteropServices.UnmanagedType.I1)]bool[] jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleSuspensionRaycasts__SWIG_1___")]
-  public static extern void PxVehicleSuspensionRaycasts__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.IntPtr[] jarg3, uint jarg4, System.Runtime.InteropServices.HandleRef jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxWheelQueryResult___")]
-  public static extern global::System.IntPtr new_PxWheelQueryResult();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspLineStart_set___")]
-  public static extern void PxWheelQueryResult_suspLineStart_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspLineStart_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_suspLineStart_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspLineDir_set___")]
-  public static extern void PxWheelQueryResult_suspLineDir_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspLineDir_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_suspLineDir_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspLineLength_set___")]
-  public static extern void PxWheelQueryResult_suspLineLength_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspLineLength_get___")]
-  public static extern float PxWheelQueryResult_suspLineLength_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_isInAir_set___")]
-  public static extern void PxWheelQueryResult_isInAir_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_isInAir_get___")]
-  public static extern bool PxWheelQueryResult_isInAir_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactActor_set___")]
-  public static extern void PxWheelQueryResult_tireContactActor_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactActor_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireContactActor_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactShape_set___")]
-  public static extern void PxWheelQueryResult_tireContactShape_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactShape_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireContactShape_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireSurfaceMaterial_set___")]
-  public static extern void PxWheelQueryResult_tireSurfaceMaterial_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireSurfaceMaterial_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireSurfaceMaterial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireSurfaceType_set___")]
-  public static extern void PxWheelQueryResult_tireSurfaceType_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireSurfaceType_get___")]
-  public static extern uint PxWheelQueryResult_tireSurfaceType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactPoint_set___")]
-  public static extern void PxWheelQueryResult_tireContactPoint_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactPoint_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireContactPoint_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactNormal_set___")]
-  public static extern void PxWheelQueryResult_tireContactNormal_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireContactNormal_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireContactNormal_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireFriction_set___")]
-  public static extern void PxWheelQueryResult_tireFriction_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireFriction_get___")]
-  public static extern float PxWheelQueryResult_tireFriction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspJounce_set___")]
-  public static extern void PxWheelQueryResult_suspJounce_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspJounce_get___")]
-  public static extern float PxWheelQueryResult_suspJounce_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspSpringForce_set___")]
-  public static extern void PxWheelQueryResult_suspSpringForce_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_suspSpringForce_get___")]
-  public static extern float PxWheelQueryResult_suspSpringForce_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireLongitudinalDir_set___")]
-  public static extern void PxWheelQueryResult_tireLongitudinalDir_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireLongitudinalDir_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireLongitudinalDir_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireLateralDir_set___")]
-  public static extern void PxWheelQueryResult_tireLateralDir_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_tireLateralDir_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_tireLateralDir_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_longitudinalSlip_set___")]
-  public static extern void PxWheelQueryResult_longitudinalSlip_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_longitudinalSlip_get___")]
-  public static extern float PxWheelQueryResult_longitudinalSlip_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_lateralSlip_set___")]
-  public static extern void PxWheelQueryResult_lateralSlip_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_lateralSlip_get___")]
-  public static extern float PxWheelQueryResult_lateralSlip_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_steerAngle_set___")]
-  public static extern void PxWheelQueryResult_steerAngle_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_steerAngle_get___")]
-  public static extern float PxWheelQueryResult_steerAngle_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_localPose_set___")]
-  public static extern void PxWheelQueryResult_localPose_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxWheelQueryResult_localPose_get___")]
-  public static extern global::System.IntPtr PxWheelQueryResult_localPose_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxWheelQueryResult___")]
-  public static extern void delete_PxWheelQueryResult(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleWheelQueryResult_wheelQueryResults_set___")]
-  public static extern void PxVehicleWheelQueryResult_wheelQueryResults_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleWheelQueryResult_wheelQueryResults_get___")]
-  public static extern global::System.IntPtr PxVehicleWheelQueryResult_wheelQueryResults_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleWheelQueryResult_nbWheelQueryResults_set___")]
-  public static extern void PxVehicleWheelQueryResult_nbWheelQueryResults_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleWheelQueryResult_nbWheelQueryResults_get___")]
-  public static extern uint PxVehicleWheelQueryResult_nbWheelQueryResults_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleWheelQueryResult___")]
-  public static extern void delete_PxVehicleWheelQueryResult(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxVehicleWheelConcurrentUpdateData___")]
-  public static extern global::System.IntPtr new_PxVehicleWheelConcurrentUpdateData();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleWheelConcurrentUpdateData___")]
-  public static extern void delete_PxVehicleWheelConcurrentUpdateData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxVehicleConcurrentUpdateData___")]
-  public static extern global::System.IntPtr new_PxVehicleConcurrentUpdateData();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleConcurrentUpdateData_concurrentWheelUpdates_set___")]
-  public static extern void PxVehicleConcurrentUpdateData_concurrentWheelUpdates_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleConcurrentUpdateData_concurrentWheelUpdates_get___")]
-  public static extern global::System.IntPtr PxVehicleConcurrentUpdateData_concurrentWheelUpdates_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleConcurrentUpdateData_nbConcurrentWheelUpdates_set___")]
-  public static extern void PxVehicleConcurrentUpdateData_nbConcurrentWheelUpdates_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleConcurrentUpdateData_nbConcurrentWheelUpdates_get___")]
-  public static extern uint PxVehicleConcurrentUpdateData_nbConcurrentWheelUpdates_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleConcurrentUpdateData___")]
-  public static extern void delete_PxVehicleConcurrentUpdateData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleUpdates__SWIG_0___")]
-  public static extern void PxVehicleUpdates__SWIG_0(float jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.IntPtr[] jarg5, System.Runtime.InteropServices.HandleRef jarg6, [global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]PxVehicleConcurrentUpdateData[] jarg7);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleUpdates__SWIG_1___")]
-  public static extern void PxVehicleUpdates__SWIG_1(float jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, uint jarg4, global::System.IntPtr[] jarg5, System.Runtime.InteropServices.HandleRef jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleGraphDesc___")]
-  public static extern void delete_PxVehicleGraphDesc(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxVehicleGraphChannelDesc___")]
-  public static extern global::System.IntPtr new_PxVehicleGraphChannelDesc();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mMinY_set___")]
-  public static extern void PxVehicleGraphChannelDesc_mMinY_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mMinY_get___")]
-  public static extern float PxVehicleGraphChannelDesc_mMinY_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mMaxY_set___")]
-  public static extern void PxVehicleGraphChannelDesc_mMaxY_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mMaxY_get___")]
-  public static extern float PxVehicleGraphChannelDesc_mMaxY_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mMidY_set___")]
-  public static extern void PxVehicleGraphChannelDesc_mMidY_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mMidY_get___")]
-  public static extern float PxVehicleGraphChannelDesc_mMidY_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mColorLow_set___")]
-  public static extern void PxVehicleGraphChannelDesc_mColorLow_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mColorLow_get___")]
-  public static extern global::System.IntPtr PxVehicleGraphChannelDesc_mColorLow_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mColorHigh_set___")]
-  public static extern void PxVehicleGraphChannelDesc_mColorHigh_set(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mColorHigh_get___")]
-  public static extern global::System.IntPtr PxVehicleGraphChannelDesc_mColorHigh_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mTitle_set___")]
-  public static extern void PxVehicleGraphChannelDesc_mTitle_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraphChannelDesc_mTitle_get___")]
-  public static extern string PxVehicleGraphChannelDesc_mTitle_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxVehicleGraphChannelDesc___")]
-  public static extern void delete_PxVehicleGraphChannelDesc(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_setup___")]
-  public static extern void PxVehicleGraph_setup(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, int jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_clearRecordedChannelData___")]
-  public static extern void PxVehicleGraph_clearRecordedChannelData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_getBackgroundColor___")]
-  public static extern global::System.IntPtr PxVehicleGraph_getBackgroundColor(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_getBackgroundAlpha___")]
-  public static extern float PxVehicleGraph_getBackgroundAlpha(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_getBackgroundCoords___")]
-  public static extern void PxVehicleGraph_getBackgroundCoords(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_computeGraphChannel___")]
-  public static extern void PxVehicleGraph_computeGraphChannel(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, global::System.Runtime.InteropServices.HandleRef jarg3,  global::System.IntPtr  jarg4, string jarg5);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_getLatestValue___")]
-  public static extern float PxVehicleGraph_getLatestValue(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleGraph_getRawData___")]
-  public static extern void PxVehicleGraph_getRawData(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2, [global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_allocate___")]
-  public static extern global::System.IntPtr PxVehicleTelemetryData_allocate(uint jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_free___")]
-  public static extern void PxVehicleTelemetryData_free(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_setup___")]
-  public static extern void PxVehicleTelemetryData_setup(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2, float jarg3, float jarg4, float jarg5, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg6, [global::System.Runtime.InteropServices.In, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]float[] jarg7,  global::System.IntPtr  jarg8,  global::System.IntPtr  jarg9,  global::System.IntPtr  jarg10);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_clear___")]
-  public static extern void PxVehicleTelemetryData_clear(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_getEngineGraph___")]
-  public static extern global::System.IntPtr PxVehicleTelemetryData_getEngineGraph(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_getNbWheelGraphs___")]
-  public static extern uint PxVehicleTelemetryData_getNbWheelGraphs(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_getWheelGraph___")]
-  public static extern global::System.IntPtr PxVehicleTelemetryData_getWheelGraph(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_getTireforceAppPoints___")]
-  public static extern global::System.IntPtr PxVehicleTelemetryData_getTireforceAppPoints(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleTelemetryData_getSuspforceAppPoints___")]
-  public static extern global::System.IntPtr PxVehicleTelemetryData_getSuspforceAppPoints(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_0___")]
-  public static extern void PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_0(float jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, [global::System.Runtime.InteropServices.Out, global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPArray)]PxVehicleConcurrentUpdateData[] jarg7);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_1___")]
-  public static extern void PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_1(float jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxVehicleShiftOrigin___")]
-  public static extern void PxVehicleShiftOrigin( global::System.IntPtr  jarg1, uint jarg2, global::System.IntPtr[] jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxExtendedVec3__SWIG_0___")]
-  public static extern global::System.IntPtr new_PxExtendedVec3__SWIG_0();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_PxExtendedVec3__SWIG_1___")]
-  public static extern global::System.IntPtr new_PxExtendedVec3__SWIG_1(double jarg1, double jarg2, double jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_isZero___")]
-  public static extern bool PxExtendedVec3_isZero(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_dot___")]
-  public static extern double PxExtendedVec3_dot(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_distanceSquared___")]
-  public static extern double PxExtendedVec3_distanceSquared(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_magnitudeSquared___")]
-  public static extern double PxExtendedVec3_magnitudeSquared(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_magnitude___")]
-  public static extern double PxExtendedVec3_magnitude(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_normalize___")]
-  public static extern double PxExtendedVec3_normalize(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_isFinite___")]
-  public static extern bool PxExtendedVec3_isFinite(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_maximum___")]
-  public static extern void PxExtendedVec3_maximum(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_minimum___")]
-  public static extern void PxExtendedVec3_minimum(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_set___")]
-  public static extern void PxExtendedVec3_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2, double jarg3, double jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_setPlusInfinity___")]
-  public static extern void PxExtendedVec3_setPlusInfinity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_setMinusInfinity___")]
-  public static extern void PxExtendedVec3_setMinusInfinity(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_0___")]
-  public static extern void PxExtendedVec3_cross__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2,  global::System.IntPtr  jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_1___")]
-  public static extern void PxExtendedVec3_cross__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_2___")]
-  public static extern global::System.IntPtr PxExtendedVec3_cross__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_cross__SWIG_3___")]
-  public static extern void PxExtendedVec3_cross__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract__SWIG_0___")]
-  public static extern global::System.IntPtr PxExtendedVec3___subtract__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___add_assign__SWIG_0___")]
-  public static extern global::System.IntPtr PxExtendedVec3___add_assign__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract_assign__SWIG_0___")]
-  public static extern global::System.IntPtr PxExtendedVec3___subtract_assign__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___add_assign__SWIG_1___")]
-  public static extern global::System.IntPtr PxExtendedVec3___add_assign__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract_assign__SWIG_1___")]
-  public static extern global::System.IntPtr PxExtendedVec3___subtract_assign__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___multiply_assign___")]
-  public static extern global::System.IntPtr PxExtendedVec3___multiply_assign(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___add___")]
-  public static extern global::System.IntPtr PxExtendedVec3___add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3___subtract__SWIG_1___")]
-  public static extern global::System.IntPtr PxExtendedVec3___subtract__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_get___")]
-  public static extern double PxExtendedVec3_get(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_x_set___")]
-  public static extern void PxExtendedVec3_x_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_x_get___")]
-  public static extern double PxExtendedVec3_x_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_y_set___")]
-  public static extern void PxExtendedVec3_y_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_y_get___")]
-  public static extern double PxExtendedVec3_y_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_z_set___")]
-  public static extern void PxExtendedVec3_z_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxExtendedVec3_z_get___")]
-  public static extern double PxExtendedVec3_z_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxExtendedVec3___")]
   public static extern void delete_PxExtendedVec3(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -7049,6 +5760,26 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxObstacleContext___")]
   public static extern void delete_PxObstacleContext(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxQueryFilterCallback_preFilter___")]
+  public static extern int PxQueryFilterCallback_preFilter(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, PxHitFlag jarg5);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxQueryFilterCallback_postFilter___")]
+  public static extern int PxQueryFilterCallback_postFilter(global::System.Runtime.InteropServices.HandleRef jarg1,  global::System.IntPtr  jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_PxQueryFilterCallback___")]
+  public static extern void delete_PxQueryFilterCallback(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxQueryFilterCallback_director_connect___")]
+  public static extern void PxQueryFilterCallback_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, PxQueryFilterCallback.SwigDelegatePxQueryFilterCallback_0 delegate0, PxQueryFilterCallback.SwigDelegatePxQueryFilterCallback_1 delegate1);
+
+  public delegate PxQueryHitType PxBatchQueryPreFilterShaderDelegate(PxFilterData queryFilterData, PxFilterData objectFilterData,
+	global::System.IntPtr constantBlock, uint constantBlockSize,
+	PxHitFlag hitFlags);
+  public delegate PxQueryHitType PxBatchQueryPostFilterShaderDelegate(PxFilterData queryFilterData, PxFilterData objectFilterData,
+	global::System.IntPtr constantBlock, uint constantBlockSize,
+	PxQueryHit hit);
+
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxControllerDesc_position_set___")]
   public static extern void PxControllerDesc_position_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -7302,30 +6033,6 @@ public class NativePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxCapsuleControllerDesc_height_get___")]
   public static extern float PxCapsuleControllerDesc_height_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_new_VehicleSceneQueryData___")]
-  public static extern global::System.IntPtr new_VehicleSceneQueryData();
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_delete_VehicleSceneQueryData___")]
-  public static extern void delete_VehicleSceneQueryData(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_VehicleSceneQueryData_allocate___")]
-  public static extern global::System.IntPtr VehicleSceneQueryData_allocate(uint jarg1, uint jarg2, uint jarg3, uint jarg4, PxBatchQueryPreFilterShaderDelegate jarg5, PxBatchQueryPostFilterShaderDelegate jarg6, global::System.Runtime.InteropServices.HandleRef jarg7);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_VehicleSceneQueryData_free___")]
-  public static extern void VehicleSceneQueryData_free(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_VehicleSceneQueryData_setUpBatchedSceneQuery___")]
-  public static extern global::System.IntPtr VehicleSceneQueryData_setUpBatchedSceneQuery(uint jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_VehicleSceneQueryData_getRaycastQueryResultBuffer___")]
-  public static extern System.IntPtr VehicleSceneQueryData_getRaycastQueryResultBuffer(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_VehicleSceneQueryData_getSweepQueryResultBuffer___")]
-  public static extern global::System.IntPtr VehicleSceneQueryData_getSweepQueryResultBuffer(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_VehicleSceneQueryData_getQueryResultBufferSize___")]
-  public static extern uint VehicleSceneQueryData_getQueryResultBufferSize(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxCreateControllerManager__SWIG_0___")]
   public static extern global::System.IntPtr PxCreateControllerManager__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
@@ -7487,27 +6194,6 @@ public class NativePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxConstraint_SWIGUpcast___")]
   public static extern global::System.IntPtr PxConstraint_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointBase_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulationJointBase_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJoint_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulationJoint_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationJointReducedCoordinate_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulationJointReducedCoordinate_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationLink_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulationLink_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationBase_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulationBase_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulation_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulation_SWIGUpcast(global::System.IntPtr jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxArticulationReducedCoordinate_SWIGUpcast___")]
-  public static extern global::System.IntPtr PxArticulationReducedCoordinate_SWIGUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("NVIDIA.PhysX.Native", EntryPoint="CSharp_NVIDIAfPhysX_PxAggregate_SWIGUpcast___")]
   public static extern global::System.IntPtr PxAggregate_SWIGUpcast(global::System.IntPtr jarg1);

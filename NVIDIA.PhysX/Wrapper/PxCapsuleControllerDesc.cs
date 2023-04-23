@@ -21,18 +21,13 @@ public partial class PxCapsuleControllerDesc : PxControllerDesc {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  public override void destroy() {
-    lock(this) {
-      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
-          NativePINVOKE.delete_PxCapsuleControllerDesc(swigCPtr);
-        }
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+  internal static new PxCapsuleControllerDesc getWrapper(global::System.IntPtr cPtr, bool cMemoryOwn) {
+      var wrapper = WrapperCache.find(cPtr);
+      if (!(wrapper is PxCapsuleControllerDesc)) {
+          wrapper = new PxCapsuleControllerDesc(cPtr, cMemoryOwn);
+          WrapperCache.add(cPtr, wrapper);
       }
-      global::System.GC.SuppressFinalize(this);
-      base.destroy();
-    }
+      return wrapper as PxCapsuleControllerDesc;
   }
 
   public PxCapsuleControllerDesc() : this(NativePINVOKE.new_PxCapsuleControllerDesc__SWIG_0(), true) {
@@ -44,7 +39,7 @@ public partial class PxCapsuleControllerDesc : PxControllerDesc {
   }
 
   public PxCapsuleControllerDesc __assign(PxCapsuleControllerDesc arg0) {
-    PxCapsuleControllerDesc ret = new PxCapsuleControllerDesc(NativePINVOKE.PxCapsuleControllerDesc___assign(swigCPtr, PxCapsuleControllerDesc.getCPtr(arg0)), false);
+    PxCapsuleControllerDesc ret = PxCapsuleControllerDesc.getWrapper(NativePINVOKE.PxCapsuleControllerDesc___assign(swigCPtr, PxCapsuleControllerDesc.getCPtr(arg0)), false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

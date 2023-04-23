@@ -111,16 +111,6 @@ public partial class PxRigidBody : PxRigidActor {
         return ret;
     }
 
-  public void setLinearVelocity( PxVec3  linVel, bool autowake) {
-    NativePINVOKE.PxRigidBody_setLinearVelocity__SWIG_0(swigCPtr,  linVel.swigCPtr , autowake);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void setLinearVelocity( PxVec3  linVel) {
-    NativePINVOKE.PxRigidBody_setLinearVelocity__SWIG_1(swigCPtr,  linVel.swigCPtr );
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
   public  PxVec3  getAngularVelocity() {
         global::System.IntPtr ptr = NativePINVOKE.PxRigidBody_getAngularVelocity(swigCPtr);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
@@ -128,16 +118,6 @@ public partial class PxRigidBody : PxRigidActor {
         PxVec3 ret; unsafe { ret = *(PxVec3*)ptr; }
         return ret;
     }
-
-  public void setAngularVelocity( PxVec3  angVel, bool autowake) {
-    NativePINVOKE.PxRigidBody_setAngularVelocity__SWIG_0(swigCPtr,  angVel.swigCPtr , autowake);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void setAngularVelocity( PxVec3  angVel) {
-    NativePINVOKE.PxRigidBody_setAngularVelocity__SWIG_1(swigCPtr,  angVel.swigCPtr );
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
 
   public void setMaxAngularVelocity(float maxAngVel) {
     NativePINVOKE.PxRigidBody_setMaxAngularVelocity(swigCPtr, maxAngVel);

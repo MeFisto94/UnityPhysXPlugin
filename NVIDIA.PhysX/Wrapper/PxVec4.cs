@@ -114,11 +114,6 @@ public partial struct PxVec4 {
         return ret;
     }
 
-  public void setZero() {
-    NativePINVOKE.PxVec4_setZero(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
 }
 
 }

@@ -20,8 +20,8 @@ MonoBehaviour:
   m_pvdPort: 5425
   m_pvdTimeout: 1
   m_pvdInstrumentation:
-    debug: 0
-    profile: 1
+    debug: 1
+    profile: 0
     memory: 0
   m_cpuThreads: -1
   m_cpuAffinities: 

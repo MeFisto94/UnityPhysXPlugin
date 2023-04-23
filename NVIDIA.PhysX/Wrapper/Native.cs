@@ -48,51 +48,6 @@ public class Native {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static void PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs(PxVehicleKeySmoothingData keySmoothing, SWIGTYPE_p_physx__PxFixedSizeLookupTableT_8_t steerVsForwardSpeedTable, PxVehicleDrive4WRawInputData rawInputData, float timestep, bool isVehicleInAir, PxVehicleDrive4W focusVehicle) {
-    NativePINVOKE.PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs(PxVehicleKeySmoothingData.getCPtr(keySmoothing), SWIGTYPE_p_physx__PxFixedSizeLookupTableT_8_t.getCPtr(steerVsForwardSpeedTable), PxVehicleDrive4WRawInputData.getCPtr(rawInputData), timestep, isVehicleInAir, PxVehicleDrive4W.getCPtr(focusVehicle));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs(PxVehiclePadSmoothingData padSmoothing, SWIGTYPE_p_physx__PxFixedSizeLookupTableT_8_t steerVsForwardSpeedTable, PxVehicleDrive4WRawInputData rawInputData, float timestep, bool isVehicleInAir, PxVehicleDrive4W focusVehicle) {
-    NativePINVOKE.PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs(PxVehiclePadSmoothingData.getCPtr(padSmoothing), SWIGTYPE_p_physx__PxFixedSizeLookupTableT_8_t.getCPtr(steerVsForwardSpeedTable), PxVehicleDrive4WRawInputData.getCPtr(rawInputData), timestep, isVehicleInAir, PxVehicleDrive4W.getCPtr(focusVehicle));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleSuspensionRaycasts(PxBatchQuery batchQuery, uint nbVehicles, PxVehicleWheels[] vehicles, uint nbSceneQueryResults, System.Runtime.InteropServices.HandleRef sceneQueryResults, bool[] vehiclesToRaycast) {
-    NativePINVOKE.PxVehicleSuspensionRaycasts__SWIG_0(PxBatchQuery.getCPtr(batchQuery), nbVehicles, global::System.Array.ConvertAll(vehicles, x => PxVehicleWheels.getCPtr(x).Handle /* Mono Bug Workaround */), nbSceneQueryResults, sceneQueryResults, vehiclesToRaycast);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleSuspensionRaycasts(PxBatchQuery batchQuery, uint nbVehicles, PxVehicleWheels[] vehicles, uint nbSceneQueryResults, System.Runtime.InteropServices.HandleRef sceneQueryResults) {
-    NativePINVOKE.PxVehicleSuspensionRaycasts__SWIG_1(PxBatchQuery.getCPtr(batchQuery), nbVehicles, global::System.Array.ConvertAll(vehicles, x => PxVehicleWheels.getCPtr(x).Handle /* Mono Bug Workaround */), nbSceneQueryResults, sceneQueryResults);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleUpdates(float timestep,  PxVec3  gravity, PxVehicleDrivableSurfaceToTireFrictionPairs vehicleDrivableSurfaceToTireFrictionPairs, uint nbVehicles, PxVehicleWheels[] vehicles, System.Runtime.InteropServices.HandleRef vehicleWheelQueryResults, PxVehicleConcurrentUpdateData[] vehicleConcurrentUpdates) {
-    NativePINVOKE.PxVehicleUpdates__SWIG_0(timestep,  gravity.swigCPtr , PxVehicleDrivableSurfaceToTireFrictionPairs.getCPtr(vehicleDrivableSurfaceToTireFrictionPairs), nbVehicles, global::System.Array.ConvertAll(vehicles, x => PxVehicleWheels.getCPtr(x).Handle /* Mono Bug Workaround */), vehicleWheelQueryResults, vehicleConcurrentUpdates);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleUpdates(float timestep,  PxVec3  gravity, PxVehicleDrivableSurfaceToTireFrictionPairs vehicleDrivableSurfaceToTireFrictionPairs, uint nbVehicles, PxVehicleWheels[] vehicles, System.Runtime.InteropServices.HandleRef vehicleWheelQueryResults) {
-    NativePINVOKE.PxVehicleUpdates__SWIG_1(timestep,  gravity.swigCPtr , PxVehicleDrivableSurfaceToTireFrictionPairs.getCPtr(vehicleDrivableSurfaceToTireFrictionPairs), nbVehicles, global::System.Array.ConvertAll(vehicles, x => PxVehicleWheels.getCPtr(x).Handle /* Mono Bug Workaround */), vehicleWheelQueryResults);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleUpdateSingleVehicleAndStoreTelemetryData(float timestep,  PxVec3  gravity, PxVehicleDrivableSurfaceToTireFrictionPairs vehicleDrivableSurfaceToTireFrictionPairs, PxVehicleWheels focusVehicle, System.Runtime.InteropServices.HandleRef vehicleWheelQueryResults, PxVehicleTelemetryData telemetryData, PxVehicleConcurrentUpdateData[] vehicleConcurrentUpdates) {
-    NativePINVOKE.PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_0(timestep,  gravity.swigCPtr , PxVehicleDrivableSurfaceToTireFrictionPairs.getCPtr(vehicleDrivableSurfaceToTireFrictionPairs), PxVehicleWheels.getCPtr(focusVehicle), vehicleWheelQueryResults, PxVehicleTelemetryData.getCPtr(telemetryData), vehicleConcurrentUpdates);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleUpdateSingleVehicleAndStoreTelemetryData(float timestep,  PxVec3  gravity, PxVehicleDrivableSurfaceToTireFrictionPairs vehicleDrivableSurfaceToTireFrictionPairs, PxVehicleWheels focusVehicle, System.Runtime.InteropServices.HandleRef vehicleWheelQueryResults, PxVehicleTelemetryData telemetryData) {
-    NativePINVOKE.PxVehicleUpdateSingleVehicleAndStoreTelemetryData__SWIG_1(timestep,  gravity.swigCPtr , PxVehicleDrivableSurfaceToTireFrictionPairs.getCPtr(vehicleDrivableSurfaceToTireFrictionPairs), PxVehicleWheels.getCPtr(focusVehicle), vehicleWheelQueryResults, PxVehicleTelemetryData.getCPtr(telemetryData));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public static void PxVehicleShiftOrigin( PxVec3  shift, uint nbVehicles, PxVehicleWheels[] vehicles) {
-    NativePINVOKE.PxVehicleShiftOrigin( shift.swigCPtr , nbVehicles, global::System.Array.ConvertAll(vehicles, x => PxVehicleWheels.getCPtr(x).Handle /* Mono Bug Workaround */));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
   public static  PxVec3  toVec3(PxExtendedVec3 v) {
         global::System.IntPtr ptr = NativePINVOKE.toVec3(PxExtendedVec3.getCPtr(v));
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();

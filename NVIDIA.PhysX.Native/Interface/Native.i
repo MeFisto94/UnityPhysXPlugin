@@ -30,7 +30,7 @@
 #include "header.h"
 %}
 
-%include PxPhysicsVersion.h
+%include foundation/PxPhysicsVersion.h
 
 %include stdint.i
 %include exception.i
@@ -127,14 +127,13 @@ namespace physx {
     struct PxConstraintInvMassScale;
     class PxConstraint;
     struct PxConstraintFlag;
-    class PxArticulationBase;
+    /*class PxArticulationBase;
     class PxArticulation;
     class PxArticulationReducedCoordinate;
-    class PxArticulationJointBase;
     class PxArticulationJoint;
-    class PxArticulationJointReducedCoordinate;
+    class PxArticulationJointReducedCoordinate;*/
     class PxArticulationLink;
-    class PxArticulationDriveCache;
+    //class PxArticulationDriveCache;
     class PxCudaContextManager;
     class PxJoint;
     class PxFixedJoint;
@@ -347,10 +346,10 @@ namespace physx {
         eGPU_COMPATIBLE = 1<<10
     );
 
-    SIMPLIFY_ENUM(PxArticulationJointDriveType,
+    /*SIMPLIFY_ENUM(PxArticulationJointDriveType,
         eTARGET = 0,
         eERROR = 1
-    );
+    );*/
 
     SIMPLIFY_ENUM(PxJointActorIndex,
         eACTOR0,
@@ -703,13 +702,12 @@ namespace physx {
     WRAPPER_CLASS(PxBVHStructure)
     WRAPPER_CLASS(PxPruningStructure)
     WRAPPER_CLASS(PxConstraint)
-    WRAPPER_CLASS(PxArticulationJointBase)
-    WRAPPER_CLASS(PxArticulationJoint)
-    WRAPPER_CLASS(PxArticulationJointReducedCoordinate)
+    /*WRAPPER_CLASS(PxArticulationJoint)
+    WRAPPER_CLASS(PxArticulationJointReducedCoordinate)*/
     WRAPPER_CLASS(PxArticulationLink)
-    WRAPPER_CLASS(PxArticulationBase)
+    /*WRAPPER_CLASS(PxArticulationBase)
     WRAPPER_CLASS(PxArticulation)
-    WRAPPER_CLASS(PxArticulationReducedCoordinate)
+    WRAPPER_CLASS(PxArticulationReducedCoordinate)*/
     WRAPPER_CLASS(PxAggregate)
     WRAPPER_CLASS(PxCudaContextManager)
     WRAPPER_CLASS(PxJoint)
@@ -797,7 +795,6 @@ namespace physx {
         PxVec4 minimum(const PxVec4& v) const;
         PxVec4 maximum(const PxVec4& v) const;
         PxVec3 getXYZ() const;
-        void setZero();
         //float x, y, z, w;
     };
 
@@ -880,8 +877,6 @@ namespace physx {
         bool isSane() const;
         bool isFinite() const;
         PxTransform transformInv(const PxTransform& src) const;
-        PxPlane transform(const PxPlane& plane) const;
-        PxPlane inverseTransform(const PxPlane& plane) const;
         PxTransform getNormalized() const;
     };
 
@@ -1035,9 +1030,9 @@ namespace physx {
     struct PxContactPairHeader {
     public:
         //PxContactPairHeader() {}
-        //PxRigidActor* actors[2];
-        %extend { physx::PxRigidActor* const actor0; %{ physx::PxRigidActor* physx_PxContactPairHeader_actor0_get(const physx::PxContactPairHeader* header) { return header->actors[0]; }%} }
-        %extend { physx::PxRigidActor* const actor1; %{ physx::PxRigidActor* physx_PxContactPairHeader_actor1_get(const physx::PxContactPairHeader* header) { return header->actors[1]; }%} }
+        //PxActor* actors[2];
+        %extend { physx::PxActor* const actor0; %{ physx::PxActor* physx_PxContactPairHeader_actor0_get(const physx::PxContactPairHeader* header) { return header->actors[0]; }%} }
+        %extend { physx::PxActor* const actor1; %{ physx::PxActor* physx_PxContactPairHeader_actor1_get(const physx::PxContactPairHeader* header) { return header->actors[1]; }%} }
         //const PxU8* extraDataStream;
         //PxU16 extraDataStreamSize;
         //PxContactPairHeaderFlags flags;
@@ -1222,11 +1217,10 @@ namespace physx {
         PxReal bounceThresholdVelocity; 
         PxReal frictionOffsetThreshold;
         PxReal ccdMaxSeparation;
-        PxReal solverOffsetSlop;
         //PxSceneFlags flags;
         %extend { PxSceneFlag::Enum flags; %{
             physx::PxSceneFlag::Enum physx_PxSceneDesc_flags_get(const physx::PxSceneDesc* desc) { return (physx::PxSceneFlag::Enum)(uint32_t)desc->flags; }
-            void physx_PxSceneDesc_flags_set(physx::PxSceneDesc* desc, physx::PxSceneFlag::Enum flags) { desc->flags.set(flags); }
+            void physx_PxSceneDesc_flags_set(physx::PxSceneDesc* desc, physx::PxSceneFlag::Enum flags) { desc->flags.setAll(flags); }
         %}}
         PxCpuDispatcher* cpuDispatcher;
         PxCudaContextManager* cudaContextManager;
@@ -1324,7 +1318,7 @@ namespace physx {
         PxReal convexEdgeThreshold;
         %extend { PxHeightFieldFlag::Enum flags; %{
             physx::PxHeightFieldFlag::Enum physx_PxHeightFieldDesc_flags_get(const physx::PxHeightFieldDesc* desc) { return (physx::PxHeightFieldFlag::Enum)(uint32_t)desc->flags; }
-            void physx_PxHeightFieldDesc_flags_set(physx::PxHeightFieldDesc* desc, physx::PxHeightFieldFlag::Enum flags) { desc->flags.set(flags); }
+            void physx_PxHeightFieldDesc_flags_set(physx::PxHeightFieldDesc* desc, physx::PxHeightFieldFlag::Enum flags) { desc->flags.setAll(flags); }
         %}}
         PxHeightFieldDesc();
         void setToDefault();
@@ -1394,7 +1388,7 @@ namespace physx {
         PxConvexMesh* convexMesh;
         %extend { PxConvexMeshGeometryFlag::Enum meshFlags; %{
             physx::PxConvexMeshGeometryFlag::Enum physx_PxConvexMeshGeometry_meshFlags_get(const physx::PxConvexMeshGeometry* geom) { return (physx::PxConvexMeshGeometryFlag::Enum)(uint32_t)geom->meshFlags; }
-            void physx_PxConvexMeshGeometry_meshFlags_set(physx::PxConvexMeshGeometry* geom, physx::PxConvexMeshGeometryFlag::Enum flags) { geom->meshFlags.set(flags); }
+            void physx_PxConvexMeshGeometry_meshFlags_set(physx::PxConvexMeshGeometry* geom, physx::PxConvexMeshGeometryFlag::Enum flags) { geom->meshFlags.setAll(flags); }
         %}}
     };
 
@@ -1406,7 +1400,7 @@ namespace physx {
         PxMeshScale scale;
         %extend { PxMeshGeometryFlag::Enum meshFlags; %{
             physx::PxMeshGeometryFlag::Enum physx_PxTriangleMeshGeometry_meshFlags_get(const physx::PxTriangleMeshGeometry* geom) { return (physx::PxMeshGeometryFlag::Enum)(uint32_t)geom->meshFlags; }
-            void physx_PxTriangleMeshGeometry_meshFlags_set(physx::PxTriangleMeshGeometry* geom, physx::PxMeshGeometryFlag::Enum flags) { geom->meshFlags.set(flags); }
+            void physx_PxTriangleMeshGeometry_meshFlags_set(physx::PxTriangleMeshGeometry* geom, physx::PxMeshGeometryFlag::Enum flags) { geom->meshFlags.setAll(flags); }
         %}}
         PxTriangleMesh* triangleMesh;
     };
@@ -1423,7 +1417,7 @@ namespace physx {
         PxReal columnScale;
         %extend { PxMeshGeometryFlag::Enum heightFieldFlags; %{
             physx::PxMeshGeometryFlag::Enum physx_PxHeightFieldGeometry_heightFieldFlags_get(const physx::PxHeightFieldGeometry* geom) { return (physx::PxMeshGeometryFlag::Enum)(uint32_t)geom->heightFieldFlags; }
-            void physx_PxHeightFieldGeometry_heightFieldFlags_set(physx::PxHeightFieldGeometry* geom, physx::PxMeshGeometryFlag::Enum flags) { geom->heightFieldFlags.set(flags); }
+            void physx_PxHeightFieldGeometry_heightFieldFlags_set(physx::PxHeightFieldGeometry* geom, physx::PxMeshGeometryFlag::Enum flags) { geom->heightFieldFlags.setAll(flags); }
         %}}
     };
 
@@ -1491,7 +1485,7 @@ namespace physx {
     };
 
     struct PxConstraintShaderTable {
-        enum { eMAX_SOLVERPRPEP_DATASIZE=400 };
+        //enum { eMAX_SOLVERPRPEP_DATASIZE=400 };
         //PxConstraintSolverPrep solverPrep;
         //PxConstraintProject project;
         //PxConstraintVisualize visualize;
@@ -1513,7 +1507,7 @@ namespace physx {
         //PxVec3 worldAngAccel;
     };
 
-    class PxArticulationCache {
+    /*class PxArticulationCache {
     public:
         %typemap(csattributes) Enum "[global::System.FlagsAttribute()]"
         enum struct Flags {
@@ -1553,7 +1547,7 @@ namespace physx {
         //void* scratchMemory;
         //void* scratchAllocator;
         PxU32 version;
-    };
+    };*/
 
     class PxSpring {
     public:
@@ -1568,7 +1562,7 @@ namespace physx {
         //PxD6JointDriveFlags flags;
         %extend { PxD6JointDriveFlag::Enum flags; %{
             physx::PxD6JointDriveFlag::Enum physx_PxD6JointDrive_flags_get(const physx::PxD6JointDrive* drive) { return (physx::PxD6JointDriveFlag::Enum)(uint32_t)drive->flags; }
-            void physx_PxD6JointDrive_flags_set(physx::PxD6JointDrive* drive, physx::PxD6JointDriveFlag::Enum flags) { drive->flags.set(flags); }
+            void physx_PxD6JointDrive_flags_set(physx::PxD6JointDrive* drive, physx::PxD6JointDriveFlag::Enum flags) { drive->flags.setAll(flags); }
         %}}
         PxD6JointDrive();
         PxD6JointDrive(PxReal driveStiffness, PxReal driveDamping, PxReal driveForceLimit, bool isAcceleration = false);
@@ -1581,7 +1575,7 @@ namespace physx {
         PxReal bounceThreshold;
         PxReal stiffness;
         PxReal damping;
-        PxReal contactDistance;
+        PxReal contactDistance_deprecated;
         PxJointLimitParameters();
         PxJointLimitParameters(const PxJointLimitParameters& p);
         bool isValid() const;
@@ -1634,10 +1628,10 @@ namespace physx {
         bool isValid() const;
     };
 
-    class PxArticulationDriveCache {
+    /*class PxArticulationDriveCache {
     protected:
         PxArticulationDriveCache();
-    };
+    };*/
 
     struct PxDominanceGroupPair {
         PxDominanceGroupPair(PxU8 a, PxU8 b);
@@ -1687,22 +1681,22 @@ namespace physx {
     };
 
     struct PxBroadPhaseRegion {
-        PxBounds3 bounds;
+        PxBounds3 mBounds;
         //void* userData;
     };
 
     struct PxBroadPhaseRegionInfo {
-        PxBroadPhaseRegion region;
-        PxU32 nbStaticObjects;
-        PxU32 nbDynamicObjects;
-        bool active;
-        bool overlap;
+        PxBroadPhaseRegion mRegion;
+        PxU32 mNbStaticObjects;
+        PxU32 mNbDynamicObjects;
+        bool mActive;
+        bool mOverlap;
     };
 
     struct PxBroadPhaseCaps {
-        PxU32 maxNbRegions;
-        PxU32 maxNbObjects;
-        bool needsPredefinedBounds;
+        PxU32 mMaxNbRegions;
+        //PxU32 mMaxNbObjects;
+        //bool mNeedsPredefinedBounds;
     };
 
     %feature("director") PxErrorCallback;
@@ -1764,7 +1758,7 @@ namespace physx {
         //PxHitFlags flags;
         %extend { PxHitFlag::Enum flags; %{
             physx::PxHitFlag::Enum physx_PxLocationHit_flags_get(const physx::PxLocationHit* hit) { return (physx::PxHitFlag::Enum)(uint32_t)hit->flags; }
-            void physx_PxLocationHit_flags_set(physx::PxLocationHit* hit, physx::PxHitFlag::Enum flags) { hit->flags.set(flags); }
+            void physx_PxLocationHit_flags_set(physx::PxLocationHit* hit, physx::PxHitFlag::Enum flags) { hit->flags.setAll(flags); }
         %}}
         PxVec3 position;
         PxVec3 normal;
@@ -1872,7 +1866,7 @@ namespace physx {
         //PxQueryFlags flags;
         %extend { PxQueryFlag::Enum flags; %{
             physx::PxQueryFlag::Enum physx_PxQueryFilterData_flags_get(const physx::PxQueryFilterData* data) { return (physx::PxQueryFlag::Enum)(uint32_t)data->flags; }
-            void physx_PxQueryFilterData_flags_set(physx::PxQueryFilterData* data, physx::PxQueryFlag::Enum flags) { data->flags.set(flags); }
+            void physx_PxQueryFilterData_flags_set(physx::PxQueryFilterData* data, physx::PxQueryFlag::Enum flags) { data->flags.setAll(flags); }
         %}}
     };
 
@@ -1923,7 +1917,7 @@ namespace physx {
         //PxMeshPreprocessingFlags meshPreprocessParams;
         %extend { PxMeshPreprocessingFlag::Enum meshPreprocessParams; %{
             physx::PxMeshPreprocessingFlag::Enum physx_PxCookingParams_meshPreprocessParams_get(const physx::PxCookingParams* params) { return (physx::PxMeshPreprocessingFlag::Enum)(uint32_t)params->meshPreprocessParams; }
-            void physx_PxCookingParams_meshPreprocessParams_set(physx::PxCookingParams* params, physx::PxMeshPreprocessingFlag::Enum flags) { params->meshPreprocessParams.set(flags); }
+            void physx_PxCookingParams_meshPreprocessParams_set(physx::PxCookingParams* params, physx::PxMeshPreprocessingFlag::Enum flags) { params->meshPreprocessParams.setAll(flags); }
         %}}
         PxReal meshWeldTolerance;
         PxMidphaseDesc midphaseDesc;
@@ -1944,7 +1938,7 @@ namespace physx {
         //PxMeshFlags flags;
         %extend { PxMeshFlag::Enum flags; %{
             physx::PxMeshFlag::Enum physx_PxSimpleTriangleMesh_flags_get(const physx::PxSimpleTriangleMesh* mesh) { return (physx::PxMeshFlag::Enum)(uint32_t)mesh->flags; }
-            void physx_PxSimpleTriangleMesh_flags_set(physx::PxSimpleTriangleMesh* mesh, physx::PxMeshFlag::Enum flags) { mesh->flags.set(flags); }
+            void physx_PxSimpleTriangleMesh_flags_set(physx::PxSimpleTriangleMesh* mesh, physx::PxMeshFlag::Enum flags) { mesh->flags.setAll(flags); }
         %}}
         PxSimpleTriangleMesh();
         void setToDefault();
@@ -2007,7 +2001,7 @@ namespace physx {
         //PxConvexFlags flags;
         %extend { PxConvexFlag::Enum flags; %{
             physx::PxConvexFlag::Enum physx_PxConvexMeshDesc_flags_get(const physx::PxConvexMeshDesc* desc) { return (physx::PxConvexFlag::Enum)(uint32_t)desc->flags; }
-            void physx_PxConvexMeshDesc_flags_set(physx::PxConvexMeshDesc* desc, physx::PxConvexFlag::Enum flags) { desc->flags.set(flags); }
+            void physx_PxConvexMeshDesc_flags_set(physx::PxConvexMeshDesc* desc, physx::PxConvexFlag::Enum flags) { desc->flags.setAll(flags); }
         %}}
         PxU16 vertexLimit;
         PxU16 quantizedCount;
@@ -2171,8 +2165,8 @@ namespace physx {
         %extend { PxSphericalJoint* createSphericalJoint(PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1) { return physx::PxSphericalJointCreate(*self, actor0, localFrame0, actor1, localFrame1); }}
         %extend { PxPrismaticJoint* createPrismaticJoint(PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1) { return physx::PxPrismaticJointCreate(*self, actor0, localFrame0, actor1, localFrame1); }}
         %extend { PxD6Joint* createD6Joint(PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1) { return physx::PxD6JointCreate(*self, actor0, localFrame0, actor1, localFrame1); }}
-        PxArticulation* createArticulation();
-        PxArticulationReducedCoordinate* createArticulationReducedCoordinate();
+//         PxArticulation* createArticulation();
+//         PxArticulationReducedCoordinate* createArticulationReducedCoordinate();
         PxMaterial* createMaterial(PxReal staticFriction, PxReal dynamicFriction, PxReal restitution);
         PxU32 getNbMaterials() const;
         //PxU32 getMaterials(PxMaterial** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
@@ -2188,7 +2182,7 @@ namespace physx {
         virtual ~PxPhysics() {}
     };
 
-    %include PxBatchQueryDesc.i
+    //%include PxBatchQueryDesc.i
 
     class PxScene {
     protected:
@@ -2203,8 +2197,8 @@ namespace physx {
         PxSceneLimits getLimits() const;
         PxPhysics& getPhysics();
         PxU32 getTimestamp() const;
-        void addArticulation(PxArticulationBase& articulation);
-        void removeArticulation(PxArticulationBase& articulation, bool wakeOnLostTouch = true);
+//         void addArticulation(PxArticulationBase& articulation);
+//         void removeArticulation(PxArticulationBase& articulation, bool wakeOnLostTouch = true);
         void addActor(PxActor& actor, const PxBVHStructure* bvhStructure = NULL);
         %apply physx::PxActor* INPUT[] { PxActor* actors[] }
         void addActors(PxActor* actors[], PxU32 nbActors);
@@ -2224,8 +2218,8 @@ namespace physx {
         %extend { PxU32 getNbDynamicActors() { return self->getNbActors(physx::PxActorTypeFlag::Enum::eRIGID_DYNAMIC); }}
         %extend { physx::PxActor* getDynamicActor(PxU32 index) { physx::PxActor* actor; self->getActors(physx::PxActorTypeFlag::Enum::eRIGID_DYNAMIC, &actor, 1, index); return actor; }}
         PxU32 getNbArticulations() const;
-        //PxU32 getArticulations(PxArticulationBase** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
-        %extend { PxArticulationBase* getArticulation(PxU32 index) { physx::PxArticulationBase* a; self->getArticulations(&a, 1, index); return a; }}
+        //PxU32 getArticulations(PxArticulationReducedCoordinate** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
+        //%extend { physx::PxArticulationReducedCoordinate* getArticulation(PxU32 index) { physx::PxArticulationReducedCoordinate* a; self->getArticulations(&a, 1, index); return a; }}
         PxU32 getNbConstraints() const;
         //PxU32 getConstraints(PxConstraint** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
         %extend { PxConstraint* getConstraint(PxU32 index) { physx::PxConstraint* c; self->getConstraints(&c, 1, index); return c; }}
@@ -2278,7 +2272,7 @@ namespace physx {
         void setCCDMaxPasses(PxU32 ccdMaxPasses);
         PxU32 getCCDMaxPasses() const;
         PxReal getFrictionOffsetThreshold() const;
-        void setFrictionType(PxFrictionType::Enum frictionType);
+        // void setFrictionType(PxFrictionType::Enum frictionType); --> this is part of the PxSceneDesc
         PxFrictionType::Enum getFrictionType() const;
         //bool setVisualizationParameter(PxVisualizationParameter::Enum param, PxReal value);
         //PxReal getVisualizationParameter(PxVisualizationParameter::Enum paramEnum) const;
@@ -2330,7 +2324,7 @@ namespace physx {
         PxPvdSceneClient* getScenePvdClient();
         //%apply void* VOID_INT_PTR { void* userData }
         //void* userData; //!< user can assign this to whatever, usually to create a 1:1 relationship with a user object.
-        virtual	physx::PxBatchQuery* createBatchQuery(const physx::PxBatchQueryDesc& desc) = 0;
+        // virtual	physx::PxBatchQuery* createBatchQuery(const physx::PxBatchQueryDesc& desc) = 0;
     };
 
     class PxBase {
@@ -2346,7 +2340,7 @@ namespace physx {
             PxRigidStatic* getRigidStatic() { return self->is<physx::PxRigidStatic>(); }
             PxRigidBody* getRigidBody() { return self->is<physx::PxRigidBody>(); }
             PxRigidDynamic* getRigidDynamic() { return self->is<physx::PxRigidDynamic>(); }
-            PxArticulationLink* getArticulationLink() { return self->is<physx::PxArticulationLink>(); }
+            // PxArticulationLink* getArticulationLink() { return self->is<physx::PxArticulationLink>(); }
             //PxShape* getShape() { return self->is<physx::PxShape>(); }
             PxConvexMesh* getConvexMesh() { return self->is<physx::PxConvexMesh>(); }
             PxTriangleMesh* getTriangleMesh() { return self->is<physx::PxTriangleMesh>(); }
@@ -2416,9 +2410,11 @@ namespace physx {
         void setAngularDamping(PxReal angDamp);
         PxReal getAngularDamping() const;
         PxVec3 getLinearVelocity() const;
-        void setLinearVelocity(const PxVec3& linVel, bool autowake = true);
+        // is on PxRigidDynamic
+        // void setLinearVelocity(const PxVec3& linVel, bool autowake = true);
         PxVec3 getAngularVelocity() const;
-        void setAngularVelocity(const PxVec3& angVel, bool autowake = true);
+        // is on PxRigidDynamic
+        // void setAngularVelocity(const PxVec3& angVel, bool autowake = true);
         void setMaxAngularVelocity(PxReal maxAngVel);
         PxReal getMaxAngularVelocity() const;
         void setMaxLinearVelocity(PxReal maxLinVel);
@@ -2483,6 +2479,8 @@ namespace physx {
         %clear PxU32& minPositionIters, PxU32& minVelocityIters;
         PxReal getContactReportThreshold() const;
         void setContactReportThreshold(PxReal threshold);
+        void setLinearVelocity(const PxVec3& linVel, bool autowake = true);
+        void setAngularVelocity(const PxVec3& angVel, bool autowake = true);
     protected:
         virtual ~PxRigidDynamic() {}
     };
@@ -2675,20 +2673,8 @@ namespace physx {
         virtual ~PxConstraint() {}
     };
 
-    class PxArticulationJointBase : public PxBase {
-    public:
-        PxArticulationLink& getParentArticulationLink() const;
-        void setParentPose(const PxTransform& pose);
-        PxTransform getParentPose() const;
-        PxArticulationLink& getChildArticulationLink() const;
-        void setChildPose(const PxTransform& pose);
-        PxTransform getChildPose() const;
-        %extend { PxArticulationJoint* getArticulationJoint() { return static_cast<physx::PxArticulationJoint*>(self); }}
-        %extend { PxArticulationJointReducedCoordinate* getArticulationJointReducedCoordinate() { return static_cast<physx::PxArticulationJointReducedCoordinate*>(self); }}
-        ~PxArticulationJointBase() {}
-    };
 
-    class PxArticulationJoint : public PxArticulationJointBase {
+    /*class PxArticulationJoint : public PxArticulationJointBase {
     public:
         void setTargetOrientation(const PxQuat& orientation);
         PxQuat getTargetOrientation() const;
@@ -2724,11 +2710,11 @@ namespace physx {
         PxReal getTwistLimitContactDistance() const;
     protected:
         virtual ~PxArticulationJoint() {}
-    };
+    };*/
 
     OUTPUT_TYPEMAP(physx::PxArticulationDriveType::Enum, int, PxArticulationDriveType, INT32_PTR)
-    class PxArticulationJointReducedCoordinate : public PxArticulationJointBase {
-    public:
+    //class PxArticulationJointReducedCoordinate /*: public PxArticulationJointBase */{
+    /*public:
         void setJointType(PxArticulationJointType::Enum jointType);
         PxArticulationJointType::Enum getJointType() const;
         void setMotion(PxArticulationAxis::Enum axis, PxArticulationMotion::Enum motion);
@@ -2750,23 +2736,23 @@ namespace physx {
         PxReal getMaxJointVelocity() const;
     protected:
         virtual ~PxArticulationJointReducedCoordinate() {}
-    };
+    };*/
 
-    class PxArticulationLink : public PxRigidBody {
-    public:
-        PxArticulationBase& getArticulation() const;
-        PxArticulationJointBase* getInboundJoint() const;
-        %extend { PxArticulationJointReducedCoordinate* getInboundJointReducedCoordinate() { return static_cast<physx::PxArticulationJointReducedCoordinate*>(self->getInboundJoint()); }}
-        PxU32 getInboundJointDof() const;
-        PxU32 getNbChildren() const;
-        PxU32 getLinkIndex() const;
-        //PxU32 getChildren(PxArticulationLink** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
-        %extend { PxArticulationLink* getChild(PxU32 index) { physx::PxArticulationLink* c; self->getChildren(&c, 1, index); return c; }}
-    protected:
-        virtual ~PxArticulationLink()    {}
-    };
+//     class PxArticulationLink : public PxRigidBody {
+//     public:
+//         PxArticulationBase& getArticulation() const;
+//         /*PxArticulationJointBase* getInboundJoint() const;
+//         %extend { PxArticulationJointReducedCoordinate* getInboundJointReducedCoordinate() { return static_cast<physx::PxArticulationJointReducedCoordinate*>(self->getInboundJoint()); }}*/
+//         PxU32 getInboundJointDof() const;
+//         PxU32 getNbChildren() const;
+//         PxU32 getLinkIndex() const;
+//         //PxU32 getChildren(PxArticulationLink** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
+//         %extend { PxArticulationLink* getChild(PxU32 index) { physx::PxArticulationLink* c; self->getChildren(&c, 1, index); return c; }}
+//     protected:
+//         virtual ~PxArticulationLink()    {}
+//     };
 
-    class PxArticulationBase : public PxBase {
+    /*class PxArticulationBase : public PxBase {
     public:
         PxScene* getScene() const;
         void setSolverIterationCounts(PxU32 minPositionIters, PxU32 minVelocityIters = 1);
@@ -2857,14 +2843,14 @@ namespace physx {
         void teleportRootLink(const PxTransform& pose, bool autowake);
     protected:
         virtual ~PxArticulationReducedCoordinate() {}
-    };
+    };*/
 
     class PxAggregate : public PxBase {
     public:
         bool addActor(PxActor& actor, const PxBVHStructure* bvhStructure = NULL);
         bool removeActor(PxActor& actor);
-        bool addArticulation(PxArticulationBase& articulation);
-        bool removeArticulation(PxArticulationBase& articulation);
+        //bool addArticulation(PxArticulationBase& articulation);
+        //bool removeArticulation(PxArticulationBase& articulation);
         PxU32 getNbActors() const;
         PxU32 getMaxNbActors() const;
         //PxU32 getActors(PxActor** userBuffer, PxU32 bufferSize, PxU32 startIndex=0) const;
@@ -3405,7 +3391,7 @@ namespace physx {
             void setMinLongSlipDenominator(const PxReal minLongSlipDenominator);
             /*%extend { PxVehicleWheelsSimFlags::Enum flags; %{
             physx::PxHeightFieldFlag::Enum physx_PxHeightFieldDesc_flags_get(const physx::PxHeightFieldDesc* desc) { return (physx::PxHeightFieldFlag::Enum)(uint32_t)desc->flags; }
-            void physx_PxHeightFieldDesc_flags_set(physx::PxHeightFieldDesc* desc, physx::PxHeightFieldFlag::Enum flags) { desc->flags.set(flags); }
+            void physx_PxHeightFieldDesc_flags_set(physx::PxHeightFieldDesc* desc, physx::PxHeightFieldFlag::Enum flags) { desc->flags.setAll(flags); }
             %}}
             void setFlags(PxVehicleWheelsSimFlags::Enum flags);
             PxVehicleWheelsSimFlags::Enum getFlags() const;*/
@@ -3673,9 +3659,9 @@ namespace physx {
 		eANALOG_INPUT_STEER_RIGHT,
 		eMAX_NB_DRIVE4W_ANALOG_INPUTS);
 
-    %include PxVehicleUtilControl.i
-    %include PxBatchQuery.i
-    %include PxVehicleUpdate.i
+    /*%include PxVehicleUtilControl.i*/
+    // %include PxBatchQuery.i -> removed as of physx 5
+    /*%include PxVehicleUpdate.i*/
 
     %include PxExtended.i
     %include PxControllerObstacles.i
@@ -3684,6 +3670,6 @@ namespace physx {
     %include PxCapsuleController.i
 }
 
-%include SnippetVehicle.i
+//%include SnippetVehicle.i
 
 physx::PxControllerManager* PxCreateControllerManager(physx::PxScene& scene, bool lockingEnabled = false);

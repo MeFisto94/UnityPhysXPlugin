@@ -1,3 +1,5 @@
+%include PxQueryFiltering.i
+
 WRAPPER_CLASS(PxController)
 WRAPPER_CLASS(PxControllerDesc)
 

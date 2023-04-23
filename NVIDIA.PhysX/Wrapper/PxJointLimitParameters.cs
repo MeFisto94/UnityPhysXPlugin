@@ -88,13 +88,13 @@ public partial class PxJointLimitParameters {
     } 
   }
 
-  public float contactDistance {
+  public float contactDistance_deprecated {
     set {
-      NativePINVOKE.PxJointLimitParameters_contactDistance_set(swigCPtr, value);
+      NativePINVOKE.PxJointLimitParameters_contactDistance_deprecated_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      float ret = NativePINVOKE.PxJointLimitParameters_contactDistance_get(swigCPtr);
+      float ret = NativePINVOKE.PxJointLimitParameters_contactDistance_deprecated_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

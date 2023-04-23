@@ -127,6 +127,26 @@ public partial class PxRigidDynamic : PxRigidBody {
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void setLinearVelocity( PxVec3  linVel, bool autowake) {
+    NativePINVOKE.PxRigidDynamic_setLinearVelocity__SWIG_0(swigCPtr,  linVel.swigCPtr , autowake);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void setLinearVelocity( PxVec3  linVel) {
+    NativePINVOKE.PxRigidDynamic_setLinearVelocity__SWIG_1(swigCPtr,  linVel.swigCPtr );
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void setAngularVelocity( PxVec3  angVel, bool autowake) {
+    NativePINVOKE.PxRigidDynamic_setAngularVelocity__SWIG_0(swigCPtr,  angVel.swigCPtr , autowake);
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void setAngularVelocity( PxVec3  angVel) {
+    NativePINVOKE.PxRigidDynamic_setAngularVelocity__SWIG_1(swigCPtr,  angVel.swigCPtr );
+    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }
 
 }

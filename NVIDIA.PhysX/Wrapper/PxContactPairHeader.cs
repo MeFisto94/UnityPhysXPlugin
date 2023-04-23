@@ -23,19 +23,19 @@ public partial struct PxContactPairHeader {
     return obj.swigCPtr;
   }
 
-  public PxRigidActor actor0 {
+  public PxActor actor0 {
     get {
       global::System.IntPtr cPtr = NativePINVOKE.PxContactPairHeader_actor0_get(swigCPtr);
-      PxRigidActor ret = (cPtr == global::System.IntPtr.Zero) ? null : PxRigidActor.getWrapper(cPtr, false);
+      PxActor ret = (cPtr == global::System.IntPtr.Zero) ? null : PxActor.getWrapper(cPtr, false);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public PxRigidActor actor1 {
+  public PxActor actor1 {
     get {
       global::System.IntPtr cPtr = NativePINVOKE.PxContactPairHeader_actor1_get(swigCPtr);
-      PxRigidActor ret = (cPtr == global::System.IntPtr.Zero) ? null : PxRigidActor.getWrapper(cPtr, false);
+      PxActor ret = (cPtr == global::System.IntPtr.Zero) ? null : PxActor.getWrapper(cPtr, false);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

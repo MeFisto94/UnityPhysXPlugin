@@ -2,8 +2,8 @@ typedef	double	PxExtended;
 #define	PX_MAX_EXTENDED	PX_MAX_F64
 #define PxExtendedAbs(x)	fabs(x)
 
-WRAPPER_STRUCT(PxExtendedVec3)
-struct PxExtendedVec3
+WRAPPER_CLASS(PxExtendedVec3)
+class PxExtendedVec3
 {
 		PxExtendedVec3()																	{}
 		PxExtendedVec3(PxExtended _x, PxExtended _y, PxExtended _z) : x(_x), y(_y), z(_z)	{}

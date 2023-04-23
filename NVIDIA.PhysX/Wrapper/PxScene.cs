@@ -76,21 +76,6 @@ public partial class PxScene {
     return ret;
   }
 
-  public void addArticulation(PxArticulationBase articulation) {
-    NativePINVOKE.PxScene_addArticulation(swigCPtr, PxArticulationBase.getCPtr(articulation));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void removeArticulation(PxArticulationBase articulation, bool wakeOnLostTouch) {
-    NativePINVOKE.PxScene_removeArticulation__SWIG_0(swigCPtr, PxArticulationBase.getCPtr(articulation), wakeOnLostTouch);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void removeArticulation(PxArticulationBase articulation) {
-    NativePINVOKE.PxScene_removeArticulation__SWIG_1(swigCPtr, PxArticulationBase.getCPtr(articulation));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
   public void addActor(PxActor actor, PxBVHStructure bvhStructure) {
     NativePINVOKE.PxScene_addActor__SWIG_0(swigCPtr, PxActor.getCPtr(actor), PxBVHStructure.getCPtr(bvhStructure));
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
@@ -187,13 +172,6 @@ public partial class PxScene {
 
   public uint getNbArticulations() {
     uint ret = NativePINVOKE.PxScene_getNbArticulations(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxArticulationBase getArticulation(uint index) {
-    global::System.IntPtr cPtr = NativePINVOKE.PxScene_getArticulation(swigCPtr, index);
-    PxArticulationBase ret = (cPtr == global::System.IntPtr.Zero) ? null : PxArticulationBase.getWrapper(cPtr, false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -439,11 +417,6 @@ public partial class PxScene {
     float ret = NativePINVOKE.PxScene_getFrictionOffsetThreshold(swigCPtr);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
-  }
-
-  public void setFrictionType(PxFrictionType frictionType) {
-    NativePINVOKE.PxScene_setFrictionType(swigCPtr, (int)frictionType);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public PxFrictionType getFrictionType() {
@@ -750,13 +723,6 @@ public partial class PxScene {
   public PxPvdSceneClient getScenePvdClient() {
     global::System.IntPtr cPtr = NativePINVOKE.PxScene_getScenePvdClient(swigCPtr);
     PxPvdSceneClient ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxPvdSceneClient(cPtr, false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public virtual PxBatchQuery createBatchQuery(PxBatchQueryDesc desc) {
-    global::System.IntPtr cPtr = NativePINVOKE.PxScene_createBatchQuery(swigCPtr, PxBatchQueryDesc.getCPtr(desc));
-    PxBatchQuery ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxBatchQuery(cPtr, false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

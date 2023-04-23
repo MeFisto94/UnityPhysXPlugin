@@ -117,7 +117,7 @@ namespace physx
             {
                 PxPairFlag::Enum pairFlags;
                 PxFilterFlag::Enum ret = pairFound(pairID, attributes0, filterData0, a0, s0, attributes1, filterData1, a1, s1, pairFlags);
-                _pairFlags.set(pairFlags);
+                _pairFlags.setAll(pairFlags);
                 return ret;
             }
             virtual void pairLost(PxU32 pairID, bool objectRemoved, const PxFilterObjectAttributes& attributes0, const PxFilterData& filterData0, const PxFilterObjectAttributes& attributes1, const PxFilterData& filterData1) {}
@@ -130,7 +130,7 @@ namespace physx
             {
                 PxPairFlag::Enum pairFlags; PxFilterFlag::Enum filterFlags;
                 bool ret = statusChange(pairID, pairFlags, filterFlags);
-                _pairFlags.set(pairFlags); _filterFlags.set(filterFlags);
+                _pairFlags.setAll(pairFlags); _filterFlags.setAll(filterFlags);
                 return ret;
             }
         };

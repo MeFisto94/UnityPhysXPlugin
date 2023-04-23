@@ -61,7 +61,7 @@ public partial class PxController {
   }
 
   public virtual PxExtendedVec3 getPosition() {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxController_getPosition(swigCPtr), false);
+    PxExtendedVec3 ret = PxExtendedVec3.getWrapper(NativePINVOKE.PxController_getPosition(swigCPtr), false);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
@@ -73,7 +73,7 @@ public partial class PxController {
   }
 
   public virtual PxExtendedVec3 getFootPosition() {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxController_getFootPosition(swigCPtr), true);
+    PxExtendedVec3 ret = PxExtendedVec3.getWrapper(NativePINVOKE.PxController_getFootPosition(swigCPtr), true);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

@@ -44,7 +44,7 @@ public partial class PxControllerDesc {
     } 
     get {
       global::System.IntPtr cPtr = NativePINVOKE.PxControllerDesc_position_get(swigCPtr);
-      PxExtendedVec3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxExtendedVec3(cPtr, false);
+      PxExtendedVec3 ret = (cPtr == global::System.IntPtr.Zero) ? null : PxExtendedVec3.getWrapper(cPtr, false);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

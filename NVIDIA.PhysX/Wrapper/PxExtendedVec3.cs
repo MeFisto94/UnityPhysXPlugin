@@ -13,6 +13,7 @@ namespace NVIDIA.PhysX {
 public partial class PxExtendedVec3 {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
+  public object userData;
 
   internal PxExtendedVec3(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
@@ -23,209 +24,17 @@ public partial class PxExtendedVec3 {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~PxExtendedVec3() {
-    destroy();
-  }
-
-  public virtual void destroy() {
-    lock(this) {
-      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
-          NativePINVOKE.delete_PxExtendedVec3(swigCPtr);
-        }
-        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+  internal static PxExtendedVec3 getWrapper(global::System.IntPtr cPtr, bool cMemoryOwn) {
+      var wrapper = WrapperCache.find(cPtr);
+      if (!(wrapper is PxExtendedVec3)) {
+          wrapper = new PxExtendedVec3(cPtr, cMemoryOwn);
+          WrapperCache.add(cPtr, wrapper);
       }
-      global::System.GC.SuppressFinalize(this);
-    }
+      return wrapper as PxExtendedVec3;
   }
 
-  public PxExtendedVec3() : this(NativePINVOKE.new_PxExtendedVec3__SWIG_0(), true) {
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public PxExtendedVec3(double _x, double _y, double _z) : this(NativePINVOKE.new_PxExtendedVec3__SWIG_1(_x, _y, _z), true) {
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public bool isZero() {
-    bool ret = NativePINVOKE.PxExtendedVec3_isZero(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double dot( PxVec3  v) {
-    double ret = NativePINVOKE.PxExtendedVec3_dot(swigCPtr,  v.swigCPtr );
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double distanceSquared(PxExtendedVec3 v) {
-    double ret = NativePINVOKE.PxExtendedVec3_distanceSquared(swigCPtr, PxExtendedVec3.getCPtr(v));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double magnitudeSquared() {
-    double ret = NativePINVOKE.PxExtendedVec3_magnitudeSquared(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double magnitude() {
-    double ret = NativePINVOKE.PxExtendedVec3_magnitude(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double normalize() {
-    double ret = NativePINVOKE.PxExtendedVec3_normalize(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool isFinite() {
-    bool ret = NativePINVOKE.PxExtendedVec3_isFinite(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void maximum(PxExtendedVec3 v) {
-    NativePINVOKE.PxExtendedVec3_maximum(swigCPtr, PxExtendedVec3.getCPtr(v));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void minimum(PxExtendedVec3 v) {
-    NativePINVOKE.PxExtendedVec3_minimum(swigCPtr, PxExtendedVec3.getCPtr(v));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void set(double x_, double y_, double z_) {
-    NativePINVOKE.PxExtendedVec3_set(swigCPtr, x_, y_, z_);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void setPlusInfinity() {
-    NativePINVOKE.PxExtendedVec3_setPlusInfinity(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void setMinusInfinity() {
-    NativePINVOKE.PxExtendedVec3_setMinusInfinity(swigCPtr);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void cross(PxExtendedVec3 left,  PxVec3  right) {
-    NativePINVOKE.PxExtendedVec3_cross__SWIG_0(swigCPtr, PxExtendedVec3.getCPtr(left),  right.swigCPtr );
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void cross(PxExtendedVec3 left, PxExtendedVec3 right) {
-    NativePINVOKE.PxExtendedVec3_cross__SWIG_1(swigCPtr, PxExtendedVec3.getCPtr(left), PxExtendedVec3.getCPtr(right));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public PxExtendedVec3 cross(PxExtendedVec3 v) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3_cross__SWIG_2(swigCPtr, PxExtendedVec3.getCPtr(v)), true);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void cross( PxVec3  left, PxExtendedVec3 right) {
-    NativePINVOKE.PxExtendedVec3_cross__SWIG_3(swigCPtr,  left.swigCPtr , PxExtendedVec3.getCPtr(right));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public PxExtendedVec3 __subtract() {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___subtract__SWIG_0(swigCPtr), true);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxExtendedVec3 __add_assign(PxExtendedVec3 v) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___add_assign__SWIG_0(swigCPtr, PxExtendedVec3.getCPtr(v)), false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxExtendedVec3 __subtract_assign(PxExtendedVec3 v) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___subtract_assign__SWIG_0(swigCPtr, PxExtendedVec3.getCPtr(v)), false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxExtendedVec3 __add_assign( PxVec3  v) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___add_assign__SWIG_1(swigCPtr,  v.swigCPtr ), false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxExtendedVec3 __subtract_assign( PxVec3  v) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___subtract_assign__SWIG_1(swigCPtr,  v.swigCPtr ), false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxExtendedVec3 __multiply_assign(float s) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___multiply_assign(swigCPtr, s), false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxExtendedVec3 __add(PxExtendedVec3 v) {
-    PxExtendedVec3 ret = new PxExtendedVec3(NativePINVOKE.PxExtendedVec3___add(swigCPtr, PxExtendedVec3.getCPtr(v)), true);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public  PxVec3  __subtract(PxExtendedVec3 v) {
-        global::System.IntPtr ptr = NativePINVOKE.PxExtendedVec3___subtract__SWIG_1(swigCPtr, PxExtendedVec3.getCPtr(v));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-        //PxVec3 ret = global::System.Runtime.InteropServices.Marshal.PtrToStructure<PxVec3>(ptr);
-        PxVec3 ret; unsafe { ret = *(PxVec3*)ptr; }
-        return ret;
-    }
-
-  public double get(int index) {
-    double ret = NativePINVOKE.PxExtendedVec3_get(swigCPtr, index);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public double x {
-    set {
-      NativePINVOKE.PxExtendedVec3_x_set(swigCPtr, value);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      double ret = NativePINVOKE.PxExtendedVec3_x_get(swigCPtr);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public double y {
-    set {
-      NativePINVOKE.PxExtendedVec3_y_set(swigCPtr, value);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      double ret = NativePINVOKE.PxExtendedVec3_y_get(swigCPtr);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public double z {
-    set {
-      NativePINVOKE.PxExtendedVec3_z_set(swigCPtr, value);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      double ret = NativePINVOKE.PxExtendedVec3_z_get(swigCPtr);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
+  ~PxExtendedVec3() {
+    WrapperCache.remove(swigCPtr.Handle, this);
   }
 
 }

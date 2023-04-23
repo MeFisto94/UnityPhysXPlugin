@@ -40,37 +40,13 @@ public partial class PxBroadPhaseCaps {
     }
   }
 
-  public uint maxNbRegions {
+  public uint mMaxNbRegions {
     set {
-      NativePINVOKE.PxBroadPhaseCaps_maxNbRegions_set(swigCPtr, value);
+      NativePINVOKE.PxBroadPhaseCaps_mMaxNbRegions_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      uint ret = NativePINVOKE.PxBroadPhaseCaps_maxNbRegions_get(swigCPtr);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public uint maxNbObjects {
-    set {
-      NativePINVOKE.PxBroadPhaseCaps_maxNbObjects_set(swigCPtr, value);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      uint ret = NativePINVOKE.PxBroadPhaseCaps_maxNbObjects_get(swigCPtr);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public bool needsPredefinedBounds {
-    set {
-      NativePINVOKE.PxBroadPhaseCaps_needsPredefinedBounds_set(swigCPtr, value);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      bool ret = NativePINVOKE.PxBroadPhaseCaps_needsPredefinedBounds_get(swigCPtr);
+      uint ret = NativePINVOKE.PxBroadPhaseCaps_mMaxNbRegions_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

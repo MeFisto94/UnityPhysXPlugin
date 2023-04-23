@@ -48,18 +48,6 @@ public partial class PxAggregate : PxBase {
     return ret;
   }
 
-  public bool addArticulation(PxArticulationBase articulation) {
-    bool ret = NativePINVOKE.PxAggregate_addArticulation(swigCPtr, PxArticulationBase.getCPtr(articulation));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public bool removeArticulation(PxArticulationBase articulation) {
-    bool ret = NativePINVOKE.PxAggregate_removeArticulation(swigCPtr, PxArticulationBase.getCPtr(articulation));
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public uint getNbActors() {
     uint ret = NativePINVOKE.PxAggregate_getNbActors(swigCPtr);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();

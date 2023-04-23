@@ -279,20 +279,6 @@ public partial class PxPhysics {
     return ret;
   }
 
-  public PxArticulation createArticulation() {
-    global::System.IntPtr cPtr = NativePINVOKE.PxPhysics_createArticulation(swigCPtr);
-    PxArticulation ret = (cPtr == global::System.IntPtr.Zero) ? null : PxArticulation.getWrapper(cPtr, false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public PxArticulationReducedCoordinate createArticulationReducedCoordinate() {
-    global::System.IntPtr cPtr = NativePINVOKE.PxPhysics_createArticulationReducedCoordinate(swigCPtr);
-    PxArticulationReducedCoordinate ret = (cPtr == global::System.IntPtr.Zero) ? null : PxArticulationReducedCoordinate.getWrapper(cPtr, false);
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public PxMaterial createMaterial(float staticFriction, float dynamicFriction, float restitution) {
     global::System.IntPtr cPtr = NativePINVOKE.PxPhysics_createMaterial(swigCPtr, staticFriction, dynamicFriction, restitution);
     PxMaterial ret = (cPtr == global::System.IntPtr.Zero) ? null : PxMaterial.getWrapper(cPtr, false);

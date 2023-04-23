@@ -239,18 +239,6 @@ public partial class PxSceneDesc {
     } 
   }
 
-  public float solverOffsetSlop {
-    set {
-      NativePINVOKE.PxSceneDesc_solverOffsetSlop_set(swigCPtr, value);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      float ret = NativePINVOKE.PxSceneDesc_solverOffsetSlop_get(swigCPtr);
-      if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
   public PxSceneFlag flags {
     set {
       NativePINVOKE.PxSceneDesc_flags_set(swigCPtr, (int)value);

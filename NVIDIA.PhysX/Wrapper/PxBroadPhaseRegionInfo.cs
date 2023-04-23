@@ -40,62 +40,62 @@ public partial class PxBroadPhaseRegionInfo {
     }
   }
 
-  public PxBroadPhaseRegion region {
+  public PxBroadPhaseRegion mRegion {
     set {
-      NativePINVOKE.PxBroadPhaseRegionInfo_region_set(swigCPtr, PxBroadPhaseRegion.getCPtr(value));
+      NativePINVOKE.PxBroadPhaseRegionInfo_mRegion_set(swigCPtr, PxBroadPhaseRegion.getCPtr(value));
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      global::System.IntPtr cPtr = NativePINVOKE.PxBroadPhaseRegionInfo_region_get(swigCPtr);
+      global::System.IntPtr cPtr = NativePINVOKE.PxBroadPhaseRegionInfo_mRegion_get(swigCPtr);
       PxBroadPhaseRegion ret = (cPtr == global::System.IntPtr.Zero) ? null : new PxBroadPhaseRegion(cPtr, false);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public uint nbStaticObjects {
+  public uint mNbStaticObjects {
     set {
-      NativePINVOKE.PxBroadPhaseRegionInfo_nbStaticObjects_set(swigCPtr, value);
+      NativePINVOKE.PxBroadPhaseRegionInfo_mNbStaticObjects_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      uint ret = NativePINVOKE.PxBroadPhaseRegionInfo_nbStaticObjects_get(swigCPtr);
+      uint ret = NativePINVOKE.PxBroadPhaseRegionInfo_mNbStaticObjects_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public uint nbDynamicObjects {
+  public uint mNbDynamicObjects {
     set {
-      NativePINVOKE.PxBroadPhaseRegionInfo_nbDynamicObjects_set(swigCPtr, value);
+      NativePINVOKE.PxBroadPhaseRegionInfo_mNbDynamicObjects_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      uint ret = NativePINVOKE.PxBroadPhaseRegionInfo_nbDynamicObjects_get(swigCPtr);
+      uint ret = NativePINVOKE.PxBroadPhaseRegionInfo_mNbDynamicObjects_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public bool active {
+  public bool mActive {
     set {
-      NativePINVOKE.PxBroadPhaseRegionInfo_active_set(swigCPtr, value);
+      NativePINVOKE.PxBroadPhaseRegionInfo_mActive_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = NativePINVOKE.PxBroadPhaseRegionInfo_active_get(swigCPtr);
+      bool ret = NativePINVOKE.PxBroadPhaseRegionInfo_mActive_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public bool overlap {
+  public bool mOverlap {
     set {
-      NativePINVOKE.PxBroadPhaseRegionInfo_overlap_set(swigCPtr, value);
+      NativePINVOKE.PxBroadPhaseRegionInfo_mOverlap_set(swigCPtr, value);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      bool ret = NativePINVOKE.PxBroadPhaseRegionInfo_overlap_get(swigCPtr);
+      bool ret = NativePINVOKE.PxBroadPhaseRegionInfo_mOverlap_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

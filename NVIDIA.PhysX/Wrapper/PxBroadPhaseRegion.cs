@@ -40,12 +40,12 @@ public partial class PxBroadPhaseRegion {
     }
   }
 
-  public PxBounds3 bounds {
+  public PxBounds3 mBounds {
     set {
-      NativePINVOKE.PxBroadPhaseRegion_bounds_set(swigCPtr,  value.swigCPtr );
+      NativePINVOKE.PxBroadPhaseRegion_mBounds_set(swigCPtr,  value.swigCPtr );
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
     } 
-        get { global::System.IntPtr ptr = NativePINVOKE.PxBroadPhaseRegion_bounds_get(swigCPtr);
+        get { global::System.IntPtr ptr = NativePINVOKE.PxBroadPhaseRegion_mBounds_get(swigCPtr);
       if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
               //PxBounds3 ret = global::System.Runtime.InteropServices.Marshal.PtrToStructure<PxBounds3>(ptr);
               PxBounds3 ret; unsafe { ret = *(PxBounds3*)ptr; }

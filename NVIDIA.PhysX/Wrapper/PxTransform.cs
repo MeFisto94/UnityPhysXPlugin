@@ -112,22 +112,6 @@ public partial struct PxTransform {
         return ret;
     }
 
-  public  PxPlane  transform( PxPlane  plane) {
-        global::System.IntPtr ptr = NativePINVOKE.PxTransform_transform__SWIG_2(swigCPtr,  plane.swigCPtr );
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-        //PxPlane ret = global::System.Runtime.InteropServices.Marshal.PtrToStructure<PxPlane>(ptr);
-        PxPlane ret; unsafe { ret = *(PxPlane*)ptr; }
-        return ret;
-    }
-
-  public  PxPlane  inverseTransform( PxPlane  plane) {
-        global::System.IntPtr ptr = NativePINVOKE.PxTransform_inverseTransform(swigCPtr,  plane.swigCPtr );
-    if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();
-        //PxPlane ret = global::System.Runtime.InteropServices.Marshal.PtrToStructure<PxPlane>(ptr);
-        PxPlane ret; unsafe { ret = *(PxPlane*)ptr; }
-        return ret;
-    }
-
   public  PxTransform  getNormalized() {
         global::System.IntPtr ptr = NativePINVOKE.PxTransform_getNormalized(swigCPtr);
     if (NativePINVOKE.SWIGPendingException.Pending) throw NativePINVOKE.SWIGPendingException.Retrieve();

@@ -1,4 +1,5 @@
 WRAPPER_CLASS(PxControllerDesc)
+WRAPPER_CLASS(PxCapsuleControllerDesc)
 class PxCapsuleControllerDesc : public PxControllerDesc
 {
 public:
@@ -6,7 +7,7 @@ public:
 	\brief constructor sets to default.
 	*/
 	PxCapsuleControllerDesc ();
-	~PxCapsuleControllerDesc () {}
+	virtual ~PxCapsuleControllerDesc () {}
 
 	/**
 	\brief copy constructor.

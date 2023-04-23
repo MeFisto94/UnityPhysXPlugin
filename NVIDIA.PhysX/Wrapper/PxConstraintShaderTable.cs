@@ -52,8 +52,6 @@ public partial class PxConstraintShaderTable {
     } 
   }
 
-  public static readonly int MAX_SOLVERPRPEP_DATASIZE = NativePINVOKE.PxConstraintShaderTable_MAX_SOLVERPRPEP_DATASIZE_get();
-
 }
 
 }
